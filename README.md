@@ -45,6 +45,7 @@ b. ¿Quién será nuestro público objetivo?
     Mi familia es mi prioridad (pareja y 2 hij@s), pero siempre encuentro un lugarcito para hacer o experimentar cosas nuevas.
 
     <Romina Solis>
+    Romina Solis, 39 años de edad soy técnica en administración de empresa y Licenciada en enfermería. Me he desempeñado como administrativa en Banco Patagonia, en empresa crediticia, en la actualidad me desempeño como enfermera en organismo público. Me interesa el área de la tecnología por eso elegí estudiar programación.
 
     <Yanina Otero>
     <Diego Peña>
