@@ -56,8 +56,11 @@ b. ¿Quién será nuestro público objetivo?
     <Sulma Bernal>
     Sulma Bernal, 34 años, vivo en Cochabamba- Bolivia. Soy Licenciada en contaduría pública y actualmente trabajo con mi padre en sociedad en el rubro de ganadería vacuno, importar-exportar dentro del país al faeneo en matadero para los vendedores al detalle (carnicerías). Tengo conocimiento de introducción a la programación, así que me llamo mucho la atención porque me gusta aprender y me gustaría poner en práctica con el rubro al que me dedico a futuro para el crecimiento de nuestra empresa.
 
-    <Diego Peña>
     <Estefani Perez>
+    Soy Estefani Perez, tengo 28 años y estudie psicología. Desde siempre me gustó la programación y ahora tengo la oportunidad de estudiar lo que me gusta. Espero que este curso me ayude a acumular mucha experiencia y conocimiento.
+
+    <Diego Peña>
+    Hola soy Diego Andrés y tengo 19 años y tengo experiencia en programación y actualmente me encuentro estudiando ingeniería de software, y la verdad me gusta este curso por qué quiero mejorar más mis habilidades y mis skills, y a futuro quiero volver un rockstar en programación.
 
 #3 Referentes del mercado
 
