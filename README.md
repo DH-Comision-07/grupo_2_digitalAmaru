@@ -48,6 +48,8 @@ b. ¿Quién será nuestro público objetivo?
     Romina Solis, 39 años de edad soy técnica en administración de empresa y Licenciada en enfermería. Me he desempeñado como administrativa en Banco Patagonia, en empresa crediticia, en la actualidad me desempeño como enfermera en organismo público. Me interesa el área de la tecnología por eso elegí estudiar programación.
 
     <Yanina Otero>
+    Yanina Otero, tengo 32 años,  y vivo en Escobar, Buenos Aires. Soy Ingeniera en Alimentos y actualmente trabajo en una foodtech lationamericana que desarrolla alimentos a base de plantas a traves de su inteligencia artificial patentada. Me encuentro con muchas ganas de comenzar a trabajar en el área de programación por eso es que decidí arrancar mis estudios con este curso.
+
     <Diego Peña>
     <Estefani Perez>
     <Heidi Bernal>
