@@ -50,9 +50,11 @@ b. ¿Quién será nuestro público objetivo?
     <Yanina Otero>
     Yanina Otero, tengo 32 años,  y vivo en Escobar, Buenos Aires. Soy Ingeniera en Alimentos y actualmente trabajo en una foodtech lationamericana que desarrolla alimentos a base de plantas a traves de su inteligencia artificial patentada. Me encuentro con muchas ganas de comenzar a trabajar en el área de programación por eso es que decidí arrancar mis estudios con este curso.
 
+    <Heidi Bernal>
+    Mi nombre es Heidi Bernal y tengo 18 años. Tengo conocimientos básicos en HTML, CSS y JavaScript por pequeños proyectos, también vi un poco de C++ y Python. Mis intereses son ganar conocimiento en varios temas, me parece genial saber muchas cosas. Me gusta la tecnología por Iron man, así que mi aspiración es dominar muy bien varios lenguajes de programación para crear grandes cosas en un futuro junto a personas que también quieran mejorar la tecnología.
+
     <Diego Peña>
     <Estefani Perez>
-    <Heidi Bernal>
     <Sulma Bernal>
 
 #3 Referentes del mercado
