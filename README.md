@@ -53,9 +53,11 @@ b. ¿Quién será nuestro público objetivo?
     <Heidi Bernal>
     Mi nombre es Heidi Bernal y tengo 18 años. Tengo conocimientos básicos en HTML, CSS y JavaScript por pequeños proyectos, también vi un poco de C++ y Python. Mis intereses son ganar conocimiento en varios temas, me parece genial saber muchas cosas. Me gusta la tecnología por Iron man, así que mi aspiración es dominar muy bien varios lenguajes de programación para crear grandes cosas en un futuro junto a personas que también quieran mejorar la tecnología.
 
+    <Sulma Bernal>
+    Sulma Bernal, 34 años, vivo en Cochabamba- Bolivia. Soy Licenciada en contaduría pública y actualmente trabajo con mi padre en sociedad en el rubro de ganadería vacuno, importar-exportar dentro del país al faeneo en matadero para los vendedores al detalle (carnicerías). Tengo conocimiento de introducción a la programación, así que me llamo mucho la atención porque me gusta aprender y me gustaría poner en práctica con el rubro al que me dedico a futuro para el crecimiento de nuestra empresa.
+
     <Diego Peña>
     <Estefani Perez>
-    <Sulma Bernal>
 
 #3 Referentes del mercado
 
