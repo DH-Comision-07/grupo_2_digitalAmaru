@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 /*----------- H O M E ------------*/
+/* celular */
+@media (max-width: 380px) {
+    .contenedor__titulos__certificados{
+        text-align: center;
+    }
+    .titulos__indiv{
+        margin: 1em auto;
+    }
+    .flex_cont_titulos{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 /*SECCION TITULOS*/
 /* Contenedor titulos certificados*/
 .contenedor__titulos__certificados{
