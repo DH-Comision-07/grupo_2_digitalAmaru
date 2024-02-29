@@ -7,11 +7,11 @@ const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
 app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
 app.listen(port,() => {
