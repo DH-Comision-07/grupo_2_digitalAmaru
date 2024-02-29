@@ -96,3 +96,12 @@ color: #1c0113;
     align-items: center;
     margin-bottom: 1em;
 }
+/*celular*/
+@media(HOME-width: 320px){
+    .flex_cont_cursos{
+        width: 20%;
+        margin: auto;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    }
