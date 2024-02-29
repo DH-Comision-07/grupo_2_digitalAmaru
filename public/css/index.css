@@ -105,3 +105,18 @@ color: #1c0113;
         padding-top: 20px;
     }
     }
+
+.carrusel_principal1{
+    background-color: #ffffff;
+    background-repeat: repeat-x;
+}
+
+.carrusel_principal2{
+    background-color: #b2b2b2;
+}
+
+.carrusel_principal3{
+    background-color: #1c0113;
+    color: #ffffff;
+}
+
