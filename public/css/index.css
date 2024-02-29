@@ -86,4 +86,13 @@ color: #1c0113;
     text-align: start;
 }
 
-
+.contenedor__titulos__cursos{
+        text-align: left;
+}
+.caja__img-curso{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
