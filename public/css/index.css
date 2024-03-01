@@ -5,7 +5,7 @@
 }
 /*----------- H O M E ------------*/
 /* celular */
-@media (max-width: 380px) {
+@media (max-width: 415px) {
     .contenedor__titulos__certificados{
         text-align: center;
     }
@@ -96,3 +96,27 @@ color: #1c0113;
     align-items: center;
     margin-bottom: 1em;
 }
+/*celular*/
+@media(HOME-width: 320px){
+    .flex_cont_cursos{
+        width: 20%;
+        margin: auto;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    }
+
+.carrusel_principal1{
+    background-color: #ffffff;
+    background-repeat: repeat-x;
+}
+
+.carrusel_principal2{
+    background-color: #b2b2b2;
+}
+
+.carrusel_principal3{
+    background-color: #1c0113;
+    color: #ffffff;
+}
+
