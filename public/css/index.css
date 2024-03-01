@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------- H O M E ------------*/
+/* celular */
+@media (max-width: 415px) {
+    .contenedor__titulos__certificados{
+        text-align: center;
+    }
+    .titulos__indiv{
+        margin: 1em auto;
+    }
+    .flex_cont_titulos{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/*SECCION TITULOS*/
+/* Contenedor titulos certificados*/
+.contenedor__titulos__certificados{
+    width: 100%;
+    height: 300px;
+    margin: 2em 0;
+}
+.flex_cont_titulos{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* Titulo Beneficios Titulos*/
+.contenedor__titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedor__titulo h3{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* contenedor de los titulos individuales*/
+.titulos__indiv{
+    width: 15em;
+    height: 20em;
+    border: 0.2em solid #6b0103;
+    border-radius: 0.4em;
+        /*interior*/
+        background-color: #ffffff;
+        padding: 0.7em;
+
+}
+.caja__img-titulo{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
+/*nombre titulo*/
+.caja__img-titulo h3{
+font-size: 2em;
+color: #1c0113;
+}
+.img__titulo{
+    width: 100px;
+    height: 100px;
+    background-color: #979797;
+}
+/* subtitulo */
+.h3-titulos-int{
+    margin: 1em 0;
+}
+/* parrafo de los cont de titulos*/
+.cont_p_texto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_p_texto p{
+    text-align: start;
+}
+
+.contenedor__titulos__cursos{
+        text-align: left;
+}
+.caja__img-curso{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
+/*celular*/
+@media(HOME-width: 320px){
+    .flex_cont_cursos{
+        width: 20%;
+        margin: auto;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    }
+
+.carrusel_principal1{
+    background-color: #ffffff;
+    background-repeat: repeat-x;
+}
+
+.carrusel_principal2{
+    background-color: #b2b2b2;
+}
+
+.carrusel_principal3{
+    background-color: #1c0113;
+    color: #ffffff;
+}
+
