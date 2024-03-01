@@ -5,7 +5,7 @@
 }
 /*----------- H O M E ------------*/
 /* celular */
-@media (max-width: 380px) {
+@media (max-width: 415px) {
     .contenedor__titulos__certificados{
         text-align: center;
     }

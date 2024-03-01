@@ -21,3 +21,7 @@ app.listen(port,() => {
 app.get("/detalle-de-curso", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/product-details.html"));
 });
+
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/register.html"));
+});
