@@ -138,3 +138,54 @@ font-size: 2.3em;
 }
 
 }
+
+/*----------footer------------*/
+footer{
+    width: 100%;
+    height: 25em;
+    background-color: #a30006;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Newsletter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footyer__input__email{
+    margin: 1em 4em;
+    border-radius: 1em;
+}
+.footyer__input__registrarme{
+    width: 7em;
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+.cursos__dest, .comunidad{
+    padding: 1em;
+}
+.cursos__dest a{
+    text-decoration: none;
+    color: black;
+}
+.comunidad a{
+    text-decoration: none;
+    color: black;
+}
+
+/*redes*/
+.contenedor__redes{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor__redes i {
+    scale: 1.5;
+}
+
