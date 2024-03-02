@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
   }
 /*-----------------------------*/
   header {
@@ -35,8 +36,29 @@
 
   .main__course-title {
     display: block;
-    width: 100%;
+    width: 60%;
     text-align: center;
     padding-top: 1rem;
     font-size: 18px;
+  }
+
+  .main__container-button {
+    margin: auto;
+    width: 40%;
+  }
+
+  .main__button--add-cart {
+    padding: 5px 8px;
+    font-size: 12px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .main__container--modality {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__article--container-img {
+    width: 40%;
   }
