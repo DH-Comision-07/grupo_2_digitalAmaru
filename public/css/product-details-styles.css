@@ -19,7 +19,9 @@
 
   .main__container {
     display: inherit;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     background-color: beige;
 
@@ -32,6 +34,10 @@
 
   .main_principal-img img{
     width: 100%;
+  }
+
+  .main__container-title-button {
+    display: flex;
   }
 
   .main__course-title {
@@ -52,6 +58,23 @@
     font-size: 12px;
     border: 1px solid;
     border-radius: 5px;
+  }
+
+  .main__container-benefits {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__box-benefits {
+    display: inherit;
+  }
+
+  .main__benefits--box-icon {
+    display: inline-block;
+  }
+
+  .main__box-benefits p {
+    display: inline-block;
   }
 
   .main__container--modality {
