@@ -85,3 +85,6 @@ https://www.soyhenry.com/
 Todos tienen alianzas con grandes empresas que sugieren buscar a sus empleados de acuerdo a cada plataforma. Al final de cada sitio, encontramos información general acerca de la empresa, los productos que ofrecen, como contactarlos y como está formado el equipo, suscripciones, etc. Todos tienen un login y para registrarse
 
 Foco en funcionalidad de soyhenry y estética de Digital House.
+
+- Tablero de trabajo:
+https://trello.com/b/Ng1bwpOd/digitalamaru
