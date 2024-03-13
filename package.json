@@ -4,8 +4,8 @@
   "description": "https://github.com/DH-Comision-07/grupo_2_digitalAmaru.git",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js -e js,html,css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
