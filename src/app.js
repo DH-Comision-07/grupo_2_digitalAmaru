@@ -10,8 +10,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-app.use('index', index);
-
+app.use('/', index);
+app.use("/home", index);
  
 
 //ruta de producto
