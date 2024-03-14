@@ -2,16 +2,15 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = 3300;
+const index = require('./routes/index');
 
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.get("/", (req, res) => {
-  res.render("index")
-});
 
+app.use('index', index);
 
  
 
