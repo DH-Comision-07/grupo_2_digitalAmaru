@@ -9,10 +9,12 @@ app.use(express.static(publicPath));
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.get("/", (req, res) => {
+  res.render("index")
+});
 
-app.use('/', index);
-app.use("/home", index);
- 
+
+
 
 //ruta de producto
 app.get("/detalle-de-curso", (req, res) => {
@@ -21,15 +23,11 @@ app.get("/detalle-de-curso", (req, res) => {
 
 //ruta de usuario
 app.get("/register", (req, res) => {
-  res.render("register")
+  res.sendFile(path.join(__dirname, "/views/register.html"));
 });
 //ruta de usuario
 app.get("/login", (req, res) => {
-  res.render("login")
-});
-
-app.get("/cart", (req, res) => {
-  res.render("cart")
+  res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
 app.listen(port, () => 
