@@ -8,6 +8,7 @@
 * Ser más proactivos
 * Comunicar en qué estado está cada uno
 * Participar en las reuniones
+* Hacer reuniones más seguidas
 
 
 3- Continuar haciendo:
@@ -19,11 +20,11 @@
 
 
 4- Hacer menos:
-* No tomar la palabra en las reuniones
+* Minima participación en reuniones
 * Dilatar la toma de decisiones
 
 
 5- Dejar de hacer:
-* No participar de las reuniones
-* No contribuir al equipo
+* Estar ausentes en las reuniones
+* Falta de participacón
 * Falta de compromiso
