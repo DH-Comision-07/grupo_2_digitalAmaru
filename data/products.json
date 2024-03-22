@@ -1,0 +1,72 @@
+[
+    {
+      "id": 100,
+      "name": "Curso de Programación Básica",
+      "description": "Aprende los fundamentos de la programación con este curso de 15 horas. Comienza con una introducción a la lógica de programación y los conceptos fundamentales que te permitirán entender cómo funcionan los programas.",
+      "image": "https://example.com/curso_programacion_basica.jpg",
+      "price": 20000
+    },
+    {
+      "id": 200,
+      "name": "Curso Fundamentos HTML y CSS",
+      "description": "Sumérgete en el mundo del diseño web con este curso de 7 horas. Aprende sobre las etiquetas y la estructura de HTML, así como la estilización de páginas con CSS para crear sitios web visualmente atractivos.",
+      "image": "https://example.com/curso_html_css.jpg",
+      "price": 15000
+    },
+    {
+      "id": 300,
+      "name": "Curso Práctico HTML y CSS",
+      "description": "Aplica los conocimientos adquiridos en HTML y CSS con este curso práctico de 2 horas. Aprende a crear y estilizar páginas web reales para llevar tus habilidades de diseño web al siguiente nivel.",
+      "image": "https://example.com/curso_practico_html_css.jpg",
+      "price": 12000
+    },
+    {
+      "id": 400,
+      "name": "Curso Responsive Design",
+      "description": "Domina el arte del diseño web adaptable con este curso de 5 horas. Aprende a utilizar media queries y técnicas de diseño adaptable para crear sitios web que se adapten a diferentes dispositivos y tamaños de pantalla.",
+      "image": "https://example.com/curso_responsive_design.jpg",
+      "price": 25000
+    },
+    {
+      "id": 500,
+      "name": "Curso CSS Grid y Flexbox",
+      "description": "Aprende a diseñar páginas web modernas y flexibles con este curso de 4 horas. Dominarás CSS Grid y Flexbox para crear diseños complejos y flexibles que se ajusten a cualquier dispositivo.",
+      "image": "https://example.com/curso_css_grid_flexbox.jpg",
+      "price": 18000
+    },
+    {
+      "id": 600,
+      "name": "Curso Programación con JavaScript",
+      "description": "Explora el mundo de la programación en el lado del cliente con este curso de 11 horas. Aprende sobre variables, operadores y estructuras de control en JavaScript para crear aplicaciones web interactivas y dinámicas.",
+      "image": "https://example.com/curso_programacion_javascript.jpg",
+      "price": 30000
+    },
+    {
+      "id": 700,
+      "name": "Curso Básico de Programación Orientada a Objetos con JavaScript",
+      "description": "Sumérgete en los principios de la programación orientada a objetos con este curso de 3 horas. Aprende los conceptos básicos de OOP en JavaScript y cómo aplicarlos en tus proyectos.",
+      "image": "https://example.com/curso_basico_oop_javascript.jpg",
+      "price": 15000
+    },
+    {
+      "id": 800,
+      "name": "Curso Intermedio de Programación Orientada a Objetos con JavaScript",
+      "description": "Profundiza tus conocimientos de programación orientada a objetos con este curso de 4 horas. Explora conceptos avanzados de OOP y aprende a aplicarlos en situaciones del mundo real.",
+      "image": "https://example.com/curso_intermedio_oop_javascript.jpg",
+      "price": 20000
+    },
+    {
+      "id": 900,
+      "name": "Curso Fundamentos de Bases de Datos",
+      "description": "Aprende los fundamentos de las bases de datos con este curso de 8 horas. Explora conceptos básicos como tablas, consultas y relaciones para comenzar a trabajar con bases de datos de manera efectiva.",
+      "image": "https://example.com/curso_fundamentos_bases_datos.jpg",
+      "price": 22000
+    },
+    {
+      "id": 1000,
+      "name": "Curso Fundamentos de Node.js",
+      "description": "Descubre el mundo del desarrollo backend con este curso de 5 horas. Aprende sobre Node.js y cómo utilizarlo para crear aplicaciones web escalables y eficientes en el servidor.",
+      "image": "https://example.com/curso_fundamentos_nodejs.jpg",
+      "price": 28000
+    }
+  ]
