@@ -1,4 +1,6 @@
 /*header*/
+@media only screen and (max-width:600px){
+
 .header__index{
     display: flex;
     width: 100%;
@@ -220,4 +222,5 @@ footer{
         align-items: flex-end;
         padding: 2em;
     }
+}
 }
