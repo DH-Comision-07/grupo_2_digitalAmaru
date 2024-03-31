@@ -23,12 +23,23 @@ app.get("/detalle-de-curso", (req, res) => {
 
 //ruta de usuario
 app.get("/register", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/register.html"));
+  res.render("register")
 });
 //ruta de usuario
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/login.html"));
+  res.render("login")
 });
+
+//ruta de usuario
+app.get("/nosotros", (req, res) => {
+  res.render("nosotros")
+});
+
+//ruta de usuario
+app.get("/cart", (req, res) => {
+  res.render("cart")
+});
+
 
 app.listen(port, () => 
 console.log(`http://localhost:${port}`)
