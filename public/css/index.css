@@ -18,6 +18,11 @@
         flex-direction: column;
         justify-content: center;
     }
+    .contenedor__titulos__cursos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 /*SECCION TITULOS*/
 /* Contenedor titulos certificados*/
@@ -32,6 +37,12 @@
     justify-content: space-around;
     
 }
+
+.contenedor__titulos__cursos{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Titulo Beneficios Titulos*/
 .contenedor__titulo{
@@ -68,11 +79,23 @@
 font-size: 2em;
 color: #1c0113;
 }
-.img__titulo{
-    width: 100px;
-    height: 100px;
-    background-color: #979797;
+.titulos__indiv img{
+width: 30%;
 }
+.titulo__indiv img{
+    width: 50%;
+}
+.titulo__indiv img{
+    width: 50%;
+}
+.flex_cont_titulos img{
+width: 40%;
+}
+.flex_cont_titulos img{
+    width: 40%;
+    }
+       
+
 /* subtitulo */
 .h3-titulos-int{
     margin: 1em 0;
@@ -89,7 +112,8 @@ color: #1c0113;
 }
 
 .contenedor__titulos__cursos{
-        text-align: left;
+        display: flex;
+        justify-content: space-around;
 }
 .caja__img-curso{
     display: flex;
@@ -98,30 +122,6 @@ color: #1c0113;
     align-items: center;
     margin-bottom: 1em;
 }
-/*celular*/
-@media(max-width: 320px){
-    .flex_cont_cursos{
-        width: 20%;
-        margin: auto;
-        justify-content: center;
-        padding-top: 20px;
-    }
-}
-/*compu*/
-@media(min-width: 320px){
-    .flex_cont_cursos{
-        width: 100%;
-        margin: auto;
-        display: flex;
-        
-        justify-content: space-around;
-        padding-top: 20px;
-
-    }
-}
-
-
-
 
 
 
