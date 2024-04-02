@@ -1,3 +1,7 @@
-const controller = {};
+const userController = {
+    user: function(req,res){
+        res.render('user');
+    },
+};
 
-module.exports = controller;
+module.exports = userController;

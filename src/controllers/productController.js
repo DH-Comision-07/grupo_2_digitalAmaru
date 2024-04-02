@@ -1,3 +1,7 @@
-const controller = {};
+const productController = {
+    product: function(req,res){
+        res.render('product');
+    },
+};
 
-module.exports = controller;
+module.exports = productController;
