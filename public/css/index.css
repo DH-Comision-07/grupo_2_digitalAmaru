@@ -58,7 +58,6 @@
 
 /* contenedor de los titulos individuales*/
 .titulos__indiv{
-    width: 15em;
     height: 20em;
     border: 0.2em solid #6b0103;
     border-radius: 0.4em;
@@ -80,7 +79,7 @@ font-size: 2em;
 color: #1c0113;
 }
 .titulos__indiv img{
-width: 30%;
+width: 20%;
 }
 .titulo__indiv img{
     width: 50%;
@@ -140,16 +139,22 @@ width: 40%;
         width: 100%;
         margin: auto;
         display: flex;
-        
         justify-content: space-around;
         padding-top: 20px;
-
     }
+}
+
+.carruselimglogo1{
+    width: 30px;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .carrusel_principal1{
     background-color: #ffffff;
     background-repeat: repeat-x;
+    width: 30%;
 }
 
 .carrusel_principal2{
@@ -159,4 +164,33 @@ width: 40%;
 .carrusel_principal3{
     background-color: #1c0113;
     color: #ffffff;
+}
+
+ul, ol {
+    list-style: none;
+}
+.nav li a {
+    background-color: #7e4cce;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav > li{
+    float: left;
+}
+.nav li a:hover {
+    background-color: #434343;
+}
+.nav > li{
+    float:left;
+}
+.nav li ul {
+    display:none;
+    position: absolute;
+    min-width: 140px;
+}
+.nav li:hover > ul {
+    display: block;
 }
