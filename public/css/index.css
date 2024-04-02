@@ -1,147 +1,202 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*----------- H O M E ------------*/
+
 /* celular */
 @media (max-width: 415px) {
-    .contenedor__titulos__certificados{
+    .contenedor__titulos__certificados {
         text-align: center;
     }
-    .titulos__indiv{
+
+    .titulos__indiv {
         margin: 1em auto;
     }
-    .flex_cont_titulos{
-        
+
+    .flex_cont_titulos,
+    .contenedor__titulos__cursos {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 }
+
 /*SECCION TITULOS*/
-/* Contenedor titulos certificados*/
-.contenedor__titulos__certificados{
+
+/* Contenedor titulos certificados */
+.contenedor__titulos__certificados {
     width: 100%;
     height: 300px;
     margin: 2em 0;
-
 }
-.flex_cont_titulos{
+
+.flex_cont_titulos {
     display: flex;
     justify-content: space-around;
-    
 }
 
-/* Titulo Beneficios Titulos*/
-.contenedor__titulo{
+.contenedor__titulos__cursos {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Titulo Beneficios Titulos */
+.contenedor__titulo {
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.contenedor__titulo h3{
+
+.contenedor__titulo h3 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
-/* contenedor de los titulos individuales*/
-.titulos__indiv{
-    width: 15em;
+/* contenedor de los titulos individuales */
+.titulos__indiv {
     height: 20em;
     border: 0.2em solid #6b0103;
     border-radius: 0.4em;
-        /*interior*/
-        background-color: #ffffff;
-        padding: 0.7em;
-
+    /*interior*/
+    background-color: #ffffff;
+    padding: 0.7em;
 }
-.caja__img-titulo{
+
+.caja__img-titulo {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1em;
 }
+
 /*nombre titulo*/
-.caja__img-titulo h3{
-font-size: 2em;
-color: #1c0113;
+.caja__img-titulo h3 {
+    font-size: 2em;
+    color: #1c0113;
 }
-.img__titulo{
-    width: 100px;
-    height: 100px;
-    background-color: #979797;
+
+.titulos__indiv img {
+    width: 20%;
 }
+
+.titulo__indiv img {
+    width: 50%;
+}
+
+.flex_cont_titulos img {
+    width: 40%;
+}
+
 /* subtitulo */
-.h3-titulos-int{
+.h3-titulos-int {
     margin: 1em 0;
 }
-/* parrafo de los cont de titulos*/
-.cont_p_texto{
+
+/* parrafo de los cont de titulos */
+.cont_p_texto {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cont_p_texto p{
+
+.cont_p_texto p {
     text-align: start;
 }
 
-.contenedor__titulos__cursos{
-        text-align: left;
+.contenedor__titulos__cursos {
+    display: flex;
+    justify-content: space-around;
 }
-.caja__img-curso{
+
+.caja__img-curso {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1em;
 }
+
 /*celular*/
-@media(max-width: 320px){
-    .flex_cont_cursos{
+@media (max-width: 320px) {
+    .flex_cont_cursos {
         width: 20%;
         margin: auto;
         justify-content: center;
         padding-top: 20px;
     }
 }
+
 /*compu*/
-@media(min-width: 320px){
-    .flex_cont_cursos{
+@media (min-width: 320px) {
+    .flex_cont_cursos {
         width: 100%;
         margin: auto;
         display: flex;
-        
         justify-content: space-around;
         padding-top: 20px;
-
     }
 }
 
-
 .carousel {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease;
+    margin: 0;
+    padding: 0;
 }
 
-.carrusel_principal {
-    flex: 0 0 100%;
-    text-align: center; /* Centra el contenido dentro del carrusel */
+.carousel-article {
+    flex: 0 0 100%; /* Establece el ancho fijo de cada artículo del carrusel */
 }
 
-
-.carrusel_principal img {
+.carousel-article img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
+.carousel-article:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último artículo para evitar un espacio adicional */
+}
 
 /* ultimo */
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav li a {
+    background-color: rgb(123, 123, 245);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
