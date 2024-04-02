@@ -56,13 +56,8 @@
     margin-bottom: 1em;
 }
 
-<<<<<<< HEAD
 /* contenedor de los titulos individuales */
 .titulos__indiv {
-=======
-/* contenedor de los titulos individuales*/
-.titulos__indiv{
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
     height: 20em;
     border: 0.2em solid #6b0103;
     border-radius: 0.4em;
@@ -80,18 +75,9 @@
 }
 
 /*nombre titulo*/
-<<<<<<< HEAD
 .caja__img-titulo h3 {
     font-size: 2em;
     color: #1c0113;
-=======
-.caja__img-titulo h3{
-font-size: 2em;
-color: #1c0113;
-}
-.titulos__indiv img{
-width: 20%;
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
 }
 
 .titulos__indiv img {
@@ -104,13 +90,8 @@ width: 20%;
 
 .flex_cont_titulos img {
     width: 40%;
-<<<<<<< HEAD
 }
 
-=======
-    }
-       
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
 /* subtitulo */
 .h3-titulos-int {
     margin: 1em 0;
@@ -162,7 +143,6 @@ width: 20%;
     }
 }
 
-<<<<<<< HEAD
 .carousel {
     position: relative;
     overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
@@ -195,34 +175,6 @@ ol {
     list-style: none;
 }
 
-=======
-.carruselimglogo1{
-    width: 30px;
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.carrusel_principal1{
-    background-color: #ffffff;
-    background-repeat: repeat-x;
-}
-
-.carrusel_principal {
-    flex: 0 0 100%;
-    text-align: center; /* Centra el contenido dentro del carrusel */
-}
-
-.carrusel_principal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-ul, ol{
-    list-style: none;
-}
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
 .nav li a {
     background-color: rgb(123, 123, 245);
     color: #ffffff;
@@ -230,7 +182,6 @@ ul, ol{
     padding: 10px 15px;
     display: block;
 }
-<<<<<<< HEAD
 
 .nav > li {
     float: left;
@@ -241,26 +192,12 @@ ul, ol{
 }
 
 .nav li ul {
-=======
-.nav > li {
-    float:left;
-}
-.nav li a:hover {
-    background-color: #434343;
-}
-.nav li ul{
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
     display: none;
     position: absolute;
     min-width: 140px;
 }
-<<<<<<< HEAD
 
 .nav li:hover > ul {
     display: block;
 }
-=======
-.nav li:hover > ul{
-    display: block;
-}
->>>>>>> b1a4f44f56aa4a8bf1ee1e9237a903a8c6bc9046
+
