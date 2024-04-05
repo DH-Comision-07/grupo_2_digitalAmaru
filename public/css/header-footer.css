@@ -9,7 +9,7 @@
 .contenedor_logo{
     width: 6em;
     height: 4em;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
