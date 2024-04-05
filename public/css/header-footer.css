@@ -1,11 +1,11 @@
-/header/
+/*header*/
 .header__index{
     display: flex;
     width: 100%;
     height: 4em;
     background-color: #a30006;
 }
-/Contenedor img header/
+/*Contenedor img header*/
 .contenedor_logo{
     width: 6em;
     height: 4em;
@@ -16,7 +16,7 @@
 .contenedor_logo p {
 font-size: 2.3em;
 }
-/display none/
+/*display none*/
 .contenedor_cursos, .contenedorblog, .contenedor_nosotros {
     display: none;
 }
@@ -46,7 +46,7 @@ font-size: 2.3em;
     scale: 1.5;
     color: black;
 }
-/logo carrito compras/
+/*logo carrito compras*/
 .contenedor__compras{
     width: 4em;
     height: 4em;
