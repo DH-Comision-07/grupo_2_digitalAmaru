@@ -9,12 +9,10 @@ app.use(express.static(publicPath));
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+//ruta de index
 app.get("/", (req, res) => {
   res.render("index")
 });
-
-
-
 
 //ruta de producto
 app.get("/detalle-de-curso", (req, res) => {
@@ -31,15 +29,14 @@ app.get("/login", (req, res) => {
 });
 
 //ruta de usuario
-app.get("/nosotros", (req, res) => {
-  res.render("nosotros")
-});
-
-//ruta de usuario
 app.get("/cart", (req, res) => {
   res.render("cart")
 });
 
+//ruta de main
+app.get("/nosotros", (req, res) => {
+  res.render("nosotros")
+});
 
 
 
@@ -51,4 +48,4 @@ app.listen(port, () =>
 console.log(`http://localhost:${port}`)
 )
 
-//vista y ruta de carrito, vista de listado de productos, vista de agregar producto (formulario), edicion de productos, vista perfil de usuario, vista de edicion de usuario (formulario), vista donde enlisten usuarios. cada uno con ruta
+//vista de listado de productos, vista de agregar producto (formulario), edicion de productos, vista perfil de usuario, vista de edicion de usuario (formulario), vista donde enlisten usuarios. cada uno con ruta
