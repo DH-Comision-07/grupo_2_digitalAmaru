@@ -1,45 +1,81 @@
 /*header*/
-@media (max-width: 600px){
+.header__index{
+    display: flex;
+    width: 100%;
+    height: 4em;
+    background-color: #a30006;
+}
+/*Contenedor img header*/
+.contenedor_logo{
+    width: 6em;
+    height: 4em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_logo p {
+font-size: 2.3em;
+}
+/*display none*/
+.contenedor_cursos, .contenedorblog, .contenedor_nosotros {
+    display: none;
+}
+/* input buscador */
+.cont__input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    height: 4em;
+}
+.cont__input input{
+    height: 2em;
+    border-radius: 0.4em ;
+    border: none;
+}
 
-    .header__index{
-        width: 100%;
-        height: 40em;
-        background-color: #a30006;
-    }
-    /*Contenedor img header*/
-    .contenedor_logo{
-        display: flex;
-        width: 6em;
-        height: 4em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .contenedor_logo p {
-    font-size: 2.3em;
-    }
-    /*display none*/
-    .contenedor__cursos, .contenedor__blog, .contenedor__nosotros {
-        display: none;
-    }
-    /* input buscador */
+/* logo login */
+.contenedor__login{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor__login a i{
+    scale: 1.5;
+    color: black;
+}
+/*logo carrito compras*/
+.contenedor__compras{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor__compras a i{
+    scale: 1.5;
+    color: black;
+}
+
+@media (max-width: 415px) {
     .cont__input{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 12em;
+        width: 8em;
         height: 4em;
     }
     .cont__input input{
         height: 2em;
-        width: 100%; /* Cambiada la unidad de medida */
+        width: 8em;
         border-radius: 0.4em ;
         border: none;
     }
-    
-    /* logo login */
+
     .contenedor__login{
-        width: 4em;
+        width: 3em;
         height: 4em;
         display: flex;
         align-items: center;
@@ -49,110 +85,59 @@
         scale: 1.5;
         color: black;
     }
-    /*logo carrito compras*/
-    .contenedor__compras{
-        width: 4em;
-        height: 4em;
+}
+@media (min-width: 422px) {
+    .header__index{
         display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .contenedor__compras a i{
-        scale: 1.5;
-        color: black;
-    }
-    }
-    @media (max-width: 415px) {     
-        .cont__input{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 8em;
-            height: 4em;
-        }
-        .cont__input input{
-            height: 2em;
-            width: 8em;
-            border-radius: 0.4em ;
-            border: none; 
-        }
-    
-        .contenedor__login{
-            width: 3em;
-            height: 4em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .contenedor__login a i{
-            scale: 1.5;
-            color: black;
-        }
-    }
-    @media (min-width: 422px) {
-        .header__index{
-            display: flex;
-            width: 100%;
-            height: 4em;
-            background-color: #a30006;
-            justify-content: space-around;
-        }
-    
-        /* input buscador */
-    .cont__input{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
+        width: 100%;
         height: 4em;
+        background-color: #a30006;
+        justify-content: space-around;
     }
-    .cont__input input{
-        height: 2em;
-        width: 40em;
-        border-radius: 0.4em ;
-        border: none;
-    }
-    .contenedor__cursos, .contenedor__blog, .contenedor__nosotros {
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        height: 4em;
-        
-    }
-    .contenedor__cursos a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.5em;
-        margin: auto 1em;
+
+    /* input buscador */
+.cont__input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 4em;
+}
+.cont__input input{
+    height: 2em;
+    width: 40em;
+    border-radius: 0.4em ;
+    border: none;
+}
+.contenedor_cursos, .contenedorblog, .contenedor_nosotros {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
     
-    }
-    .contenedor__blog a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.5em;
-        margin: auto 1em;
-    }
-    
-    .contenedor__nosotros a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.5em;
-        margin: auto 1em;
-    }
-    
-    }
-    @media (min-width: 601px) {
-       
-        .contenedor__compras, .contenedor__login{
-            height: 4em;
-            width: 4em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-    } 
-    
+}
+.contenedor__cursos a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin: auto 1em;
+
+}
+.contenedor__blog a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin: auto 1em;
+}
+
+.contenedor__nosotros a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin: auto 1em;
+}
+
+}
     /*----------footer------------*/
     
     footer{
