@@ -38,6 +38,12 @@ app.get("/nosotros", (req, res) => {
   res.render("nosotros")
 });
 
+
+
+
+
+
+
 app.listen(port, () => 
 console.log(`http://localhost:${port}`)
 )

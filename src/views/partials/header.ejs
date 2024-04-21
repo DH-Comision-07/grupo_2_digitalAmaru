@@ -1,33 +1,38 @@
 <header class="header__index">
-    <!--IMG HEADER-->
-    <div class="contenedor_logo">
-        <p>Logo</p>
-    </div>
-    <!--cursos blog nosotros-->
-    <div class="contenedor__cursos">
-        <a href="##">Cursos</a>
-    </div>
-    <div class="contenedor__blog">
-        <a href="##">Blog</a>
-    </div>
-    <div class="contenedor__nosotros">
-        <a href="##">Nosotros</a>
-    </div>
-    <!--INPUT BUSCADOR-->
-    <div class="cont__input">
-        <input type="text" value="   Busca tu curso!">
-    </div>
+    <nav class="navbar">
+        <h1 class="logo">digitalAmaru</h1>
+        <ul class="nav-links">
+            <li><a href="#"></a>Cursos</li>
+            <li><a href="#"></a>Blog</li>
+            <li><a href="#"></a>Nosotros</li>
+        </ul>
 
-    <!--loguin-->
-    <div class="contenedor__login">
-        <a href="">
-            <i class="fa-solid fa-user"></i>
-        </a>
-    </div>
-    <!-- carrito compras  -->
-    <div class="contenedor__compras">
-        <a href="">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-    </div>
+        <form>
+            <div class="search">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input class="search-input" type="search" placeholder="Search">
+            </div>
+        </form>
+        
+
+        <ul class="nav-links">
+            <li><a href="#"></a>Iniciar seción</li>
+            <li><a href="#"></a>Registrarse</li>
+        </ul>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <img src="/images/menu.png" alt="" class="menu-button">
+
+        
+    </nav>
 </header>
+
+<script>
+    const menuButton = document.querySelector('.menu-button')
+    const navlinks = document.querySelector('.nav-links')
+
+    menuButton.addEventListener('click', ()=>{
+        navlinks.classList.toggle('mobile-menu')
+    })
+</script>
