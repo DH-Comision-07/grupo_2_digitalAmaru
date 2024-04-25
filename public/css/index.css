@@ -138,7 +138,7 @@ ul{
 
 
 /*Movil*/
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 600px){
 
 
     .menu-button{
@@ -182,6 +182,11 @@ ul{
         max-width: 90%;
     }
 
+    .titulos__indiv{
+        margin: 20px auto;
+        flex-direction: column;
+    }
+
 
 
 
@@ -199,7 +204,7 @@ ul{
 }
 
 /*compu*/
-@media (min-width: 320px) {
+@media (min-width: 850px) {
     .flex_cont_cursos {
         width: 100%;
         margin: auto;
@@ -240,6 +245,7 @@ ul{
 .flex_cont_titulos {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .contenedor__titulos__cursos {
@@ -263,10 +269,14 @@ ul{
 
 /* contenedor de los titulos individuales */
 .titulos__indiv {
-    height: 20em;
+    display: flex;
+    flex-direction: column;
+    height: 30em;
     border: 0.2em solid #6b0103;
     border-radius: 0.4em;
-    padding: auto;
+    align-items: center;
+    padding: 9px;
+
     /*interior*/
     background-color: #ffffff;
     
