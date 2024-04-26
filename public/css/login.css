@@ -57,3 +57,7 @@ button[type="submit"]:hover {
     align-items: center;
     margin-top: 10px;
 }
+
+.additionals p a{
+    color: #0056b3;
+}
