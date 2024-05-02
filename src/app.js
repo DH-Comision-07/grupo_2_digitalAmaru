@@ -23,6 +23,7 @@ app.get("/detalle-de-curso", (req, res) => {
 app.get("/register", (req, res) => {
   res.render("register")
 });
+
 //ruta de usuario
 app.get("/login", (req, res) => {
   res.render("login")

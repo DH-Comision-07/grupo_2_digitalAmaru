@@ -132,13 +132,20 @@ ul{
     color: rgba(0, 0, 0, 0.5);
 }
 
-
+.nav-links li{
+    list-style: none;
+    
+}
+.nav-links li a{
+    color: #1c0113;
+    text-decoration: none;
+}
 
 
 
 
 /*Movil*/
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 600px){
 
 
     .menu-button{
@@ -180,13 +187,41 @@ ul{
     }
     .col img{
         max-width: 90%;
+<<<<<<< HEAD
     }*/
+=======
+    }
+
+    .titulos__indiv{
+        margin: 20px auto;
+        flex-direction: column;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+>>>>>>> 1febf24c8b51ca149ed8783ef3fb733fc06e232e
 
 }
 
 /*compu*/
+<<<<<<< HEAD
 @media (min-width: 320px) {
  /*   .flex_cont_cursos {
+=======
+@media (min-width: 850px) {
+    .flex_cont_cursos {
+>>>>>>> 1febf24c8b51ca149ed8783ef3fb733fc06e232e
         width: 100%;
         margin: auto;
         display: flex;
@@ -226,6 +261,7 @@ ul{
 .flex_cont_titulos {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .contenedor__titulos__cursos {
@@ -248,12 +284,25 @@ ul{
 }*/
 
 /* contenedor de los titulos individuales */
+<<<<<<< HEAD
 /* .titulos__indiv {
     height: 20em;
     border: 0.2em solid #6b0103;
     border-radius: 0.4em;
     padding: auto;
     
+=======
+.titulos__indiv {
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+    border: 0.2em solid #6b0103;
+    border-radius: 0.4em;
+    align-items: center;
+    padding: 9px;
+
+    /*interior*/
+>>>>>>> 1febf24c8b51ca149ed8783ef3fb733fc06e232e
     background-color: #ffffff;
     
 }

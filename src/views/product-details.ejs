@@ -1,128 +1,87 @@
 <!DOCTYPE html>
 <html>
-    
+
 <!--HEAD-->
 <%- include('./partials/head') %>
 
-    <body class="body body__reset">
-        <!--HEADER-->
-        <header class="header__index">
-            <!--IMG HEADER-->
-            <div class="contenedor_logo">
-                <p>Logo</p>
+<body class="body body__reset">
+    <!--HEADER-->
+    <header class="header__index">
+        <!--IMG HEADER-->
+        <div class="contenedor_logo">
+            <p>Logo</p>
+        </div>
+        <!--cursos blog nosotros-->
+        <div class="contenedor__cursos">
+            <a href="##">Cursos</a>
+        </div>
+        <div class="contenedor__blog">
+            <a href="##">Blog</a>
+        </div>
+        <div class="contenedor__nosotros">
+            <a href="##">Nosotros</a>
+        </div>
+        <!--INPUT BUSCADOR-->
+        <div class="cont__input">
+            <input type="text" value="   Busca tu curso!">
+        </div>
+
+        <!--loguin-->
+        <div class="contenedor__login">
+            <a href="">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+        <!-- carrito compras  -->
+        <div class="contenedor__compras">
+            <a href="">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="main" style="margin-top: 30px;"> <!-- Agregar margen superior -->
+        <!-- Cuatro cajas con texto -->
+        <div class="boxes-container top-boxes-container"> <!-- Agregada la clase top-boxes-container -->
+            <div class="box">
+                <p>Tutoría personalizada</p>
             </div>
-            <!--cursos blog nosotros-->
-            <div class="contenedor__cursos">
-                <a href="##">Cursos</a>
+            <div class="box">
+                <p>Clases en vivo</p>
             </div>
-            <div class="contenedor__blog">
-                <a href="##">Blog</a>
+            <div class="box">
+                <p>Profesores expertos</p>
             </div>
-            <div class="contenedor__nosotros">
-                <a href="##">Nosotros</a>
+            <div class="box">
+                <p>Proyectos grupales</p>
             </div>
-            <!--INPUT BUSCADOR-->
-            <div class="cont__input">
-                <input type="text" value="   Busca tu curso!">
+        </div>
+        <div class="main__container">
+            <div class="main__content">
+                <h2 class="main__course-title">Programación con JavaScript</h2>
+                <button class="main__button--add-cart"><a href="">Agregar a Carrito</a></button>
+                <p style="margin-top: 20px;">Este curso te brinda los conocimientos básicos necesarios para iniciar tu viaje en el desarrollo web, abarcando desde la sintaxis elemental hasta la manipulación del DOM y manejo de eventos.</p>
             </div>
-
-            <!--loguin-->
-            <div class="contenedor__login">
-                <a href="">
-                    <i class="fa-solid fa-user"></i>
-                </a>
+            <div class="main__image">
+                <img src="/images/imgen1.jpeg" alt="" style="max-width: 400px;"> <!-- Ajustar el ancho máximo -->
             </div>
-            <!-- carrito compras  -->
-            <div class="contenedor__compras">
-                <a href="">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
+        </div>
+        <!-- mas info -->
+        <div class="main__container">
+            <div class="main__content">
+                <p style="margin-top: 20px;"> 4 meses de duración y dos clases de 3hs en vivo por semana. Fecha de inicio de curso: 04/10/2024</p>
             </div>
-        </header>
-
-
-        <main class="main">
-            <div class="main__container">
-                <figure class="main_principal-img">
-                    <img src="/images/port-javascript.jpg" alt="">
-                </figure>
-                <h2 class="main__course-title">Programación con JavaScript <js></h2>
-                <div class="main__container-button">
-                    <button class="main__button--add-cart"><a href="">Agregar a Carrito</a></button>
-                </div>
-                <p>Este curso te brinda los conocimientos básicos necesarios para iniciar tu viaje en el desarrollo web, abarcando desde la sintaxis elemental hasta la manipulación del DOM y manejo de eventos.</p>
-
-                <section class="main__container-benefits">
-                    <div class="main__box-benefits">
-                        <div>
-                            <i class="fa-solid fa-person-chalkboard"></i>
-                        </div>
-                        <p>Tutorías personalizadas</p>
-                    </div>
-                    <div class="main__box-benefits"></div>
-                        <div>
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <p>Certificado profesional</p>
-                    </div>
-                    <div class="main__box-benefits"></div>
-                        <div>
-                            <i class="fa-solid fa-diagram-project"></i>
-                        </div>
-                        <p>Proyectos integradores grupales</p>
-                    </div>
-                    <div class="main__box-benefits"></div>
-                        <div>
-                            <i class="fa-solid fa-chalkboard-user"></i>
-                        </div>
-                        <p>Clases en vivo</p>
-                    </div>
-                </section>
-                <section class="main__container--modality">
-                    <article>
-                        <div>
-                            <ul>
-                                <li>4 meses de duración</li>
-                                <li>2 clases de 3hs en vivo por semana</li>
-                                <li>Fecha de inicio: Julio 2024 (a confirmar)</li>
-                            </ul>
-                        </div>
-                        <figure class="main__article--container-img">
-                            <img src="" alt="">
-                        </figure>
-                    </article>
-                    <article>
-                        <div>
-                            <ul>
-                              <li></li>
-                            </ul>
-                        </div>
-                        <figure>
-                          <img src="" alt="">
-                        </figure>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <div>
-                            <ul>
-                              <li></li>
-                            </ul>
-                        </div>
-                        <figure>
-                          <img src="" alt="">
-                        </figure>
-                    </article>
-                </section>
-
-
+            <div class="main__image">
+                <img src="/images/imgen2.jpeg" alt="" style="max-width: 400px;"> <!-- Ajustar el ancho máximo -->
             </div>
+            <div class="main__content">
+                <p style="margin-top: 20px;"> Contenido avalado por las mejores empresas. Oferta laboral garantizada a través de nuestro portal de empleo.</p>
+            </div>
+            <div class="main__image">
+                <img src="/images/program.jpg" alt="" style="max-width: 400px;"> <!-- Ajustar el ancho máximo -->
+            </div>
+        </div>
 
-        </main>
-
-
-        <footer>
-
-        </footer>
-    </body>
+    </main>
+</body>
 </html>
