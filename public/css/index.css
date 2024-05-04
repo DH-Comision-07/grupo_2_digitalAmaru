@@ -54,14 +54,16 @@ p {
 .header__index{
   display: flex;
   width: 100%;
-  height: 5em;
+  height: auto;
   background-color: #a30006;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
+.search{display: none;}
+.form{
+  display: none;
+}
 ul{
   list-style: none;
 }
@@ -100,7 +102,7 @@ ul{
 
 /*Search*/
 .search{
-  --padding: 14px
+  --padding: 14px,
 
   width: max-content;
   display: flex;
@@ -108,7 +110,7 @@ ul{
   padding: var(--padding);
   border-radius: 28px;
   background: #f6f6f6;
-  transition: box-shadow 0.25s;
+  transition: 0.25s;
 }
 
 .search:focus-within{
@@ -147,7 +149,8 @@ ul{
 /*Movil*/
 @media only screen and (max-width: 600px){
 
-
+  .search{display: none;}
+.header__index{height: auto;}
   .menu-button{
       display: block;
   }
@@ -343,7 +346,10 @@ p.descripcion {
 }
 
 @media (min-width: 361px) /*Smart*/ {
-
+.search{display: none;}
+.header__index{
+  height: auto;
+}
 .logo{
   width: 33%;
   }
@@ -391,7 +397,10 @@ p.descripcion {
   justify-content: space-between;
   padding: 10px;
   }
-
+.header__index{
+  height: auto;
+}
+.search{display: block;}
 .container-search-bar{
   margin: 30px;
   }
@@ -432,6 +441,10 @@ p.descripcion {
 }
 
 @media (min-width: 996px) /*Desktop*/{
+  .search{display: block;}
+  .header__index{
+    height: auto;
+  }
 .logo{
   width: 33%;
   margin: 20px;}
@@ -449,6 +462,15 @@ p.descripcion {
 .producto__contenedor{
   flex-wrap: nowrap;
   }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  gap: 0;
+}
+.logo{
+  width: 6em;
+}
 /*.footer{
   display: flex;
   flex-wrap: wrap;
