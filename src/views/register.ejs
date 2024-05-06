@@ -6,6 +6,19 @@
 
  
 <body>
+    <!--mostrador de errores-->
+<% if(typeof errors != 'undefined') { %>
+    <p>ERROR</p>
+    <ul>
+        <% for (let i = 0; i < errors.length; i++) {%>
+            <li>
+                <% errors[i].msg%>
+            </li>
+        <% } %>
+    </ul>
+<% } %>
+
+
 <div class="container">
     <h2>Crea tu cuenta!</h2>
 

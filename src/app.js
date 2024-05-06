@@ -4,7 +4,7 @@ const path = require("path");
 const port = 3300;
 const index = require('./routes/index');
 
-const  session = require('express-session');
+const session = require('express-session');
 
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));

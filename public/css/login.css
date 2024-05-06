@@ -21,6 +21,7 @@ h2 {
 
 .form {
     margin-bottom: 15px;
+    display: block;
 }
 
 label {
