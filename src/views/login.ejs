@@ -5,16 +5,17 @@
 <%- include('./partials/head') %>
 
 <body>
-    <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+    <% if(typeof errors != 'undefined') { %>
         <p>ERROR</p>
         <ul>
-            <% for (let i = 0; i < errors.length; i++) { %>
+            <% for (let i = 0; i < errors.length; i++) {%>
                 <li>
-                    <%= errors[i].msg %>
+                    <%= errors[i].msg%>
                 </li>
             <% } %>
         </ul>
     <% } %>
+
 
     <div class="login">
         <h2>Log In</h2>
@@ -29,8 +30,9 @@
             </div>
             <div>
                 <label for="rememberme">Recuérdame</label>
-                <input type="checkbox" id="rememberme" name="rememberme">
-            </div>
+                <input type="checkbox" id="rememberme" name="rememberme">             
+               
+            </div> 
             <div class="additionals">
                 <div>
                     <p>No tienes una cuenta? <a href="register">Regístrate</a>.</p>

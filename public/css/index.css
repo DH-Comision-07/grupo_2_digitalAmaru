@@ -102,7 +102,7 @@ ul{
 
 /*Search*/
 .search{
-  --padding: 14px,
+  --padding: 14px;
 
   width: max-content;
   display: flex;
@@ -274,7 +274,7 @@ ol {
 .producto {
   text-align: center;
   width: 100%;
-  margin: 15px;
+  margin: 15px 20px;
   background-color: #fff;
 }
 
@@ -471,22 +471,9 @@ p.descripcion {
 .logo{
   width: 6em;
 }
-/*.footer{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-
+.last-view, .offer{
+  margin: 5em;
 }
 
-.pago, .envio, .seguridad{
-  margin: 10px;
-  padding:15px;
-  width: 25%
-}
-.copy{
-  width: 35%;
-  margin-right: auto;
-}
-}*/
+
 }
