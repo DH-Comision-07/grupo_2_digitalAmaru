@@ -4,12 +4,15 @@ const path = require("path");
 const port = 3300;
 const index = require('./routes/index');
 
+const cookies = require('cookie-parser');
+
 const session = require('express-session');
 
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(cookies());
 
 app.use(session({secret: "esto es secreto!"}));
 
