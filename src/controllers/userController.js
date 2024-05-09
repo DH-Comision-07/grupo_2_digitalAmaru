@@ -12,7 +12,6 @@ const userController = {
     },
     processLogin : function (req, res) {
         let errors = validationResult(req);
-
         if (!errors.isEmpty()){
             return res.render("login", {errors: errors.errors, old: req.body})
         } else { 
@@ -43,7 +42,7 @@ const userController = {
             
             if (usuarioALoguearse == undefined) {
                 return res.render("login", {errors: [
-                    {msg: 'Credenciales invalidas'}
+                    {msg: 'Credenciales invalidas, vuelva a intentarlo'}
                 ]})
             }
         }   
@@ -58,9 +57,9 @@ const userController = {
             email: req.body.email,
             contraseña: req.body.contraseña
         }
-        let usuarioJSON = JESON.stringify(usuario);
+        let users = JESON.stringify(usuario);
 
-        fs.writeFileSync("usuarios.json" , usuarioJSON);
+        fs.writeFileSync("usuarios.json" , users);
     }
 };
 module.exports = userController;

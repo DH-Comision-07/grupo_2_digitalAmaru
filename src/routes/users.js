@@ -13,7 +13,7 @@ router.get("/login", userController.login);
 
 router.post('/login', loginValidations, userController.processLogin);
 
-router.get("/userList", userController.userList)
+
 
 
 module.exports = router;
