@@ -16,11 +16,13 @@ app.use(cookies());
 
 app.use(session({secret: "esto es secreto!"}));
 
-//ruta de index
-app.get("/", (req, res) => {
-  res.render("index")
-});
+let userRouter = require("./routes/users")
+// ruta a user
+app.use('/user', userRouter);
 
+let indexRouter = require("./routes/index")
+//ruta a home
+app.use('/', indexRouter) 
 //ruta de producto
 app.get("/detalle-de-curso", (req, res) => {
   res.render("product-details")

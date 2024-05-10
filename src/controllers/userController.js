@@ -1,6 +1,7 @@
 let fs = require("fs");
 const session = require('express-session');
 const { resolve } = require("path");
+const { validationResult } = require("express-validator")
 
 const userController = {
 

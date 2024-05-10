@@ -3,7 +3,8 @@ const router = express.Router();
 const session = require('express-session');
 const userController = require('../controllers/userController');
 router.get("/", userController.user);
-const { loginValidations } = require('../middlewers/validations');
+const  loginValidations  = require('../middlewers/validations');
+
 
 router.get("/register", userController.register);
 
