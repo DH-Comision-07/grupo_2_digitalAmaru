@@ -42,96 +42,43 @@
 <section class="last-view">
     <h2 class="titular">Cursos</h2>
     <article class="producto__contenedor">
-        <div class="producto">
-            <img src="/images/cursospng.jpeg" alt="cafetera">
+
+        <% for( i = 0 ; i < cursos.length; i++) { %>
+            <div class="producto">
+                <img src=" <%= cursos[i].img %> " alt="cafetera">
                 <div class="producto__info">
-                        
-                    <div class="precio-descuento">
-                        
-                        <p class="descuento">40% off</p>
+                    <div class="precio-descuento">                       
+                        <p class="descuento"> <%= cursos[i].descuento %></p>
                     </div>
                     <div>
-                        <p class="descripcion">Este curso está diseñado para que puedas idear, maquetear y finalmente realizar tus sitios web de manera profesional.</p>
+                        <p class="descripcion"> <%= cursos[i].descripcion %></p>
                         <a href="#" class="ctn">Leer más</a>
                     </div>
                 </div>
-        </div>
+            </div>
+        <% } %>
         
-        <div class="producto">
-            <img src="/images/cursospng.jpeg" alt="cafetera">
-                <div class="producto__info">
-                        
-                    <div class="precio-descuento">
-                        
-                        <p class="descuento">40% off</p>
-                    </div>
-                    <div>
-                        <p class="descripcion">Este curso está diseñado para que puedas idear, maquetear y finalmente realizar tus sitios web de manera profesional.</p>
-                        <a href="#" class="ctn">Leer más</a>
-                    </div>
-                </div>
-        </div>
-        <div class="producto">
-            <img src="/images/cursospng.jpeg" alt="cafetera">
-                <div class="producto__info">
-                        
-                    <div class="precio-descuento">
-                        
-                        <p class="descuento">40% off</p>
-                    </div>
-                    <div>
-                        <p class="descripcion">Este curso está diseñado para que puedas idear, maquetear y finalmente realizar tus sitios web de manera profesional.</p>
-                        <a href="#" class="ctn">Leer más</a>
-                    </div>
-                </div>
-        </div>  
+        
     </article>
 </section>
 
 <section class="offer">
     <h2 class="titular">Titulos</h2>
         <article class="producto__contenedor">
-            <div class="producto">
-                <img src="/images/cursos.jpg" alt="curso">
+            <% for( i = 0 ; i < titulos.length; i++) { %>
+                <div class="producto">
+                    <img src=" <%= titulos[i].img %> " alt="cafetera">
                     <div class="producto__info">
-                        
-                        <div class="precio-descuento">
-                        
-                        <p class="descuento">10% off</p>
+                        <div class="precio-descuento">                       
+                            <p class="descuento"> <%= titulos[i].descuento %></p>
+                        </div>
+                        <div>
+                            <p class="descripcion"> <%= titulos[i].descripcion %></p>
+                            <a href="#" class="ctn">Leer más</a>
+                        </div>
                     </div>
-                        <p class="descripcion"><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la industria.</p>
-                        <a href="#" class="ctn">Leer más</a>
-                    </div>
-                    
-            </div>
-            
-            <div class="producto">
-                <img src="/images/cursos.jpg" alt="curso">
-                    <div class="producto__info">
-                        
-                        <div class="precio-descuento">
-                        
-                        <p class="descuento">20% off</p>
-                    </div>
-                        <p class="descripcion"><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la industria.</p>
-                        <a href="#" class="ctn">Leer más</a>
-                    </div>
-                    
-            </div>
-            <div class="producto">
-                <img src="/images/cursos.jpg" alt="curso">
-                    <div class="producto__info">
-                        
-                        <div class="precio-descuento">
-                        
-                        <p class="descuento">10% off</p>
-                    </div>
-                        <p class="descripcion"><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la industria.</p>
-                        <a href="#" class="ctn">Leer más</a>
-                    </div>
-                    
-            </div>
-            
+                </div>
+            <% } %> 
         </article>
 </section
 

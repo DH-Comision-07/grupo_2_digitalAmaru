@@ -11,6 +11,19 @@ body , html {
 }
 
 
+.error--p, .error--li {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.error--ul{
+  padding-left: 0%;
+}
+.error--p{
+  margin-top: 2em;
+}
+
 /*Cuerpo del index*/
 /*section{
   width: 80%;

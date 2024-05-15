@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 3300;
+const port = 8887;
 const index = require('./routes/index');
 
 const cookies = require('cookie-parser');
@@ -14,7 +14,11 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(cookies());
 
-app.use(session({secret: "esto es secreto!"}));
+app.use(session({secret: "esto es secreto!",
+                resave: false,
+                saveUninitialized: true
+              }));
+
 
 let userRouter = require("./routes/users")
 // ruta a user
@@ -23,34 +27,20 @@ app.use('/user', userRouter);
 let indexRouter = require("./routes/index")
 //ruta a home
 app.use('/', indexRouter) 
+
 //ruta de producto
-app.get("/detalle-de-curso", (req, res) => {
-  res.render("product-details")
-});
-
-//ruta de usuario
-app.get("/register", (req, res) => {
-  res.render("register")
-});
-
-//ruta de usuario
-app.get("/login", (req, res) => {
-  res.render("login")
-});
-
-//ruta de usuario
-app.get("/cart", (req, res) => {
-  res.render("cart")
-});
-
-//ruta de main
-app.get("/nosotros", (req, res) => {
-  res.render("nosotros")
-});
+let productRouter = require("./routes/product")
+app.use("/detalle-de-curso", productRouter);
 
 
+ //   app.get("/cart", (req, res) => {
+   //   res.render("cart")
+ //   });
 
-
+    //ruta de main
+ //   app.get("/nosotros", (req, res) => {
+   //   res.render("nosotros")
+ //   });
 
 
 

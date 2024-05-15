@@ -1,10 +1,17 @@
+const { name } = require('ejs');
+const {body, check} = require ('express-validator');
 
-
-const { check } = require('express-validator');
-
-const loginValidations = [
-    check('email').isEmail().withMessage('Email inválido'),
-    check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
-];
-
-module.exports = loginValidations;
+module.exports = {
+    register: [
+        body("name")
+            .notEmpty()
+            .withMessage('Debes ingresar tu nombre.')
+            .isLength({min:4, max:20})
+    ],
+    login: [
+        body("email")
+            .notEmpty()
+            .withMessage('Debes ingresar tu email.')
+            
+    ]
+}

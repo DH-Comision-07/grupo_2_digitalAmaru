@@ -6,10 +6,10 @@
 
 <body>
     <% if(typeof errors != 'undefined') { %>
-        <p>ERROR</p>
-        <ul>
+        <p class="error--p">ERROR</p>
+        <ul class="error--ul">
             <% for (let i = 0; i < errors.length; i++) {%>
-                <li>
+                <li class="error--li">
                     <%= errors[i].msg%>
                 </li>
             <% } %>

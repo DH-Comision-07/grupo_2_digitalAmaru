@@ -1,17 +1,39 @@
 let fs = require("fs");
 const session = require('express-session');
 const { resolve } = require("path");
-const { validationResult } = require("express-validator")
+const { validationResult } = require("express-validator");
+const { body } = require("express-validator")
+const bcrypt = require("bcryptjs");
+const theUser = require("../models/User");
+const { isUtf8 } = require("buffer");
+
+
+
 
 const userController = {
 
     register : function (req, res) {
         return res.render("register");
     },
+    prosesRegister: function(req, res) {
+        const errorsReg = validationResult(req);
+
+        if (errorsReg.isEmpty()) {
+            theUser.create(req.body);
+            return res.render("register");
+            
+        } else { 
+            return errorsReg
+        }
+    },
+
+
+
     login : function (req, res){
         return res.render("login");
     },
-    processLogin : function (req, res) {
+    procesLogin : function (req, res) {
+        let validationResult = {};
         let errors = validationResult(req);
         if (!errors.isEmpty()){
             return res.render("login", {errors: errors.errors, old: req.body})
@@ -50,17 +72,8 @@ const userController = {
         
     },
     user: function(req,res){
-        res.render('user');
+       
     },
-    create: function(req, res) {
-        let usuario = {
-            nombre: req.body.nombre,
-            email: req.body.email,
-            contraseña: req.body.contraseña
-        }
-        let users = JESON.stringify(usuario);
-
-        fs.writeFileSync("usuarios.json" , users);
-    }
+    
 };
 module.exports = userController;
