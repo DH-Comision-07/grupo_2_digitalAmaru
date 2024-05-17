@@ -1,6 +1,9 @@
-const { isUtf8 } = require("buffer");
 const fs = require("fs");
 const {body, check} = require ('express-validator');
+const path = require("path");
+const bcrypt = require("bcryptjs");
+const { isUtf8 } = require("buffer");
+
 
 const theUser = {
 
@@ -8,8 +11,10 @@ const theUser = {
 
 
     getData: function(){
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+       return  JSON.parse(fs.readFileSync(path.resolve(__dirname,this.fileName), 'utf-8'));
+        
     },
+    
 
     //generamos id
     generateId : function () {
@@ -41,14 +46,14 @@ const theUser = {
 
     create: function (userData) {
         let allUsers = this.findAll();
+        
         let newUser = {
             id: this.generateId(),
             ...userData
         }
-
+        
         allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, " "));
-        return newUser;
+        fs.writeFileSync(path.resolve(__dirname,this.fileName), JSON.stringify(allUsers, null, " "));
         
     },
 

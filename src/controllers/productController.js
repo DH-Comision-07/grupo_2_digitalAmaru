@@ -1,6 +1,6 @@
 const productController = {
     product: function(req,res){
-        res.render('product');
+        res.render('product-details');
     },
 };
 

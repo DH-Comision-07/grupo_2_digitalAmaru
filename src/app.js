@@ -5,11 +5,13 @@ const port = 8887;
 const index = require('./routes/index');
 
 const cookies = require('cookie-parser');
-
 const session = require('express-session');
 
 const publicPath = path.resolve(__dirname, "../public");
+
 app.use(express.static(publicPath));
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(cookies());

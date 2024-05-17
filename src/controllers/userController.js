@@ -2,9 +2,9 @@ let fs = require("fs");
 const session = require('express-session');
 const { resolve } = require("path");
 const { validationResult } = require("express-validator");
-const { body } = require("express-validator")
+const  { body } = require("express-validator")
 const bcrypt = require("bcryptjs");
-const theUser = require("../models/User");
+const userService = require("../models/User");
 const { isUtf8 } = require("buffer");
 
 
@@ -18,9 +18,10 @@ const userController = {
     prosesRegister: function(req, res) {
         const errorsReg = validationResult(req);
 
-        if (errorsReg.isEmpty()) {
-            theUser.create(req.body);
-            return res.render("register");
+
+        if (errorsReg.errors.length == 0) {
+            userService.create(req.body);
+            res.render("login");
             
         } else { 
             return errorsReg
@@ -34,7 +35,7 @@ const userController = {
     },
     procesLogin : function (req, res) {
         let validationResult = {};
-        let errors = validationResult(req);
+        let errors = validationResult.req;
         if (!errors.isEmpty()){
             return res.render("login", {errors: errors.errors, old: req.body})
         } else { 
