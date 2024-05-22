@@ -7,16 +7,18 @@
  
 <body>
     <!--mostrador de errores-->
-<% if(typeof errors != 'undefined') { %>
-    <p>ERROR</p>
-    <ul>
-        <% for (let i = 0; i < errors.length; i++) {%>
-            <li>
-                <%= errors[i].msg%>
-            </li>
-        <% } %>
-    </ul>
-<% } %>
+    <% if(typeof errors != 'undefined') { %>
+        <p style="top: 3em; color: red;">ERROR</p>
+        
+        <ul>
+            <% for (let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg%>
+                </li>
+            <% } %>
+        </ul>
+    <% } %>
+
 
 
 <div class="container">
@@ -30,10 +32,13 @@
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Email" required>
-
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-denger">
+                <%= errors.email.msg %>
+            </div>
+        <% } %>
         <label for="contraseña">Contraseña</label>
-        <input type="text" id="contraseña" name="password" placeholder="contraseña">
-
+        <input type="password" id="contraseña" name="password" placeholder="contraseña">
         <input type="submit" value="Crea tu cuenta">
     </form>
 </div>

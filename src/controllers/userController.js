@@ -3,9 +3,10 @@ const session = require('express-session');
 const { resolve } = require("path");
 const { validationResult } = require("express-validator");
 const  { body } = require("express-validator")
-const bcrypt = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 const userService = require("../models/User");
 const { isUtf8 } = require("buffer");
+const { log } = require("console");
 
 
 
@@ -17,15 +18,35 @@ const userController = {
     },
     prosesRegister: function(req, res) {
         const errorsReg = validationResult(req);
+        // comparacion de email para no registrar mas de una vez ese email
+        let userComparationEmail = userService.findByParam('email', req.body.email);
+        if (userComparationEmail) { 
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya esta en uso, intenta con otro'
+                    }
+                }
+            });
 
-
+        }  
+        
         if (errorsReg.errors.length == 0) {
-            userService.create(req.body);
-            res.render("login");
+            
+            let userHashed = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 12)
+            }
+
+            let usuarioCreado =  userService.create(userHashed);
+            res.redirect("/user/login");
             
         } else { 
             return errorsReg
         }
+    
+
+        
     },
 
 
@@ -34,12 +55,43 @@ const userController = {
         return res.render("login");
     },
     procesLogin : function (req, res) {
+        let userToLogin = userService.findByParam('email', req.body.email);
+        
+        if (userToLogin){
+            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            console.log(passwordOk);
+            if (passwordOk) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect("/user/perfil")
+            }
+            return res.render("login", {
+                errors: {
+                    email: {
+                        msg: 'La contraseña es incorrecta'
+                    }
+                }
+            })
+        }
+
+        return res.render("login", {
+            errors: {
+                email: {
+                    msg: 'No encontramos este email en nuesra base de datos por favor registrese o intente nuevamente con otro'
+                }
+            }
+        })
+    },
+
+
+
+    prosesologanterior: function(){
         let validationResult = {};
         let errors = validationResult.req;
         if (!errors.isEmpty()){
-            return res.render("login", {errors: errors.errors, old: req.body})
+            return res.render("login", {errors: errors.errors})
         } else { 
-            let users = JSON.parse(fs.readFileSync( resolve(__dirname, '../data/users.json'), "utf-8"));
+            let users = JSON.parse(fs.readFileSync( resolve(__dirname, '../data/users.json')));
 
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == req.body.email) {
@@ -52,7 +104,7 @@ const userController = {
                 return res.render("login", {errors: {msg: "El usuario no se encuentra registrado"}})
             } 
 
-            if (bcrypt.compareSync(req.body.password, users[i].password)){
+            if (bcryptjs.compareSync(req.body.password, users[i].password)){
                 delete usuarioALoguearse.password
                 req.session.usuarioLogueado = usuarioALoguearse;
 
@@ -75,6 +127,11 @@ const userController = {
     user: function(req,res){
        
     },
+    perfil: (req,res) => {
+       return res.render("perfil", {
+        user: req.session.userLogged
+       });
+   }
     
 };
 module.exports = userController;

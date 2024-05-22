@@ -23,10 +23,20 @@
             <div class="form">
                 <label for="email">Email:</label>
                 <input type="email" value="" id="email" name="email" placeholder="Email" required>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-denger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="form">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-denger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
             </div>
             <div>
                 <label for="rememberme">Recuérdame</label>

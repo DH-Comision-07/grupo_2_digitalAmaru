@@ -22,9 +22,11 @@ app.use(session({secret: "esto es secreto!",
               }));
 
 
+
 let userRouter = require("./routes/users")
 // ruta a user
 app.use('/user', userRouter);
+
 
 let indexRouter = require("./routes/index")
 //ruta a home
