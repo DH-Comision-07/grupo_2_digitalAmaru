@@ -9,7 +9,7 @@ const userValidations = require('../middlewers/validations');
 router.get("/register", userController.register);
 
 //router.post("/register", userValidations.register, userController.prosesRegister);
-router.post("/register", userValidations.register, userController.prosesRegister);
+router.post("/register", userController.prosesRegister);
 
 router.get("/login", userController.login);
 

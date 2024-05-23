@@ -10,5 +10,11 @@
   "name": "Catalina",
   "email": "cataguzman7836@gmail.com",
   "password": "$2a$12$gDtNncoP9BxMesRSwA9w5uXuK23si2wWdLBteXUbFeZh0DtmhEY4W"
+ },
+ {
+  "id": 3,
+  "name": "ana",
+  "email": "analaura2327@hotmail.com",
+  "password": "$2a$12$3UwIOr.qFB/buALz8eIjPOQgQ68VB3HwUG9/qZYmQHg7ZlfHLZG8G"
  }
 ]
