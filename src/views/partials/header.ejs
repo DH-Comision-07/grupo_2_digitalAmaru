@@ -1,6 +1,7 @@
 <header class="header__index">
     <nav class="navbar">
-        <h1 class="logo">digitalAmaru</h1>
+        <a style="text-decoration: none; color: black;" href="/"><h1 class="logo">digitalAmaru</h1></a>
+
         <ul class="nav-links">
             <li><a href="#"></a>Cursos</li>
             <li><a href="#"></a>Blog</li>
@@ -14,13 +15,28 @@
             </div>
         </form>
         
-
-        <ul class="nav-links">
-            <li><a href="/user/login">Iniciar seción</a></li>
-            <li><a href="/user/register">Registrarse</a></li>
-        </ul>
-        <a style="color: black; right: 5px;" href="/user/perfil"><i class="fa-solid fa-user"></i></a>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <% if (locals.isLogged) { %>
+            <div class="div-perfil">
+                <ul class="ul-perfil-contenedor">
+                    <li class="flex-perfil">
+                        <a class="logo-perfil" href="/user/perfil"><i class="fa-solid fa-user"></i></a>
+                        <h2><%= locals.user.name %></h2>
+                        <ul class="ul-perfil">
+                            <li><a href="/user/perfil">Perfil</a></li>
+                            <li><a href="/user/logout">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <% } else { %>  
+            <ul class="nav-links">
+                <li><a href="/user/login">Iniciar sesión</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
+            </ul>
+        <% } %> 
+       
+        
+        <a class="logo-carrito" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
 
         <img src="/images/menu.png" alt="" class="menu-button">
 

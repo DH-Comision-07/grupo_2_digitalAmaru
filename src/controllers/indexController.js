@@ -6,14 +6,14 @@ const { body } = require("express-validator")
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const { isUtf8 } = require("buffer");
-const arrayCursos = require("../../public/jsvaScript/cursos");
+const arrayCursos = require("../../src/database/products.json");
 const arrayTitulos = require("../../public/jsvaScript/titulos");
 const indexController = {
     index: function(req, res) {
-        let cursos = arrayCursos;
+        let products = arrayCursos;
         let titulos = arrayTitulos;
         res.render('index',
-        {"cursos": cursos,
+        {"products": products,
         "titulos": titulos});
     },
 

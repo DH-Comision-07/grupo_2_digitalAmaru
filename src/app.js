@@ -2,12 +2,15 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = 8887;
-const index = require('./routes/index');
+//const index = require('./routes/index');
+
 
 const cookies = require('cookie-parser');
 const session = require('express-session');
 
 const publicPath = path.resolve(__dirname, "../public");
+
+
 
 app.use(express.static(publicPath));
 app.use(express.urlencoded({extended: false}))
@@ -20,7 +23,9 @@ app.use(session({secret: "esto es secreto!",
                 resave: false,
                 saveUninitialized: true
               }));
-
+const userLoggedMidlewere = require("./middlewers/userloggedmidleweres")
+app.use(userLoggedMidlewere);
+app.use(cookies());
 
 
 let userRouter = require("./routes/users")

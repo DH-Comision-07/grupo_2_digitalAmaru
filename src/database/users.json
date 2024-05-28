@@ -16,5 +16,17 @@
   "name": "ana",
   "email": "analaura2327@hotmail.com",
   "password": "$2a$12$3UwIOr.qFB/buALz8eIjPOQgQ68VB3HwUG9/qZYmQHg7ZlfHLZG8G"
+ },
+ {
+  "id": 4,
+  "name": "maria mercedes",
+  "email": "mechalagunas@gmail.com",
+  "password": "$2a$12$APzhr7delevNY5tFWOrD.uMUyoso6iUzhrLOR6AP4hcHv52lnTGF6"
+ },
+ {
+  "id": 5,
+  "name": "maru",
+  "email": "marutambo@gmail.com",
+  "password": "$2a$12$cq1wD8tPF2JQ.o1Ejyian.j1TZeGFa/vzV15gLNcqp827OxWGfRwK"
  }
 ]
