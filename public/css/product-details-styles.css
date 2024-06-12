@@ -95,3 +95,36 @@
     font-weight: bold; /* Poner el texto en negrita */
       margin-top: 10px; /* Ajustar el espacio superior del texto dentro de la caja */
 }
+
+
+.main-detalle{
+  margin: 3em;
+  padding: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.main-detalle section img{
+  border-radius: 1em;
+}
+.boton {
+ display: flex;
+ justify-content: center;
+ margin: 0 auto 4em auto;
+ width: 100%;
+
+}
+
+
+
+
+
+@media (min-width: 785px) {
+  
+}

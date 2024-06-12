@@ -160,6 +160,9 @@ body, html {
 .ul-perfil li a:hover {
   color: honeydew;
 }
+.ul-perfil-contenedor{
+  margin: 0;
+}
 
 .header__index {
   display: flex;
@@ -198,6 +201,7 @@ ul {
   display: flex;
   align-items: center;
   padding-left: 0;
+  margin: 0;
 }
 
 .nav-links li {
@@ -212,7 +216,10 @@ ul {
   cursor: pointer;
   display: none;
 }
-
+.cursosss{
+  text-decoration: none;
+  color: #000000;
+}
 /* Search */
 .search {
   --padding: 14px;

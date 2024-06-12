@@ -28,5 +28,23 @@
   "name": "maru",
   "email": "marutambo@gmail.com",
   "password": "$2a$12$cq1wD8tPF2JQ.o1Ejyian.j1TZeGFa/vzV15gLNcqp827OxWGfRwK"
+ },
+ {
+  "id": 6,
+  "name": "Facundo",
+  "email": "facundo.lagunas@gmail.com",
+  "password": "$2a$12$Sq64xu/4N4YEJr6zOQigO.Lkv9lWJdV.hP.AZBqeRV7loQgB3e92e"
+ },
+ {
+  "id": 7,
+  "name": "cata guzman",
+  "email": "matidamasia88@gmail.com",
+  "password": "$2a$12$NssWXzuaZ.Awdctcr3vHuORM7T0MfRjZdSpbccAJ7kTlf9C9Vqm.6"
+ },
+ {
+  "id": 8,
+  "name": "Facundo",
+  "email": "faculagunas@gmail.com",
+  "password": "$2a$12$2JxEQ1p0K.opMGkHV/BcGeA65n03QfzZ2a1djTt7B/VBxUWdKj3xi"
  }
 ]

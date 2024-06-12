@@ -39,33 +39,25 @@
 
     <article class="articulo-main">
         <section class="last-view">
-            <h2 class="titular">Cursos</h2>
+            <h2 id="cursos" class="titular">Cursos</h2>
+            <p></p>
             <div class="courses-container">
+
+                
                 <% for(let i = 0; i < products.length; i++) { %>
                     <div class="course">
                         <img src="<%= products[i].image %>" alt="<%= products[i].name %>">
                         <h3><%= products[i].name %></h3>
                         <p><%= products[i].description %></p>
                         <p class="price">$<%= products[i].price %></p>
-                        <a href="#" class="btn-read-more">Leer más</a>
+                        <a href="/product/cursos/detalle/<%= products[i].id %>" class="btn-read-more">Leer más</a>
                     </div>
-                <% } %>
+                    <% } %> 
             </div>
+
         </section>
     
-        <section class="offer">
-            <h2 class="titular">Titulos</h2>
-            <div class="courses-container">
-                <% for(let i = 0; i < titulos.length; i++) { %>
-                    <div class="course">
-                        <img src="<%= titulos[i].img %>" alt="<%= titulos[i].descripcion %>">
-                        <h3><%= titulos[i].descuento %></h3>
-                        <p><%= titulos[i].descripcion %></p>
-                        <a href="#" class="btn-read-more">Leer más</a>
-                    </div>
-                <% } %> 
-            </div>
-        </section>
+        
     
     </article>
     <!-- Script para carrusel -->

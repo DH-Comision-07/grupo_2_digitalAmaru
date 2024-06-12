@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 8887;
+const port = 7777;
 //const index = require('./routes/index');
 
 
@@ -33,25 +33,31 @@ let userRouter = require("./routes/users")
 app.use('/user', userRouter);
 
 
+let productRouter = require("./routes/product")
+// ruta a user
+app.use('/product', productRouter);
+
+
 let indexRouter = require("./routes/index")
 //ruta a home
 app.use('/', indexRouter) 
 
 //ruta de producto
-let productRouter = require("./routes/product")
-app.use("/detalle-de-curso", productRouter);
 
 
- //   app.get("/cart", (req, res) => {
-   //   res.render("cart")
- //   });
+
+
+    app.get("/cart", (req, res) => {
+   res.render("cart")
+   });
 
     //ruta de main
  //   app.get("/nosotros", (req, res) => {
    //   res.render("nosotros")
  //   });
 
-
+let cartRouter = require("./routes/cart");
+app.use("/cart", cartRouter);
 
 app.listen(port, () => 
 console.log(`http://localhost:${port}`)

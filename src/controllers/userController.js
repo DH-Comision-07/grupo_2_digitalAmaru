@@ -59,7 +59,6 @@ const userController = {
         
         if (userToLogin){
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            console.log(passwordOk);
             if (passwordOk) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
@@ -133,7 +132,7 @@ const userController = {
        
     },
     perfil: (req,res) => {
-        console.log(req.cookies.userEmail);
+        
        return res.render("perfil", {
         user: req.session.userLogged
        });

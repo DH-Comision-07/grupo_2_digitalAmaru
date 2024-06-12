@@ -12,7 +12,6 @@ const theUser = {
 
     getData: function(){
        return  JSON.parse(fs.readFileSync(path.resolve(__dirname,this.fileName), 'utf-8'));
-        
     },
     
 
@@ -43,6 +42,7 @@ const theUser = {
         let userFound = allUsers.find(oneUser => oneUser[parametro] === texto);
         return userFound
     },
+    
 
     create: function (userData) {
         let allUsers = this.findAll();
@@ -66,5 +66,6 @@ const theUser = {
         return true;
     }
 }
+
 
 module.exports = theUser;
