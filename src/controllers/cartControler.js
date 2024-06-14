@@ -1,35 +1,32 @@
-let fs = require("fs");
+const fs = require("fs");
 const path = require("path");
 
 const cartController = {
-    cartComplete: function (req, res) {
+    viewCart: (req, res) => {
         const cart = req.session.cart || [];
-    res.render('cart', { cart });
-        return res.render("cart")
+        res.render('cart', { cart });
     },
-    allCursos: function(){ 
-        return JSON.parse(fs.readFileSync(path.resolve(__dirname,  "../database/products.json")));
-    },
-    cartCompleteById: function(req, res) {
-        let cursos = JSON.parse(fs.readFileSync(path.resolve(__dirname,  "../database/products.json")));
-        
-        let cursoCarrito = cursos.find(curso => curso.id == req.params.id);
-        console.log(cursoCarrito);
 
-        if (!cursoCarrito) {
-            return res.status(404).send('Producto no encontrado');
-        }
-    
+    addToCart: (req, res) => {
+        const { id } = req.body;
+        const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/products.json"), 'utf-8'));
+        const product = products.find(p => p.id == id);
+
         if (!req.session.cart) {
             req.session.cart = [];
         }
-    
-        req.session.cart.push(cursoCarrito);
-        res.redirect('/cart');
+
+        if (product) {
+            const cartItem = req.session.cart.find(item => item.id == id);
+            if (cartItem) {
+                cartItem.quantity++;
+            } else {
+                req.session.cart.push({ ...product, quantity: 1 });
+            }
+        }
+
+        res.redirect('/cart/cartAdd');
     }
-    
-    // Ruta para mostrar el carrito
-    
-    
-}
+};
+
 module.exports = cartController;

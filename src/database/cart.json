@@ -1,0 +1,10 @@
+[
+  {
+    "id": 600,
+    "name": "Curso Programación con JavaScript",
+    "description": "Explora el mundo de la programación en el lado del cliente con este curso de 11 horas. Aprende sobre variables, operadores y estructuras de control en JavaScript para crear aplicaciones web interactivas y dinámicas.",
+    "image": "/images/cursospng.jpeg",
+    "price": 30000,
+    "quantity": 1
+  }
+]

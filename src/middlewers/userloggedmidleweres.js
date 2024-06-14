@@ -5,14 +5,6 @@ function userLoggedMidlewere(req, res, next) {
     let emailInCookie = req.cookies.userEmail
     let userFromCookie = User.findByParam("email", emailInCookie);
 
-   
-
-
-    
-
-   // if (userFromCookie) {
-   //     req.session.userLogged = userFromCookie
-   // }
 
     if (req.session && req.session.userLogged) {
         res.locals.isLogged = true;

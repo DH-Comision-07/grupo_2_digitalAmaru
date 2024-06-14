@@ -21,8 +21,11 @@ body, html {
   gap: 30px; 
   padding: 20px;
 }
-
-
+.nuevocurso{
+  margin: 2em 0;
+  text-align: center;
+  font-size: 1.2em;
+}
 .course {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -168,7 +171,7 @@ body, html {
   display: flex;
   width: 100%;
   height: auto;
-  background-color: #a30006;
+  background-color: #de6266;
   align-items: center;
   justify-content: center;
 }
@@ -261,13 +264,13 @@ ul {
   font-family: 'Lexend', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #000000;
+  color: #fff;
 }
 
 .hidden {

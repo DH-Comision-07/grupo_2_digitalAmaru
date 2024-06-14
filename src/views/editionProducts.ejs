@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edicion y creacion de cursos</title>
+    <%- include('./partials/head') %>
+</head>
+<body class="body-editionCreacion">
+    <%- include('./partials/header') %>
+    <div class="tituloCyE"><h1>Creacion y edicion de productos</h1></div>
+    <main class="container-edition">
+        <!--creacion-->
+        <div class="Creacion">
+            <button class="button-edit">Editar</button>
+
+
+            <label for="name">Nombre del curso</label>
+            <input type="text" name="name">
+
+            <label for="description">Descripcion del curso</label>
+            <textarea class="textarea" id="descripcion" name="description" rows="4" placeholder="Ingrese la descripción del producto aquí..."></textarea>
+
+            <label for="image">URL de la foto</label>
+            <input type="text" name="image" placeholder="(Opcional)">
+
+            <label for="price">Precio</label> <br>
+            <input type="number" name="price" placeholder="$">
+        </div>
+        <!--Edicion-->
+        <div class="Edicion">
+            <div><button type="submit" class="button-crear">Crear</button></div>
+        </div>
+    </main>
+    
+    
+</body>
+</html>

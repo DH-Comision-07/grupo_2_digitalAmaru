@@ -55,3 +55,9 @@ body{
 	background-color: #a30006;
 	border: none;
 }
+.cont-pagar{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

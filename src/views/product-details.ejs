@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<!--HEAD-->
 <%- include('./partials/head') %>
 
 <body class="body body__reset">
-    <!--HEADER-->
     <%- include('./partials/header') %>
 
     <main class="main" style="margin-top: 30px;">
-        <!-- Cuatro cajas con texto -->
         <div class="boxes-container top-boxes-container">
             <div class="box">
                 <p>Tutoría personalizada</p>
@@ -29,26 +26,32 @@
             <section class="div-info">
                 <div>
                     <p>Nombre del curso</p>
-                    <h2 class="name"><%= curso.name %></h2>
+                    <h2 class="name"><%= products.name %></h2>
                 </div>
                 <div>
                     <p>Descripcion del curso</p>
-                    <p class="descrip"><%= curso.description %></p>
+                    <p class="descrip"><%= products.description %></p>
                 </div>
                 <div>
                     <p>Precio del curso</p>
-                    <p class="precio"><%= curso.price %></p>
+                    <p class="precio"><%= products.price %></p>
                 </div>
             </section>
             <section>
-                <img src="<%= curso.image %>" alt="">
+                <img src="<%= products.image %>" alt="">
             </section>
         </main>
 
         <div class="boton">
-            <div>
-                <a href="/cart/add-to-cart/<%= curso.id %>">Agregar al carrito</a>
-            </div>
+            <form action="/cart/add" method="POST">
+                <input type="hidden" name="id" value="<%= products.id %>">
+                <input type="hidden" name="name" value="<%= products.name %>">
+                <input type="hidden" name="price" value="<%= products.price %>">
+                <input type="hidden" name="image" value="<%= products.image %>">
+                <% if (locals.isLogged) { %>
+                <button type="submit">Agregar al carrito</button>
+                <% } %>
+            </form>
         </div>
     </main>
 </body>

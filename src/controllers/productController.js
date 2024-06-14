@@ -1,6 +1,5 @@
-let fs = require("fs");
+const fs = require("fs");
 const path = require("path");
-
 
 const productController = {   
     productData: function(){ 
@@ -9,14 +8,13 @@ const productController = {
 
     productById: function (req, res) {
         let cursos = JSON.parse(fs.readFileSync(path.resolve(__dirname,  "../database/products.json")));
-        
-        let curso = cursos.find(curso => curso.id == req.params.id);
-        console.log(curso);
-        return res.render('product-details', {curso});
-    }
-    
-    
-};
+        let products = cursos.find(curso => curso.id == req.params.id);
+        return res.render('product-details', { products });
+    },
 
+    editionCreate: function(req, res){ 
+        return res.render('editionProducts');
+    }
+};
 
 module.exports = productController;
