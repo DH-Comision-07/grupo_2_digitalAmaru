@@ -51,25 +51,65 @@
     height: 1fr;
     
 }
-
+.price-edit,.desxcription-edit,.name-edit{
+    margin: 0%;
+}
 
 @media (min-width: 769px) {
-    .container-edition{
-        width: 60%;
-        display: flex;
-       margin: 2em auto;
-        justify-content: space-around;
+    .listado-de-cursos-cont{
+        display: grid;
+        
         
     }
+    .container-edition{
+        width: 70%;
+        display: grid;
+        margin: 2em auto;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(#FFFFFF, #de6266);
+        
+    }
+    .container-edition-edit{
+        width: 70%;
+        display: grid;
+        margin: 2em auto;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1em;
+        background-image: linear-gradient( #de6266, #FFFFFF);
+    }
     .Creacion{
-        width: 20em;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        width: 25em;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
         height: 30em;
+        margin: 2em auto;
+        padding: 1em;
+        background-color: #fff;
        
     }
     .Edicion{
         width: 20em;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
         height: 30em;
+        
+
     }
+    .curso-individual-cont{
+        width: 100%;
+        height: auto;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5px;
+
+    }
+    .img-edit{
+        width: auto;
+        height: 5em;
+    }
+
 }
