@@ -8,11 +8,13 @@ const userService = require("../models/User");
 const { isUtf8 } = require("buffer");
 const { log } = require("console");
 
-
+const db = require('../db/models')
 
 
 const userController = {
-
+    getAllUsers : async() => {
+        return res.send(await db.Usuario.findAll())
+    },
     register : function (req, res) {
         return res.render("register");
     },
