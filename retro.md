@@ -219,4 +219,37 @@ Entregar sprints incompletos
 Organizarnos mal con los tiempos
 Participación minima en las tareas 
 
+SPRINT 8
+
+1- Comenzar a hacer:
+Ser trasparentes con los tiempos de dedicación de cada uno
+Organizar mejor la división de tareas para avanzar más rápido
+Entregar los sprints completos/llegar al objetivo esperado
+A tener mayor participación y división homogenia de las tareas para poder culminar el TPI
+Tener el mayor de los compromisos fines poder finalizar lo comenzado
+
+2- Hacer más:
+Proponer activamente juntarnos
+Motivarnos aún más pese a la disminución del rrhh
+Aumentar más las horas dedicadas al TPI, fines cumplir con las espectativas esperadas
+Aumentar la actividad
+
+3- Continuar haciendo:
+Corregir errores de sprints anteriores
+Ponernos al día con las entregas
+Seguir motivados
+Seguir con el compromiso y aumentarlo aún en esta recta final
+
+4- Hacer menos:
+Frustrarnos por la disminución de los integrantes del grupo
+Desmotivarnos por el aumento de las tareas debido al faltante de rrhh
+Entregas incompletas
+Delegar en el otro, sin participar al igual del resto 
+
+5- Dejar de hacer:
+Entregar sprints incompletos
+Organizarnos mal con los tiempos
+Participación minima en las tareas 
+Falta de compromiso con el trabajo y compañeros del grupo
+
 
