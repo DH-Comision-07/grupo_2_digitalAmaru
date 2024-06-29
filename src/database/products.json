@@ -4,7 +4,7 @@
     "name": "Curso de Programación Básica",
     "description": "Aprende los fundamentos de la programación con este curso de 15 horas. Comienza con una introducción a la lógica de programación y los conceptos fundamentales que te permitirán entender cómo funcionan los programas.",
     "image": "/images/cursospng.jpeg",
-    "price": "20000"
+    "price": "30000"
   },
   {
     "id": 200,
@@ -61,19 +61,5 @@
     "description": "Aprende los fundamentos de las bases de datos con este curso de 8 horas. Explora conceptos básicos como tablas, consultas y relaciones para comenzar a trabajar con bases de datos de manera efectiva.",
     "image": "/images/cursospng.jpeg",
     "price": 22000
-  },
-  {
-    "id": 1000,
-    "name": "Curso Fundamentos de Node.js",
-    "description": "\r\n\r\n",
-    "image": "/images/cursospng.jpeg",
-    "price": "28000"
-  },
-  {
-    "id": 1718750621369,
-    "name": "Facundo",
-    "description": "Aprende los fundamentos de la programación con este curso de 15 horas. Comienza con una introducción a la lógica de programación y los conceptos fundamentales que te permitirán entender cómo funcionan los programas.",
-    "image": "/images/cursospng.jpeg",
-    "price": "22222"
   }
 ]

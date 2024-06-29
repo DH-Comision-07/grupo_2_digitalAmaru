@@ -46,5 +46,11 @@
   "name": "Facundo",
   "email": "faculagunas@gmail.com",
   "password": "$2a$12$2JxEQ1p0K.opMGkHV/BcGeA65n03QfzZ2a1djTt7B/VBxUWdKj3xi"
+ },
+ {
+  "id": 9,
+  "name": "Facundo Jagunas",
+  "email": "facu@gmail.com",
+  "password": "$2a$12$5di2HGoDmlQOTkQzTAUASOCviTZIQRvxKzotbgk5ngUkNVAjTHb6G"
  }
 ]

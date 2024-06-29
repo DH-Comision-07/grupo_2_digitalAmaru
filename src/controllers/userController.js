@@ -89,45 +89,7 @@ const userController = {
 
 
 
-    prosesologanterior: function(){
-        let validationResult = {};
-        let errors = validationResult.req;
-        if (!errors.isEmpty()){
-            return res.render("login", {errors: errors.errors})
-        } else { 
-            let users = JSON.parse(fs.readFileSync( resolve(__dirname, '../data/users.json')));
-
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email) {
-                    let usuarioALoguearse = users[i];
-                    break;
-                }
-            }
-
-            if (!usuarioALoguearse) {
-                return res.render("login", {errors: {msg: "El usuario no se encuentra registrado"}})
-            } 
-
-            if (bcryptjs.compareSync(req.body.password, users[i].password)){
-                delete usuarioALoguearse.password
-                req.session.usuarioLogueado = usuarioALoguearse;
-
-                if (req.body.rememberme) {
-                    res.cookie("userEmail", req.body.email,  {maxAge : (((1000 * 60) * 60)*24)})
-                }
-
-                return res.render("login", {errors: {msg: "La contraseña no se encuentra registrada"}})
-            }
-
-            
-            if (usuarioALoguearse == undefined) {
-                return res.render("login", {errors: [
-                    {msg: 'Credenciales invalidas, vuelva a intentarlo'}
-                ]})
-            }
-        }   
-        
-    },
+    
     user: function(req,res){
        
     },
