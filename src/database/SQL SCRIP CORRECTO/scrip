@@ -1,0 +1,124 @@
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+-- Create and use the database
+CREATE DATABASE IF NOT EXISTS `DB_DIGITALAMARU`;
+USE `DB_DIGITALAMARU`;
+
+
+-- Create category table
+CREATE TABLE `category` (
+  `sku` int(20) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`sku`)
+);
+
+-- Insert data into category table
+INSERT INTO `category` (sku, name) VALUES 
+(1, 'Administrador'),
+(2, 'Profesor'),
+(3, 'Alumno');
+
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+-- Create cursos table
+CREATE TABLE `cursos` (
+  `sku` int(20) UNSIGNED NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `description` text NOT NULL, 
+  `image` varchar(200) NOT NULL,
+  `price` int(10) UNSIGNED NOT NULL, 
+  `name_teacher` varchar(100) NOT NULL,
+  PRIMARY KEY (`sku`)
+);
+
+-- Insert data into cursos table
+INSERT INTO `cursos`(sku, name, description, image, price, name_teacher) VALUES
+(1, 'Curso de Programación Básica', 'Descubre los fundamentos de la programación en nuestro curso introductorio. Desde conceptos básicos como variables y operadores, hasta estructuras de control y funciones, este curso te proporcionará las habilidades necesarias para comenzar tu viaje en el mundo de la programación. Aprende a crear programas simples y resolver problemas utilizando lenguajes de programación populares como Python o JavaScript. No se requiere experiencia previa en programación. ¡Únete y comienza a crear tu propio código hoy!', 'programacion_basica.jpg', 45000, 'Pepe Santos'),
+(2, 'Curso Fundamentos HTML y CSS', 'Descubre los fundamentos esenciales de HTML y CSS en este curso introductorio. Aprende a crear y diseñar páginas web desde cero, dominando etiquetas HTML para estructurar contenido y aplicando estilos con CSS para lograr diseños atractivos. Este curso práctico está diseñado para principiantes sin experiencia previa en programación. Desarrolla habilidades en diseño web responsivo y completa proyectos prácticos que te prepararán para crear sitios web profesionales. Únete ahora y comienza tu viaje en el desarrollo web.', 'fundamentos_html_css.jpg', 45000, 'Pepe Santos'),
+(3, 'Curso avanzado HTML y CSS', 'Avanza en HTML y CSS con este curso dinámico y práctico. Profundiza en las técnicas avanzadas de HTML para estructurar contenido de manera semántica y perfecciona tus habilidades en CSS para crear diseños sofisticados y responsive. Aprende a utilizar flexbox, grid y animaciones CSS para desarrollar sitios web interactivos y modernos. Este curso es ideal para aquellos con conocimientos básicos de HTML y CSS que buscan llevar sus habilidades al siguiente nivel. Completa proyectos desafiantes y adquiere las herramientas necesarias para construir sitios web profesionales y atractivos. Únete ahora y conviértete en un experto en diseño web avanzado.', 'avanzado_html_css.jpg', 12500, 'Pepe el Grillo'),
+(4, 'Introducción a Python', 'Sumérgete en el mundo de la programación con Python en este curso introductorio. Aprende los conceptos básicos de la programación y la sintaxis de Python, incluyendo variables, estructuras de control, funciones y manejo de datos. Descubre cómo utilizar Python para resolver problemas reales y desarrollar aplicaciones simples. Este curso es ideal para principiantes sin experiencia previa en programación y ofrece una base sólida para aquellos interesados en explorar la ciencia de datos, desarrollo web, automatización y más. Únete a nuestra comunidad y comienza tu viaje en la programación con Python.', 'introduccion_python.jpg', 25000, 'Matias Lagunas'),
+(5, 'Back-end', 'Explora el desarrollo de backend con este curso integral. Aprende a construir aplicaciones web dinámicas y escalables utilizando tecnologías como Node.js, Express y bases de datos relacionales y no relacionales. Domina el diseño de APIs RESTful, la autenticación de usuarios, el manejo de sesiones y otros conceptos fundamentales del desarrollo backend. Este curso es ideal para desarrolladores web que desean profundizar en el lado servidor de las aplicaciones y expandir sus habilidades en el desarrollo full-stack. Completa proyectos prácticos y adquiere las habilidades necesarias para construir sistemas robustos y eficientes. Únete y conviértete en un experto en backend development.', 'backend.jpg', 45700, 'Mateo Rivera'),
+(6, 'Curso Programación con JavaScript', 'Sumérgete en el poder de JavaScript con este curso dinámico. Aprende los fundamentos del lenguaje, incluyendo variables, funciones, estructuras de control y manipulación del DOM. Descubre conceptos avanzados como programación orientada a objetos, asincronía y manejo de eventos. Explora el desarrollo frontend y backend con Node.js, Express y MongoDB. Este curso es ideal para principiantes y desarrolladores que desean dominar JavaScript y construir aplicaciones web interactivas y escalables. Completa proyectos prácticos y adquiere las habilidades esenciales para crear experiencias dinámicas en la web. Únete y desbloquea todo el potencial de JavaScript en tu carrera.', 'programacion_javascript.jpg', 35600, 'Catalina Guz'),
+(7, 'Curso Básico de Programación Orientada a Objetos con JavaScript', 'Descubre los fundamentos de la Programación Orientada a Objetos (POO) con JavaScript en este curso básico. Aprende los conceptos esenciales de clases, objetos, métodos y propiedades. Explora cómo organizar y estructurar tu código utilizando principios de POO como encapsulamiento y abstracción. Comprende cómo crear y utilizar clases en JavaScript para modelar entidades y comportamientos en tus aplicaciones. Este curso es ideal para principiantes en JavaScript que desean entender cómo aplicar la POO para escribir código más estructurado y modular. Únete y establece una base sólida en POO con JavaScript para construir aplicaciones más eficientes y escalables.', 'basico_programacion_orientada_objetos_javascript.jpg', 23800, 'Abigail'),
+(8, 'Curso Intermedio de Programación Orientada a Objetos con JavaScript', 'Perfecciona tus habilidades en Programación Orientada a Objetos (POO) con JavaScript en este curso intermedio. Profundiza en los conceptos de herencia, polimorfismo, encapsulamiento y composición para diseñar arquitecturas más complejas y flexibles. Aprende a implementar patrones de diseño populares como el patrón de módulo, el patrón de fábrica y el patrón de singleton para mejorar la reutilización y la mantenibilidad del código. Explora técnicas avanzadas como mixins y composición funcional para construir sistemas más modulares. Este curso es ideal para desarrolladores JavaScript con experiencia que desean elevar su conocimiento en POO y aplicarlo en proyectos prácticos. Únete y lleva tu desarrollo a un nivel superior con POO en JavaScript.', 'intermedio_programacion_orientada_objetos_javascript.jpg', 63000, 'Lucas Paggio'),
+(9, 'Curso Fundamentos de GO', 'Explora la programación en Go con este curso completo. Aprende los conceptos fundamentales del lenguaje Go, incluyendo tipos de datos, estructuras de control y funciones. Descubre cómo trabajar con concurrencia y canales para crear programas eficientes y concurrentes. Profundiza en las características avanzadas de Go, como los slices, maps, interfaces y goroutines. Explora el desarrollo de aplicaciones web y servicios RESTful utilizando frameworks como Gin. Este curso es ideal para desarrolladores que desean dominar Go y construir aplicaciones robustas y escalables. Completa proyectos prácticos y adquiere las habilidades necesarias para desarrollar en Go de manera profesional. Únete y comienza tu viaje en la programación con Go.', 'fundamentos_go.jpg', 27300, 'Lucas Paggio'),
+(10, 'Curso Fundamentos de Node.js', 'Sumérgete en el desarrollo con Node.js en este curso completo. Aprende a construir aplicaciones backend eficientes y escalables utilizando JavaScript en el servidor. Explora los fundamentos de Node.js, incluyendo el manejo de eventos, el sistema de módulos y el uso de paquetes npm. Profundiza en el desarrollo de APIs RESTful utilizando Express y MongoDB para almacenar datos. Descubre cómo trabajar con la asincronía en Node.js y utilizar promesas y async/await para manejar operaciones no bloqueantes. Este curso es ideal para desarrolladores web que desean dominar Node.js y construir aplicaciones modernas. Únete y potencia tus habilidades en el desarrollo backend con Node.js.', 'fundamentos_nodejs.jpg', 32450, 'Catalina Guz');
+
+/*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+-- Create usuarios table
+CREATE TABLE `usuarios`(
+  `sku` int(50) UNSIGNED NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `apellido` varchar(150) NOT NULL, 
+  `mail` varchar(200) NOT NULL,
+  `contraseña` varchar(100) NOT NULL, 
+  `categoria_sku` varchar(100) NOT NULL,
+  PRIMARY KEY (`sku`)
+);
+
+-- Insert data into usuarios table
+INSERT INTO `usuarios` (sku, name, apellido, mail, contraseña, categoria_sku) VALUES
+(1, 'María José', 'García', 'maria.jose@garcia.com', 'P@ssw0rdGarcia', 'PROFESOR'),
+(2, 'José Luis', 'Martínez', 'jose.luis@martinez.com', 'SecureMartinez123', 'ESTUDIANTE'),
+(3, 'Ana María', 'López', 'ana.maria@lopez.com', 'Lopez!Password', 'ADMINISTRADOR'),
+(4, 'Juan Carlos', 'Rodríguez', 'juan.carlos@rodriguez.com', 'R0driguez&Password', 'EDITOR'),
+(5, 'María Fernanda', 'González', 'maria.fernanda@gonzalez.com', 'Gonz@lezSecure789', 'PROFESOR'),
+(6, 'Luis Miguel', 'Hernández', 'luis.miguel@hernandez.com', 'Hernandez#Secure1', 'ESTUDIANTE'),
+(7, 'María Isabel', 'Pérez', 'maria.isabel@perez.com', 'Perez123!Password', 'ADMINISTRADOR'),
+(8, 'Juan José', 'Sánchez', 'juan.jose@sanchez.com', 'S@nchezSecure2022', 'EDITOR'),
+(9, 'Ana Sofía', 'Ramírez', 'ana.sofia@ramirez.com', 'Ramirez*Password456', 'PROFESOR'),
+(10, 'Carlos Eduardo', 'Flores', 'carlos.eduardo@flores.com', 'FloresSecure!789', 'ESTUDIANTE');
+
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+-- Create unidades table
+CREATE TABLE `unidades`(
+  `sku` int(50) UNSIGNED NOT NULL,
+  `curso_sku` int(20) UNSIGNED NOT NULL,
+  PRIMARY KEY (`sku`)
+);
+
+-- Insert data into unidades table
+INSERT INTO `unidades` (sku, curso_sku) VALUES 
+(1, 'Unidad 1');
+
+/*!40000 ALTER TABLE `unidades` ENABLE KEYS */;
+UNLOCK TABLES;
+
+-- Create usuarios_cursos table and insert data
+CREATE TABLE `usuarios_cursos`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuarios_id` int(11) NOT NULL,
+  `curso_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+LOCK TABLES `usuarios_cursos` WRITE;
+/*!40000 ALTER TABLE `usuarios_cursos` DISABLE KEYS */;
+INSERT INTO `usuarios_cursos` (id, usuarios_id, curso_id) VALUES 
+(1, 2, 1);
+
+/*!40000 ALTER TABLE `usuarios_cursos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

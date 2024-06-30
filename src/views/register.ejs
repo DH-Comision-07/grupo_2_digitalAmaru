@@ -4,43 +4,48 @@
 <!--HEAD-->
 <%- include('./partials/head') %>
 
- 
 <body>
-    <!--mostrador de errores-->
+    <!-- Mostrador de errores -->
     <% if(typeof errors != 'undefined') { %>
         <p style="top: 3em; color: red;">ERROR</p>
-        
         <ul>
             <% for (let i = 0; i < errors.length; i++) { %>
-                <li>
-                    <%= errors[i].msg%>
-                </li>
+                <li><%= errors[i].msg %></li>
             <% } %>
         </ul>
     <% } %>
 
-
-
-<div class="container">
-    <h2>Crea tu cuenta!</h2>
-
-    <p>Regístrate para acceder a tus cursos.</p>
-
-    <form method="POST" action="/user/register" >
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="name" placeholder="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <% if (locals.errors && errors.email) { %>
-            <div class="text-denger">
-                <%= errors.email.msg %>
+    <div class="container">
+        <h2>¡Crea tu cuenta!</h2>
+        <p>Regístrate para acceder a tus cursos.</p>
+        <!-- Mensaje de error -->
+        <div id="mensaje-error" style="display: none; color: red;">
+            Tienes campos incompletos o incorrectos. Por favor revisa el formulario.
+        </div>
+        <form method="POST" action="/user/register" id="formulario">
+            <div id="grupo-name">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="name" placeholder="Nombre" required>
+                <span class="requisito" style="display: none;">Debe contener solo letras y espacios.</span>
             </div>
-        <% } %>
-        <label for="contraseña">Contraseña</label>
-        <input type="password" id="contraseña" name="password" placeholder="contraseña">
-        <input type="submit" value="Crea tu cuenta">
-    </form>
-</div>
+
+            <div id="grupo-email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="requisito" style="display: none;">Debe ser un correo electrónico válido.</span>
+            </div>
+
+            <div id="grupo-password">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="password" placeholder="Contraseña" required>
+                <span class="requisito" style="display: none;">Debe tener entre 4 y 12 caracteres.</span>
+            </div>
+
+            <input type="submit" value="Crea tu cuenta">
+        </form>
+    </div>
+
+    <script src="../js-frontend/validations.js"></script>
 </body>
+
 </html>

@@ -1,12 +1,12 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require("path");
+const path = require('path');
 const port = 7777;
 
 const cookies = require('cookie-parser');
 const session = require('express-session');
 
-const publicPath = path.resolve(__dirname, "../public");
+const publicPath = path.resolve(__dirname, '../public');
 
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));
@@ -20,24 +20,24 @@ app.use(session({
     saveUninitialized: true
 }));
 
-const userLoggedMiddleware = require("./middlewers/userloggedmidleweres");
+const userLoggedMiddleware = require('./middlewers/userloggedmidleweres');
 app.use(userLoggedMiddleware);
 
-const userRouter = require("./routes/users");
+const userRouter = require('./routes/users');
 app.use('/user', userRouter);
 
-const productRouter = require("./routes/product");
+const productRouter = require('./routes/product');
 app.use('/product', productRouter);
 
-const indexRouter = require("./routes/index");
+const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
-const cartRouter = require("./routes/cart");
-app.use("/cart", cartRouter);
+const cartRouter = require('./routes/cart');
+app.use('/cart', cartRouter);
 
-const editCreationRouter = require("./routes/editCreation");
+const editCreationRouter = require('./routes/editCreation');
 app.use('/editCreation', editCreationRouter);
 
 app.listen(port, () => 
-    console.log(`http://localhost:${port}`)
+    console.log(`Servidor corriendo en http://localhost:${port}`)
 );

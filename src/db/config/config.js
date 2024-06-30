@@ -1,22 +1,22 @@
-module.export={
+module.exports={
   "development": {
     "username": "root",
     "password": "verano2024",
-    "database": "DB_DIGITALAMARU",
+    "database": "db_digitalamaru",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "verano2024",
+    "database": "db_digitalamaru",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
+    "password": "verano2024",
+    "database": "db_digitalamaru",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

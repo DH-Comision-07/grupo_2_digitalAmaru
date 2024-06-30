@@ -30,12 +30,22 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     width: calc(100% - 12px);
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    transition: border-color 0.3s ease;
+}
+
+input.input-correcto {
+    border-color: #28a745;
+}
+
+input.input-incorrecto {
+    border-color: #dc3545;
 }
 
 input[type="submit"] {
@@ -50,4 +60,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.requisito {
+    display: none;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
 }
