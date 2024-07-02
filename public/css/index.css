@@ -31,9 +31,16 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 1em;
   padding: 20px;
+  justify-content: space-between; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño del elemento */
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+  position: relative; 
+  display: flex;
+  flex-direction: column
 }
 
 .course img {
@@ -65,10 +72,15 @@ body, html {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s;
+
 }
 
 .course .btn-read-more:hover {
   background-color: #0056b3;
+
+
 }
 .articulo-main{
   width: 100%;
@@ -161,7 +173,7 @@ body, html {
 }
 
 .ul-perfil li a:hover {
-  color: rgb(7, 7, 7);
+  color: honeydew;
 }
 .ul-perfil-contenedor{
   margin: 0;
