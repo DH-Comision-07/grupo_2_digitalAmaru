@@ -205,7 +205,19 @@ ul {
   align-items: center;
   padding-left: 0;
   margin: 0;
+  padding: 3px;
+  gap: 1em;
 }
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.nav-links a:hover{
+  color: #fafafa;
+}
+
 
 .nav-links li {
   margin: 0 20px;

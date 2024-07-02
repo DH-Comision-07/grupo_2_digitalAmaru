@@ -64,5 +64,17 @@
   "name": "curso utyf",
   "email": "matidamasiaaaaa@gmail.com",
   "password": "$2a$12$ako9SlRQO65aF3VHewR3/OWKFKAEoRfQabqSfYIvfs72IZD08825S"
+ },
+ {
+  "id": 12,
+  "name": "facundo",
+  "email": "facudamasia@gmail.com",
+  "password": "$2a$12$IwNWPZoo28R1omqgfJXHK.TZJOUeddlZfZM.2AeorW1nREfltnMKy"
+ },
+ {
+  "id": 13,
+  "name": "catalina",
+  "email": "catalindaguzman@hotmail.com",
+  "password": "$2a$12$vcyzPE8656znzkQUFrzt9OgM0TINp3aNuYLZaGVkI4aiDP0WIu8d."
  }
 ]

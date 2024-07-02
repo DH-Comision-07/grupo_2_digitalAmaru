@@ -5,6 +5,9 @@ const indexController = require('../controllers/indexController');
 
 router.get("/", indexController.index);
 
+// ruta a nosotros
+router.get("/nosotros", indexController.nosotros)
+
 
 
 
