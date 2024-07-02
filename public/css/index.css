@@ -161,7 +161,7 @@ body, html {
 }
 
 .ul-perfil li a:hover {
-  color: honeydew;
+  color: rgb(7, 7, 7);
 }
 .ul-perfil-contenedor{
   margin: 0;
