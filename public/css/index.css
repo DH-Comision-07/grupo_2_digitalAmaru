@@ -40,7 +40,7 @@ body, html {
   align-items: center;
   position: relative; 
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .course img {
@@ -324,18 +324,34 @@ ul {
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5em 1em;
   border-radius: 0.5em;
-}
-
-.slide-content h5 {
+ }
+ 
+ 
+ .slide-content h5 {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5em 1em;
   border-radius: 0.5em;
-}
+ }
+ /* Ajustes para dispositivos móviles */
+ @media (max-width: 768px) {
+  .slide-content h5 {
+    font-size: 1em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.3em 0.7em; /* Ajuste de padding para mantener proporción */
+    top: 50%
+  }
+ }
+ @media (max-width: 768px) {
+  .slide-content h3 {
+    font-size: 2em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.4em 0.8em; /* Ajuste de padding para mantener proporción */
+  }
+ }
+  
 
 /* Footer styles */
 .footer {
