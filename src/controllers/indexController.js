@@ -11,7 +11,9 @@ const indexController = {
         });
     },
 
-    
+    blog: function(req, res) {
+        res.render("blog")
+    }
 };
 
 module.exports = indexController; 

@@ -5,6 +5,9 @@ const indexController = require('../controllers/indexController');
 
 router.get("/", indexController.index);
 
+// ruta a blog
+router.get("/blog", indexController.blog);
+
 
 
 
