@@ -31,9 +31,16 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 1em;
   padding: 20px;
+  justify-content: space-between; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño del elemento */
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
 }
 
 .course img {
@@ -65,10 +72,15 @@ body, html {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s;
+
 }
 
 .course .btn-read-more:hover {
   background-color: #0056b3;
+
+
 }
 .articulo-main{
   width: 100%;
@@ -171,7 +183,7 @@ body, html {
   display: flex;
   width: 100%;
   height: auto;
-  background-color: #de6266;
+  background-color: #aca7f5;
   align-items: center;
   justify-content: center;
 }
@@ -324,15 +336,52 @@ ul {
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5em 1em;
   border-radius: 0.5em;
-}
-
-.slide-content h5 {
+ }
+ 
+ 
+ .slide-content h5 {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5em 1em;
   border-radius: 0.5em;
+ }
+ /* Ajustes para dispositivos móviles */
+ @media (max-width: 768px) {
+  .slide-content h5 {
+    font-size: 1em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.3em 0.7em; /* Ajuste de padding para mantener proporción */
+    top: 50%
+  }
+ }
+ @media (max-width: 768px) {
+  .slide-content h3 {
+    font-size: 2em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.4em 0.8em; /* Ajuste de padding para mantener proporción */
+  }
+ }
+  
+
+/* Footer styles */
+.footer {
+  background-color: #aca7f5;
+  color: #000000;
+  padding: 20px 0;
+  text-align: center;
 }
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between; /* alinea en los costados */
+  align-items: flex-start; /* alinacion vertical */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__section {
+  flex: 1 1 45%; /* para que ajustemos el ancho de la secccion */
+  margin: 0 10px

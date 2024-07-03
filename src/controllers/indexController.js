@@ -10,8 +10,13 @@ const indexController = {
         {"products": products
         });
     },
+
     nosotros: function (req, res) {
         res.render("nosotros")
+    },
+
+    blog: function(req, res) {
+        res.render("blog")
     }
 };
 
