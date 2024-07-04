@@ -38,8 +38,6 @@ app.use('/cart', cartRouter);
 const editCreationRouter = require('./routes/editCreation');
 app.use('/editCreation', editCreationRouter);
 
-const nosotrosController = require('./routes/nosotros');
-app.use('/nosotros', nosotrosController);
 
 app.listen(port, () => 
     console.log(`Servidor corriendo en http://localhost:${port}`)

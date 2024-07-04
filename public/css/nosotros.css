@@ -1,0 +1,30 @@
+
+.titulo-nosotros{
+    margin: 1em;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+.nosotros-cont{
+    padding: 0 2em;
+}
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #de6266;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}

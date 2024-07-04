@@ -5,56 +5,31 @@
 <%- include('./partials/head') %>
 
 <body>
-    <!--HEADER-->
-    <header class="header__index">
-        <!--IMG HEADER-->
-        <div class="contenedor_logo">
-            <p>Logo</p>
-        </div>
-        <!--cursos blog nosotros-->
-        <div class="contenedor__cursos">
-            <a href="##">Cursos</a>
-        </div>
-        <div class="contenedor__blog">
-            <a href="blog">Blog</a>
-        </div>
-        <div class="contenedor__nosotros">
-            <li><a href="##">Nosotros</a></li>
-        </div>
-        <!--INPUT BUSCADOR-->
-        <div class="cont__input">
-            <input type="text" value="   Busca tu curso!">
-        </div>
+   <!--HEADER-->
+   <%- include('./partials/header') %>
 
-        <!--loguin-->
-        <div class="contenedor__login">
-            <a href="">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-        <!-- carrito compras  -->
-        <div class="contenedor__compras">
-            <a href="">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-    </header>
-
-
-    <div class="contenedor__nosotros">
-        <h1>Nosotros</h1>
-        <P>QUIENES SOMOS NOSOTROS: Somos una plataforma educativa comprometida con el crecimiento personal y profesional de nuestros
-            estudiantes, ofreciendo acceso a conocimientos actualizados y herramientas prácticas impartidas por expertos de la 
-            industria.
-            MISIÓN: Capacitar a personas de todas las edades y niveles de experiencia en el arte de la programación, proporcionando
-            cursos online de alta calidad que fomenten el parendizaje efectivo y práctico, mientras cultivamos un ambiente de colaboración,
-            y crecimiento persona.
-            VISIÓN: Ser lideres reconocidos globalmente en la educación online de programación, inspirando y empoderando a nuestros
-            estudiantes para que transformen ideas en innovaciones digitales, guiados por nuestrops valores de creatividad, excelencia y reponsabilidad
-            social.
-            FUTURO: Nos vemos como impulsores de una revolución digital, donde cada individuo tenga la capacidad de crear y desarrollar soluciones
-            tecnológicas que mejoren el muendo que nos rodea, promoviendo una cultura inclusiva y de constante aprendizaje.
-        </P>
+    <h1 class="titulo-nosotros">Nosotros</h1>
+    <div class="nosotros-cont">
+        <section id="quienes-somos">
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos una plataforma educativa comprometida con el crecimiento personal y profesional de nuestros estudiantes, ofreciendo acceso a conocimientos actualizados y herramientas prácticas impartidas por expertos de la industria.</p>
+        </section>
+    
+        <section id="mision">
+            <h2>Misión</h2>
+            <p>Capacitar a personas de todas las edades y niveles de experiencia en el arte de la programación, proporcionando cursos online de alta calidad que fomenten el aprendizaje efectivo y práctico, mientras cultivamos un ambiente de colaboración y crecimiento personal.</p>
+        </section>
+    
+        <section id="vision">
+            <h2>Visión</h2>
+            <p>Ser líderes reconocidos globalmente en la educación online de programación, inspirando y empoderando a nuestros estudiantes para que transformen ideas en innovaciones digitales, guiados por nuestros valores de creatividad, excelencia y responsabilidad social.</p>
+        </section>
+    
+        <section id="futuro">
+            <h2>Futuro</h2>
+            <p>Nos vemos como impulsores de una revolución digital, donde cada individuo tenga la capacidad de crear y desarrollar soluciones tecnológicas que mejoren el mundo que nos rodea, promoviendo una cultura inclusiva y de constante aprendizaje.</p>
+        </section>
+    </div>
 
  <!-- FOOTER -->
  <%- include('./partials/footer') %></body>

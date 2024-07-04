@@ -11,6 +11,10 @@ const indexController = {
         });
     },
 
+    nosotros: function (req, res) {
+        res.render("nosotros")
+    },
+
     blog: function(req, res) {
         res.render("blog")
     }
