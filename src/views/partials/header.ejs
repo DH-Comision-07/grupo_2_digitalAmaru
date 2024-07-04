@@ -1,16 +1,11 @@
 <header class="header__index">
     <nav class="navbar">
-        <a style="text-decoration: none; color: black;" href="/"><h1 class="logo"> DigitalAmaru </h1></a>
+        <a href="/" style="text-decoration: none; color: black;"><h1 class="logo">digitalAmaru</h1></a>
 
         <ul class="nav-links">
-            <a class="cursosss" href="#cursos">Cursos</a>
+            <li><a class="cursosss" href="#cursos">Cursos</a></li>
+            <li><a class="blog" href="/blog">Blog</a></li>
         </ul>
-        <ul class="nav-links">
-
-            <a class="blog" href="/blog">Blog</a>
-        </ul>
-
-        
 
         <form>
             <div class="search">
@@ -18,7 +13,7 @@
                 <input class="search-input" type="search" placeholder="Search">
             </div>
         </form>
-        
+
         <% if (locals.isLogged) { %>
             <div class="div-perfil">
                 <ul class="ul-perfil-contenedor">  
@@ -32,27 +27,13 @@
                     </li>
                 </ul>
             </div>
-        <% } else { %>  
+        <% } else { %>
             <ul class="nav-links">
-                <li><a href="/user/login"><b>Iniciar sesión</b></a></li>
-                <li><a href="/user/register"><b>Registrarse</b></a></li>
+                <li><a href="/user/login">Iniciar sesión</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
             </ul>
-        <% } %> 
-       
-        
+        <% } %>
+
         <a class="logo-carrito" href="/cart/cartAdd"><i class="fa-solid fa-cart-shopping"></i></a>
-
-        <img src="/images/menu.png" alt="" class="menu-button">
-
-        
     </nav>
 </header>
-
-<script>
-    const menuButton = document.querySelector('.menu-button')
-    const navlinks = document.querySelector('.nav-links')
-
-    menuButton.addEventListener('click', ()=>{
-        navlinks.classList.toggle('mobile-menu')
-    })
-</script>

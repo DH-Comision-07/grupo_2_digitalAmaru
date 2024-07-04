@@ -54,12 +54,5 @@
     "description": "Profundiza tus conocimientos de programación orientada a objetos con este curso de 4 horas. Explora conceptos avanzados de OOP y aprende a aplicarlos en situaciones del mundo real.",
     "image": "/images/cursospng.jpeg",
     "price": "20000"
-  },
-  {
-    "id": 900,
-    "name": "Curso Fundamentos de Bases de Datos",
-    "description": "Aprende los fundamentos de las bases de datos con este curso de 8 horas. Explora conceptos básicos como tablas, consultas y relaciones para comenzar a trabajar con bases de datos de manera efectiva.",
-    "image": "/images/cursospng.jpeg",
-    "price": 22000
   }
 ]

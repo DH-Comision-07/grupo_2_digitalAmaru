@@ -1,8 +1,9 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Define el tipo de letra predeterminado para todo el documento */
+
 }
 
 a {
@@ -221,6 +222,12 @@ ul {
 
 .nav-links li {
   margin: 0 20px;
+
+}
+
+.nav-links li a {
+  text-transform: lowercase !important;  
+  font-family: 'Arial', sans-serif
 }
 
 .menu-button {
@@ -282,7 +289,7 @@ ul {
 }
 
 .nav-links li a:hover {
-  color: #fff;
+  color: #3740a4;
 }
 
 .hidden {
@@ -373,3 +380,10 @@ ul {
 .footer__section {
   flex: 1 1 45%; /* para que ajustemos el ancho de la secccion */
   margin: 0 10px
+}
+  .nosotros {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Cambia el color a negro */
+    font-weight: normal; /* Ajusta el peso de la fuente si es necesario */
+    /* Otros estilos que desees aplicar */
+}
