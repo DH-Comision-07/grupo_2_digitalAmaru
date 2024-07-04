@@ -82,8 +82,8 @@
   display: flex;
   justify-content: center;
   align-items: center; /* Centrar verticalmente el contenido */
-  background-color: #2e136efe; /* Fondo gris claro */
-  color: rgb(255, 255, 255);
+  background-color: #dfd5fafe; /* Fondo gris claro */
+  color: rgb(20, 20, 20);
 
 }
 

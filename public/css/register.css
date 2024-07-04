@@ -6,12 +6,15 @@ body {
 }
 
 .container {
-    max-width: 400px;
-    margin: 50px auto;
+    width: 100%; /* Utiliza el ancho máximo disponible */
+    max-width: 400px; /* Ancho máximo deseado */
+    margin: 50px auto; /* Centra el contenedor vertical y horizontalmente */
     background-color: #fff;
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 h2 {
@@ -32,12 +35,13 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: calc(100% - 12px);
+    width: calc(100% - 20px); /* Ajusta el ancho para que no ocupe toda la página */
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 input.input-correcto {
@@ -49,13 +53,16 @@ input.input-incorrecto {
 }
 
 input[type="submit"] {
-    width: 40%;
+    width: 100%; /* Ocupa todo el ancho disponible dentro del contenedor */
     padding: 10px;
     background-color: #007bff;
     border: none;
     border-radius: 10px;
     color: #fff;
     transition: background-color 0.3s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    max-width: 200px; /* Limita el ancho máximo del botón */
+    margin: 0 auto; /* Centra el botón horizontalmente */
 }
 
 input[type="submit"]:hover {
