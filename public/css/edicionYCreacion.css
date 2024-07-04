@@ -7,7 +7,11 @@
     width: 100%;
 }
 .button-edit{
-    display: none;
+         padding: 10px 10px;
+         background-color: #b782e9;
+         color:#b782e9;
+         border: none;
+         cursor: pointer;
 }
 .Edicion div {
     width: 100%;
