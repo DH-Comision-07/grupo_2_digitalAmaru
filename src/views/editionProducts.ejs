@@ -14,7 +14,7 @@
     <main class="container-edition">
         <!-- Creación -->
         <div class="Creacion">
-            <h2>Crrea tu curso</h2>
+            <h2>CREA TU CURSO</h2>
             <form action="/editCreation/create" method="POST">
                 <label for="name">Nombre del producto</label>
                 <input type="text" id="name" name="name" required>
@@ -34,7 +34,7 @@
 
         <!-- Edición -->
         <div class="listado-de-cursos-cont">
-            <h2>Edita tu curso</h2>
+            <h2>EDITA TU CURSO</h2>
             <% products.forEach(product => { %>
                 <div class="curso-individual-cont">
                     <img class="img-edit" src="<%= product.image %>" alt="<%= product.name %>">
