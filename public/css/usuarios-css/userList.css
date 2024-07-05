@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.crudList__title {
+    text-align: center;
+}
+
+.crudList__form {
+    display: flex;
+    margin: 10px 0;
+}
+
+.form__input {
+   flex: 1;
+   padding: 5px;
+   margin-right: 10px; 
+   font-size: 1rem;
+}
+
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button--primary {
+    background-color: blue;
+    color: azure;
+}
+
+.crudList__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table__header, .table__body {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.table__header {
+    background-color: aliceblue;
+}

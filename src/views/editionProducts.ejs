@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición y Creación de Productos</title>
+    <%- include('partials/head') %>
+</head>
+<body class="body-editionCreacion">
+    <%- include('partials/header') %>
+    <div class="tituloCyE">
+        <h1>Creación y Edición de Productos</h1>
+    </div>
+    <main class="container-edition">
+        <!-- Creación -->
+        <div class="Creacion">
+            <h2>Crea tu Curso</h2>
+            <form action="/editCreation/create" method="POST">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="description">Descripción del producto</label>
+                <textarea class="textarea" id="description" name="description" rows="4" placeholder="Ingrese la descripción del producto aquí..." required></textarea>
+
+                <label for="image">URL de la foto</label>
+                <input type="text" id="image" name="image" placeholder="(Opcional)">
+
+                <label for="price">Precio</label>
+                <input type="number" id="price" name="price" placeholder="$" required>
+
+                <button type="submit" class="button-edit">Crear Producto</button>
+            </form>
+        </div>
+
+        <!-- Edición -->
+        <div class="listado-de-cursos-cont">
+            <h2>Edita tu Curso</h2>
+            <% products.forEach(product => { %>
+                <div class="curso-individual-cont">
+                    <img class="img-edit" src="<%= product.image %>" alt="<%= product.name %>">
+                    <p class="name-edit"><b><%= product.name %></b></p>
+                    <p class="description-edit"><%= product.description %></p>
+                    <p class="price-edit">$<%= product.price %></p>
+                    <a href="/editCreation/edit/<%= product.id %>" class="btn-read-more">Editar</a>
+                </div>
+                <hr>
+            <% }) %>
+        </div>
+    </main>
+</body>
+ <!-- FOOTER -->
+ <%- include('./partials/footer') %>
+</html>

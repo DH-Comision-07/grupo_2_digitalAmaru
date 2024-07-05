@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Blog - Digital Amaru</title>
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <!-- HEAD -->
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+
+    <main class="main-content">
+        <h1 class="blog-heading">Nuestro Blog</h1>
+        <section class="blog-section">
+            <article class="blog-entry">
+                <img src="/images/program3.jpg" alt="Desarrollador Web">
+                <div class="blog-text">
+                    <h2>¿Qué hace un desarrollador web?</h2>
+                    <p>Descubre las tareas esenciales de un desarrollador web...</p>
+                </div>
+            </article>
+            <article class="blog-entry">
+                <img src="/images/foto4.jpg" alt="Lenguajes de Programación">
+                <div class="blog-text">
+                    <h2>Lenguajes de Programación Más Demandados 2024</h2>
+                    <p>La industria tecnológica está en constante evolución...</p>
+                </div>
+            </article>
+            <article class="blog-entry">
+                <img src="/images/programfinal.jpg" alt="Freelancers en Latinoamérica">
+                <div class="blog-text">
+                    <h2>¿Quiénes y por qué eligen trabajar freelance en Latinoamérica?</h2>
+                    <p>Los jóvenes de hoy ya no buscan reglas impuestas por terceros...</p>
+                </div>
+            </article>
+            <article class="blog-entry">
+                <img src="/images/clases-en-vivo.jpg" alt="Programación Avanzada">
+                <div class="blog-text">
+                    <h2>Desafíos y Soluciones en Programación Avanzada</h2>
+                    <p>Explora los desafíos comunes que enfrentan los desarrolladores...</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+</body>
+</html>

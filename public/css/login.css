@@ -21,6 +21,7 @@ h2 {
 
 .form {
     margin-bottom: 15px;
+    display: block;
 }
 
 label {
@@ -56,4 +57,8 @@ button[type="submit"]:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+}
+
+.additionals p a{
+    color: #0056b3;
 }

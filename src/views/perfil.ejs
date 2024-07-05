@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('./partials/header') %>
+    
+
+    <main>
+
+        <div class="caja-perfil">
+            <div class="caja-perfil-letra-perfil">
+                <h1 class="letraperfil"><%= user.name[0].toUpperCase(); %></h1>
+            </div>
+            <p class="p-name-titulo">Name:</p>
+            <h3 class="nombre-perfil"> Hola <%= user.name %></h3>
+            <p class="p-email-titulo">Email: </p>
+            <h3 class="email-perfil"> <%= user.email %> </h3>
+
+        </div>
+
+    </main>
+     <!-- FOOTER -->
+     <%- include('./partials/footer') %>
+</body>
+</html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--HEAD-->
+<!-- HEAD -->
 <%- include('./partials/head') %>
 
 <body>
-    <!--HEADER-->
+    <!-- HEADER -->
     <%- include('./partials/header') %>
 
-    <!--Cuerpo del index-->
     <main>
         <!-- Carousel Section -->
         <div class="carousel">
@@ -36,146 +35,53 @@
                 </article>
             </div>
         </div>
+
+        <!-- Section de Cursos -->
+        <section class="last-view">
+            <h2 id="cursos" class="titular">Cursos</h2>
+            <div class="courses-container">
+                <% for(let i = 0; i < products.length; i++) { %>
+                <div class="course">
+                    <img src="<%= products[i].image %>" alt="<%= products[i].name %>">
+                    <h3><%= products[i].name %></h3>
+                    <p><%= products[i].description %></p>
+                    <p class="price">$<%= products[i].price %></p>
+                    <a href="/product/cursos/detalle/<%= products[i].id %>" class="btn-read-more">Leer más</a>
+                </div>
+                <% } %>
+            </div>
+        </section>
+
+        <!-- Mensaje para agregar curso -->
+        <div class="nuevocurso">
+            <p>Para agregar curso haz <a href="/editCreation/edit">Click aquí</a></p>
+        </div>
     </main>
 
-     <!--CURSOS MAS VENDIDOS-->
-     <h1>CURSOS MAS VENDIDOS</h1>
-     <div class="contenedor__titulos__cursos">
-         <div class="contenedor__titulo">
-             <div class="cont_p_curso"></div>
-         </div>
-
-         <!--contenedores cursos-->
-         <div class="flex_cont_cursos"></div>
-             <div class="titulos__indiv">
-                 <div class="img__titulo"></div>
-                 <img src="/images/html.jpg">
-                 <div class="caja__img-curso">
-                     <h3>HTML Y CSS</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">VER MAS</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Descripción. </b>Este curso está diseñado para que puedas idear, maquetear y finalmente realizar tus sitios web de manera profesional. </p>
-                 </div>
-             </div>
-             
-             <div class="titulos__indiv">
-                 <div class="img__titulo"></div>
-                 <img src="/images/java.jpg">
-                 <div class="caja__img-curso">
-                     <h3>JAVASCRIPT</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">VER MAS</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Descripción. </b>Este curso está diseñado para que puedas crear contenido de actualización dinámica, controlar multimedia, animar imágenes entre otras tantas que te servirán para introducirte en el mundo laboral. </p>
-                 </div>
-             </div>
-             
-             <div class="titulos__indiv">
-                 <div class="img__titulo"></div>
-                <img src="/images/nodejs.jpg">
-                 <div class="caja__img-curso">
-                     <h3>NODE.JS</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">VER MAS</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Descripción. </b>Está diseñado para crear aplicaciones escalables, es una tecnología del Back-end e interpretes de JavaScript
-                          que permite ejecutar código de una manera veloz. </p>
-                 </div>
-             </div>
-         </div>
-     </div>
-
-     <!--TITULOS-->
-     <div class="contenedor__titulos__certificados">
-         <div class="contenedor__titulo">
-             <h3>Beneficios</h3>
-         </div>
-
-         <!--contenedores titulos-->
-         <div class="flex_cont_titulos">
-             <div class="titulos__indiv">
-                 <div class="caja__img-titulo">
-                     <div class="img__titulo"></div>
-                     <img src="/images/cursos.jpg">
-                     <h3>CTD</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">the ultimate degree</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado
-                         Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la
-                         industria. </p>
-                 </div>
-             </div>
-             <div class="titulos__indiv">
-                 <div class="caja__img-titulo">
-                     <div class="img__titulo"></div>
-                     <img src="/images/cursos.jpg">
-                     <h3>CTD</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">the ultimate degree</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado
-                         Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la
-                         industria. </p>
-                 </div>
-             </div>
-
-             <div class="titulos__indiv">
-                 <div class="caja__img-titulo">
-                     <div class="img__titulo"></div>
-                     <img src="/images/cursos.jpg">
-                     <h3>CTD</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">the ultimate degree</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la industria. </p>
-                 </div>
-             </div>
-
-             <div class="titulos__indiv">
-                 <div class="caja__img-titulo">
-                     <div class="img__titulo"></div>
-                     <img src="/images/cursos.jpg">
-                     <h3>CTD</h3>
-                 </div>
-                 <!--texto-->
-                 <h3 class="h3-titulos-int">the ultimate degree</h3>
-                 <div class="cont_p_texto">
-                     <p><b>Titulo Certificado. </b>Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant para formar desarrolladores siguiendo los más altos estándares de la industria. </p>
-                 </div>
-             </div>
-         </div>
-     </div>
- </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
 
     <!-- Script para carrusel -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-    const carouselContainer = document.querySelector('.carousel-container');
-    const slides = carouselContainer.querySelectorAll('.carousel-article');
-    const slideWidth = slides[0].offsetWidth; // Ancho de cada diapositiva
-    let currentIndex = 0;
-    const intervalTime = 3000; // Cambia esto para ajustar la velocidad de cambio de las imágenes
+            const carouselContainer = document.querySelector('.carousel-container');
+            const slides = carouselContainer.querySelectorAll('.carousel-article');
+            const slideWidth = slides[0].offsetWidth; // Ancho de las diapo
+            let currentIndex = 0;
+            const intervalTime = 3000; // Con esto fijas la velocidad a la que queres que pasen las img
 
-    function showSlide(index) {
-        const newPosition = -index * slideWidth;
-        carouselContainer.style.transform = `translateX(${newPosition}px)`;
-    }
+            function showSlide(index) {
+                const newPosition = -index * slideWidth;
+                carouselContainer.style.transform = `translateX(${newPosition}px)`;
+            }
 
-    function showNextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
 
-    setInterval(showNextSlide, intervalTime); // Cambiar automáticamente las imágenes cada intervalo de tiempo
-});
+            setInterval(showNextSlide, intervalTime); // Esto cambia automáticamente las imágenes desp de cada intervalo de tiempo
+        });
     </script>
 </body>
 

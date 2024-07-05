@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <%- include('../partials/head') %>
+</head>
+<body class="body-editionCreacion">
+    <%- include('../partials/header') %>
+    <div class="tituloCyE">
+        <h1>Editar Producto</h1>
+    </div>
+    <main class="container-edition-edit">
+        <div class="Creacion">
+            <h2>Edita tu curso</h2>
+            <form action="/editCreation/edit/<%= product.id %>" method="POST">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" value="<%= product.name %>" required>
+
+                <label for="description">Descripción del producto</label>
+                <textarea class="textarea" id="description" name="description" rows="4" required><%= product.description %></textarea>
+
+                <label for="image">URL de la foto</label>
+                <input type="text" id="image" name="image" value="<%= product.image %>">
+
+                <label for="price">Precio</label>
+                <input type="number" id="price" name="price" value="<%= product.price %>" required>
+
+                <button type="submit" class="button-edit">Guardar Cambios</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

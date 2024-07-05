@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <%- include('./partials/head') %>
-
 <body>
-    
-    <div class="cart">
-        <h1><i class="fa-solid fa-cart-shopping"></i>Mis compras</h1>
-        <ul class="items">
-            <li>Curso 1</li>
-            <li>Curso 2</li>
-            <li>Curso 3</li>
-        </ul>
-    </div>
+    <section>
+        <div class="container">
+            <h2 class="px-5 p-2"><i class="fa-solid fa-cart-shopping"></i> Mis compras</h2>
+            <div class="cart">
+                <div class="col-md-12 col-lg-10 mx-auto">
+                    <% if (cart.length > 0) { %>
+                        <% cart.forEach(item => { %>
+                            <div class="cart-item">
+                                <div class="row">
+                                    <div class="col-md-7 center-item">
+                                        <img src="<%= item.image %>" alt="<%= item.name %>">
+                                        <h5><%= item.name %></h5>
+                                    </div>
+                                    <div class="col-md-5 center-item">
+                                        <div class="input-group number-spinner">
+                                            <button id="curso-menos" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                            <input id="curso-numero" type="number" min="0" class="form-control text-center" value="<%= item.quantity %>">
+                                            <button id="curso-mas" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                        <h5>$ <span id="curso-total"><%= item.price * item.quantity %></span></h5>
+                                        <img src="images/x_icon.png" alt="" class="remove-item">
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } else { %>
+                        <p>No hay productos en el carrito</p>
+                    <% } %>
+                </div>
+                <div class="cont-pagar">
+                    <div><button type="submit" class="button-crear">Pagar</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+ <!-- FOOTER -->
+ <%- include('./partials/footer') %>
 </html>
+

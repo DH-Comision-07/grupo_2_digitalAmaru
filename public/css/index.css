@@ -1,203 +1,405 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Define el tipo de letra predeterminado para todo el documento */
+
+}.flex-perfil
+
+a {
+  text-decoration: none;
 }
 
-/*----------- H O M E ------------*/
-
-/* celular */
-@media (max-width: 415px) {
-    .contenedor__titulos__certificados {
-        text-align: center;
-    }
-
-    .titulos__indiv {
-        margin: 1em auto;
-    }
-
-    .flex_cont_titulos,
-    .contenedor__titulos__cursos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+body, html {
+  overflow-x: hidden;
+}
+.last-view {
+  margin-bottom: 2em;
+}
+/* Courses Container */
+.courses-container {
+  display: grid;
+  gap: 30px; 
+  padding: 20px;
+}
+.nuevocurso{
+  margin: 2em 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+.course {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 1em;
+  padding: 20px;
+  justify-content: space-between; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño del elemento */
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
 }
 
-/*SECCION TITULOS*/
-
-/* Contenedor titulos certificados */
-.contenedor__titulos__certificados {
-    width: 100%;
-    height: 300px;
-    margin: 2em 0;
+.course img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 1em;
 }
 
-.flex_cont_titulos {
-    display: flex;
-    justify-content: space-around;
+.course h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.contenedor__titulos__cursos {
-    display: flex;
-    justify-content: space-around;
+.course p {
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
-/* Titulo Beneficios Titulos */
-.contenedor__titulo {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.course .price {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.contenedor__titulo h3 {
-    font-size: 2em;
-    margin-bottom: 1em;
+.course .btn-read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s;
+
 }
 
-/* contenedor de los titulos individuales */
-.titulos__indiv {
-    height: 20em;
-    border: 0.2em solid #6b0103;
-    border-radius: 0.4em;
-    /*interior*/
-    background-color: #ffffff;
-    padding: 0.7em;
+.course .btn-read-more:hover {
+  background-color: #0056b3;
+
+
+}
+.articulo-main{
+  width: 100%;
+  height: auto;
+  margin: 2em 0;
+
+}
+@media (max-width: 600px) {
+  .courses-container {
+      grid-template-columns: 1fr;
+  }
 }
 
-.caja__img-titulo {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1em;
+@media (min-width: 601px) and (max-width: 768px) {
+  .courses-container {
+      grid-template-columns: 1fr 1fr;
+  }
+  .articulo-main{
+    margin: 2em 0em;
+    padding: 0 1em;
+  }
 }
 
-/*nombre titulo*/
-.caja__img-titulo h3 {
-    font-size: 2em;
-    color: #1c0113;
+@media (min-width: 769px) {
+  .courses-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .articulo-main{
+    margin: 2em 0em;
+    padding: 0 2em;
+  }
 }
 
-.titulos__indiv img {
-    width: 20%;
+.logo-perfil, .logo-carrito {
+  font-size: 2em;
+  color: black;
+  right: 5px;
 }
 
-.titulo__indiv img {
-    width: 50%;
+.div-perfil {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
-.flex_cont_titulos img {
-    width: 40%;
+.ul-perfil-contenedor {
+  display: block;
+  flex-direction: row;
+  padding: 0;
 }
 
-/* subtitulo */
-.h3-titulos-int {
-    margin: 1em 0;
+.ul-perfil {
+  opacity: 0; 
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
-/* parrafo de los cont de titulos */
-.cont_p_texto {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flex-perfil:hover .ul-perfil {
+  opacity: 1;
+  visibility: visible;
 }
 
-.cont_p_texto p {
-    text-align: start;
+.flex-perfil {
+  position: relative;
+  display: flex;
+  gap: 1em; 
+
+}
+.flex-perfil h2{
+  color: #000;
 }
 
-.contenedor__titulos__cursos {
-    display: flex;
-    justify-content: space-around;
+.ul-perfil {
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  background-color: rgb(218, 218, 218); 
+  border: 1px solid #191818; 
+  border-radius: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
 }
 
-.caja__img-curso {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1em;
+.ul-perfil li {
+  padding: 10px; 
 }
 
-/*celular*/
-@media (max-width: 320px) {
-    .flex_cont_cursos {
-        width: 20%;
-        margin: auto;
-        justify-content: center;
-        padding-top: 20px;
-    }
+.ul-perfil li a {
+  text-decoration: none; 
+  color: #333; 
 }
 
-/*compu*/
-@media (min-width: 320px) {
-    .flex_cont_cursos {
-        width: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        padding-top: 20px;
-    }
+.ul-perfil li a:hover {
+  color: honeydew;
+}
+.ul-perfil-contenedor{
+  margin: 0;
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+.header__index {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #aca7f5;
+  align-items: center;
+  justify-content: center;
 }
 
+.search {
+  display: none;
+}
+
+.form {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+  padding: 3px;
+  gap: 1em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.nav-links a:hover{
+  color: #fafafa;
+}
+
+
+.nav-links li {
+  margin: 0 20px;
+
+}
+
+.nav-links li a {
+  text-transform: lowercase !important;  
+  font-family: 'Arial', sans-serif
+}
+
+.menu-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+.cursosss{
+  text-decoration: none;
+  color: #000000;
+}
+/* Search */
+.search {
+  --padding: 14px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 28px;
+  background: #f6f6f6;
+  transition: 0.25s;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input {
+  font-size: 16px;
+  font-family: 'Lexend', sans-serif;
+  color: #333333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 300px;
+}
+
+.search-input::placeholder,
+.search-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 15px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #3740a4;
+}
+
+.hidden {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+/* Carousel */
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-article {
-    flex: 0 0 100%; /* Establece el ancho fijo de cada artículo del carrusel */
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
-.carousel-article img {
-    width: 100%;
-    height: auto;
+.slide-content {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.carousel-article:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último artículo para evitar un espacio adicional */
+.slide-content img {
+  width: 100%;
+  height: auto;
 }
 
-/* ultimo */
+.slide-content h3 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+ }
+ 
+ 
+ .slide-content h5 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+ }
+ /* Ajustes para dispositivos móviles */
+ @media (max-width: 768px) {
+  .slide-content h5 {
+    font-size: 1em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.3em 0.7em; /* Ajuste de padding para mantener proporción */
+    top: 50%
+  }
+ }
+ @media (max-width: 768px) {
+  .slide-content h3 {
+    font-size: 2em; /* Tamaño ajustado para dispositivos móviles */
+    padding: 0.4em 0.8em; /* Ajuste de padding para mantener proporción */
+  }
+ }
+  
 
-ul,
-ol {
-    list-style: none;
+/* Footer styles */
+.footer {
+  background-color: #aca7f5;
+  color: #000000;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.nav li a {
-    background-color: rgb(123, 123, 245);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
+.footer__inner {
+  display: flex;
+  justify-content: space-between; /* alinea en los costados */
+  align-items: flex-start; /* alinacion vertical */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.nav > li {
-    float: left;
+.footer__section {
+  flex: 1 1 45%; /* para que ajustemos el ancho de la secccion */
+  margin: 0 10px
 }
-
-.nav li a:hover {
-    background-color: #434343;
+  .nosotros {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Cambia el color a negro */
+    font-weight: normal; /* Ajusta el peso de la fuente si es necesario */
+    /* Otros estilos que desees aplicar */
 }
-
-.nav li ul {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-}
-
-.nav li:hover > ul {
-    display: block;
-}
-

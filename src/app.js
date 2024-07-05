@@ -1,45 +1,44 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require("path");
-const port = 3300;
-const index = require('./routes/index');
+const path = require('path');
+const port = 7777;
 
-const publicPath = path.resolve(__dirname, "../public");
+const cookies = require('cookie-parser');
+const session = require('express-session');
+
+const publicPath = path.resolve(__dirname, '../public');
+
 app.use(express.static(publicPath));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(cookies());
+app.use(session({
+    secret: "esto es secreto!",
+    resave: false,
+    saveUninitialized: true
+}));
 
-//ruta de index
-app.get("/", (req, res) => {
-  res.render("index")
-});
+const userLoggedMiddleware = require('./middlewers/userloggedmidleweres');
+app.use(userLoggedMiddleware);
 
-//ruta de producto
-app.get("/detalle-de-curso", (req, res) => {
-  res.render("product-details")
-});
+const userRouter = require('./routes/users');
+app.use('/user', userRouter);
 
-//ruta de usuario
-app.get("/register", (req, res) => {
-  res.render("register")
-});
-//ruta de usuario
-app.get("/login", (req, res) => {
-  res.render("login")
-});
+const productRouter = require('./routes/product');
+app.use('/product', productRouter);
 
-//ruta de usuario
-app.get("/cart", (req, res) => {
-  res.render("cart")
-});
+const indexRouter = require('./routes/index');
+app.use('/', indexRouter);
 
-//ruta de main
-app.get("/nosotros", (req, res) => {
-  res.render("nosotros")
-});
+const cartRouter = require('./routes/cart');
+app.use('/cart', cartRouter);
+
+const editCreationRouter = require('./routes/editCreation');
+app.use('/editCreation', editCreationRouter);
+
 
 app.listen(port, () => 
-console.log(`http://localhost:${port}`)
-)
-
-//vista de listado de productos, vista de agregar producto (formulario), edicion de productos, vista perfil de usuario, vista de edicion de usuario (formulario), vista donde enlisten usuarios. cada uno con ruta
+    console.log(`Servidor corriendo en http://localhost:${port}`)
+);

@@ -5,29 +5,54 @@
 <%- include('./partials/head') %>
 
 <body>
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+    <% if(typeof errors != 'undefined') { %>
+        <p class="error--p">ERROR</p>
+        <ul class="error--ul">
+            <% for (let i = 0; i < errors.length; i++) {%>
+                <li class="error--li">
+                    <%= errors[i].msg%>
+                </li>
+            <% } %>
+        </ul>
+    <% } %>
+
+
     <div class="login">
         <h2>Log In</h2>
-        <form action="#" method="POST">
+        <form action="/user/login" method="POST">
             <div class="form">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" value="" id="email" name="email" placeholder="Email" required>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-denger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="form">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-denger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
             </div>
             <div>
                 <label for="rememberme">Recuérdame</label>
-                <input type="checkbox" id="rememberme" name="rememberme">
-               
-            </div>
+                <input type="checkbox" id="rememberme" name="rememberme">                           
+            </div> 
             <div class="additionals">
                 <div>
-                    <p>No tienes una cuenta? <a href="#">Regístrate</a>.</p>
+                    <p>No tienes una cuenta? <a href="register">Regístrate</a>.</p>
                     <button type="submit">Log In</button>
                 </div>
             </div>
         </form>
     </div>
+     <!-- FOOTER -->
+     <%- include('./partials/footer') %>
 </body>
 </html>

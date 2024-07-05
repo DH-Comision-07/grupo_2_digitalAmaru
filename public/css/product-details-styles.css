@@ -1,64 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  }
-/*-----------------------------*/
-  header {
-    height: 20vh;
-    background-color: blueviolet;
-  }
-/*------------------------------*/
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aquamarine;
-  }
+/* CSS */
+.main__box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-  .main__container {
-    display: inherit;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: beige;
+.main__title-container {
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px;
+}
 
-  }
+.main__container-button {
+  text-align: center; /* Centrar el botón */
+}
 
-  .main_principal-img {
-    width: 90vw;
-    padding-top: 1rem;
-  }
+.main__button--add-cart {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: rgb(5, 0, 12);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold; /* Poner el texto en negrita */
+}
 
-  .main_principal-img img{
-    width: 100%;
-  }
+.main__description {
+  text-align: justify; /* Justificar el texto */
+}
 
-  .main__course-title {
-    display: block;
-    width: 60%;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 18px;
-  }
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px; /* Ajusta el espacio superior */
+  margin-left: 20px; /* Ajusta el espacio a la izquierda */
+  margin-right: 20px; /* Ajusta el espacio a la derecha */
+}
 
-  .main__container-button {
-    margin: auto;
-    width: 40%;
-  }
+.main__content {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px; /* Ajusta el espaciado según sea necesario */
+}
 
-  .main__button--add-cart {
-    padding: 5px 8px;
-    font-size: 12px;
-    border: 1px solid;
-    border-radius: 5px;
-  }
+.main__image {
+  text-align: center; /* Centrar la imagen */
+  flex: 1;
+  margin-top: 20px;
+}
 
-  .main__container--modality {
-    display: flex;
-    flex-direction: column;
-  }
+.main__image img {
+  width: 100%;
+  height: auto;
+}
 
-  .main__article--container-img {
-    width: 40%;
-  }
+.main_principal-img img {
+  max-width: 200px; /* Ajustar el ancho máximo de la imagen */
+  height: auto; /* Esto mantiene la proporción de la imagen */
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las cajas envuelvan en varias líneas */
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px
+}
+
+.box {
+  width: calc(50% - 20px); /* Ancho del 50% del contenedor menos el espacio entre las cajas */
+  padding: 2px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center; /* Centrar el texto dentro de las cajas */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente el contenido */
+  background-color: #dfd5fafe; /* Fondo gris claro */
+  color: rgb(20, 20, 20);
+
+}
+
+/* Ajustes de estilo para el contenido dentro de las cajas */
+.box p {
+  margin-right:0;
+  text-align: center; /* Centrar el texto dentro de las cajas */
+  display: flex;
+    font-weight: bold; /* Poner el texto en negrita */
+      margin-top: 10px; /* Ajustar el espacio superior del texto dentro de la caja */
+}
+
+
+.main-detalle{
+  margin: 3em;
+  padding: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.main-detalle section img{
+  border-radius: 1em;
+}
+.boton {
+ display: flex;
+ justify-content: center;
+ margin: 0 auto 4em auto;
+ width: 100%;
+
+}
+
+
+
+
+
+@media (min-width: 785px) {
+  
+}
