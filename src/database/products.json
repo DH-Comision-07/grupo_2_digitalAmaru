@@ -11,7 +11,7 @@
     "name": "Curso Fundamentos HTML y CSS",
     "description": "Sumérgete en el mundo del diseño web con este curso de 7 horas. Aprende sobre las etiquetas y la estructura de HTML, así como la estilización de páginas con CSS para crear sitios web visualmente atractivos.",
     "image": "/images/cursospng.jpeg",
-    "price": 15000
+    "price": "80000"
   },
   {
     "id": 300,
@@ -55,4 +55,5 @@
     "image": "/images/cursospng.jpeg",
     "price": "20000"
   }
+  
 ]

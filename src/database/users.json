@@ -82,5 +82,17 @@
   "name": "efefeff jhvgc",
   "email": "mati@gmail.com",
   "password": "$2a$12$vo3I/yU6ZGK38m5V2I4BB.glQuGsRClKrMxHsg5ZSkcNol3ZcwBKq"
+ },
+ {
+  "id": 15,
+  "name": "ana",
+  "email": "anamarin@hotmail.com",
+  "password": "$2a$12$UMDletbdZFkROtIiSE63lu1Csvqkb73Rc4jA44ssGKlC.ofY.2RUC"
+ },
+ {
+  "id": 16,
+  "name": "ana",
+  "email": "romi@hotmail.com",
+  "password": "$2a$12$yn.O3upW4oP1dzhdXNy7ueXLb.o8gWLhczz0cLwtq80dpMivNupGa"
  }
 ]
