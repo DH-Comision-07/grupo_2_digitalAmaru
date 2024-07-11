@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Usuario = sequelize.define('Usuario', {
+    const Cursos = sequelize.define('Cursos', {
       sku: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -8,35 +8,37 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(150),
         allowNull: false,
       },
-      apellido: {
-        type: DataTypes.STRING(150),
+      description: {
+        type: DataTypes.TEXT,
         allowNull: false,
       },
-      mail: {
+      image: {
         type: DataTypes.STRING(200),
         allowNull: false,
         unique: true,
       },
-      contraseña: {
-        type: DataTypes.STRING(100),
+      price: {
+        type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
       },
       categoria_sku: {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
         references: {
-          model: 'Category',
+          model: 'Usuario',
           key: 'sku',
         },
       },
-    }, {
-      tableName: 'usuarios',
+    }, 
+    
+    {
+      tableName: 'cursos',
       timestamps: false,
     });
   
-    Usuario.associate = models => {
-      Usuario.belongsTo(models.Cursos, {as:'cursos', foreignKey: 'cursosId'});
+    Cursos.associate = models => {
+      Cursos.belongsTo(models.Usuario, {as:"usuarios", foreignKey: 'usuariosId'});
     };
   
-    return Usuario;
+    return Cursos;
   };
