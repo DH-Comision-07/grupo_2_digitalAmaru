@@ -1,5 +1,70 @@
+<<<<<<< HEAD
+
+SPRINT 1
+
+1- Comenzar a hacer:
+Tener los repositorios clonados para que todos podamos subir a git
+Participar de las reuniones
+Ayudarnos mutuamente para solucionar problemas
+
+2- Hacer más:
+Coordinar con el equipo para reunirnos con mayor frecuencia
+Distribuir las tareas equitativamente
+Comunicar avances realizado por cada integrante
+
+3- Continuar haciendo:
+Proponer ideas nuevas
+Seguir participando de las reuniones
+Comunicar si necesitamos ayuda
+
+4- Hacer menos:
+Poca participación en las reuniones
+Tener poca iniciativa en proponer instancias para reunirnos
+Comunicar poco
+
+5- Dejar de hacer:
+Tener muchas ausencias y participar poco
+Escasa comunicación
+Dejar las tareas para último momento
+
+
+SPRINT 2
+
+1- Comenzar a hacer:
+Empezar a definir tareas en trello
+Reuniones más organizadas y regulares (2 veces por semana)
+Mejorar la comunicación y coordinación para las entregas
+
+2- Hacer más:
+Ser más proactivos
+Ayudarnos entre sí
+Pedir ayuda cuando la necesitamos 
+Comunicar en qué estado está cada uno
+
+3- Continuar haciendo:
+Tratarnos con respeto y entender los tiempos de otros
+Ser perseverantes y poner buena voluntad
+Insistir en la participación y en las reuniones semanales
+Participar en las reuniones
+
+4- Hacer menos:
+Falta de proactividad
+No tomar la palabra en las reuniones
+Dilatar la toma de decisiones
+
+5- Dejar de hacer:
+No participar de las reuniones
+No contribuir al equipo
+Falta de compromiso
+
+
+SPRINT 3
+ 
+ 1- Comenzar a hacer:
+=======
 ﻿SPRINT 1
 1- Comenzar a hacer:
+>>>>>>> develop
 * Actualizar regularmente tareas en trello
 * Reuniones más organizadas y regulares (3 veces por semana)
 * Mejorar la comunicación y coordinación para las entregas
@@ -30,6 +95,8 @@
 * Falta de participacón
 * Falta de compromiso
 
+<<<<<<< HEAD
+=======
 SPRINT 2
 
 1- Comenzar a hacer:
@@ -93,6 +160,7 @@ SPRINT 3
 * Falta de participacón
 * Falta de compromiso
 
+>>>>>>> develop
 
 SPRINT 4
 
@@ -157,6 +225,8 @@ Juntarnos con poca frecuencia
 Entregar sprints incompletos
 Organizarnos mal con los tiempos
 Participar con poca frecuencia de las reuniones
+<<<<<<< HEAD
+=======
 
 SPRINT 6
 
@@ -253,3 +323,4 @@ Participación minima en las tareas
 Falta de compromiso con el trabajo y compañeros del grupo
 
 
+>>>>>>> develop

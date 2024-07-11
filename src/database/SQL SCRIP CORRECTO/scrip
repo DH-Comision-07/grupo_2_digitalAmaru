@@ -14,20 +14,20 @@ CREATE DATABASE IF NOT EXISTS `DB_DIGITALAMARU`;
 USE `DB_DIGITALAMARU`;
 
 
--- Create category table
-CREATE TABLE `category` (
+-- Create categorias table
+CREATE TABLE `categorias` (
   `sku` int(20) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`sku`)
 );
 
--- Insert data into category table
-INSERT INTO `category` (sku, name) VALUES 
+-- Insert data into categorias table
+INSERT INTO `categorias` (sku, name) VALUES 
 (1, 'Administrador'),
 (2, 'Profesor'),
 (3, 'Alumno');
 
-/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+/*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
 -- Create cursos table
