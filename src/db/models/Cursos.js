@@ -1,5 +1,8 @@
-module.exports = (sequelize, DataTypes) => {
-    const Cursos = sequelize.define('Cursos', {
+  module.exports = (sequelize, DataTypes)=>{
+
+     let alias = "Cursos";
+     let cols = {
+
       sku: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -29,16 +32,14 @@ module.exports = (sequelize, DataTypes) => {
           key: 'sku',
         },
       },
-    }, 
+     };
     
-    {
-      tableName: 'cursos',
-      timestamps: false,
-    });
-  
-    Cursos.associate = models => {
-      Cursos.belongsTo(models.Usuario, {as:"usuarios", foreignKey: 'usuariosId'});
+    let config = {
+      tableName: "cursos",
+      timestamps: false
     };
+    
+    let Cursos = sequelize.define(alias, cols, config);
   
     return Cursos;
-  };
+  }
