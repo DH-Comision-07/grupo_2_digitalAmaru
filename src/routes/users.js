@@ -10,7 +10,7 @@ const autMiddlewers = require("../middlewers/autMiddleweres");
 router.get("/register", guestmiddlewers, userController.register);
 
 //router.post("/register", userValidations.register, userController.prosesRegister);
-router.post("/register", userController.prosesRegister);
+router.post("/register",userValidations.register, userController.prosesRegister);
 
 router.get("/login" , guestmiddlewers, userController.login);
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!--HEAD-->
 <%- include('./partials/head') %>
@@ -7,52 +7,42 @@
 <body>
     <!-- HEADER -->
     <%- include('./partials/header') %>
+
     <% if(typeof errors != 'undefined') { %>
-        <p class="error--p">ERROR</p>
-        <ul class="error--ul">
-            <% for (let i = 0; i < errors.length; i++) {%>
-                <li class="error--li">
-                    <%= errors[i].msg%>
-                </li>
+        <p style="top: 3em; color: red;">ERROR</p>
+        <ul>
+            <% for (let i = 0; i < errors.length; i++) { %>
+                <li><%= errors[i].msg %></li>
             <% } %>
         </ul>
     <% } %>
 
-
-    <div class="login">
-        <h2>Log In</h2>
-        <form action="/user/login" method="POST">
-            <div class="form">
+    <div class="container">
+        <h2>Inicia sesión</h2>
+        <p>Ingresa tus credenciales para acceder a tu cuenta.</p>
+        <!-- Mensaje de error -->
+        <div id="mensaje-error" style="display: none; color: red;">
+            Tienes campos incompletos o incorrectos. Por favor revisa el formulario.
+        </div>
+        <form method="POST" action="/user/login" id="formulario">
+            <div id="grupo-email">
                 <label for="email">Email:</label>
-                <input type="email" value="" id="email" name="email" placeholder="Email" required>
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-denger">
-                        <%= errors.email.msg %>
-                    </div>
-                <% } %>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="requisito" style="display: none;">Debe ser un correo electrónico válido.</span>
             </div>
-            <div class="form">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <% if (locals.errors && errors.password) { %>
-                    <div class="text-denger">
-                        <%= errors.password.msg %>
-                    </div>
-                <% } %>
+
+            <div id="grupo-password">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="password" placeholder="Contraseña" required>
+                <span class="requisito" style="display: none;">Debe tener entre 4 y 12 caracteres.</span>
             </div>
-            <div>
-                <label for="rememberme">Recuérdame</label>
-                <input type="checkbox" id="rememberme" name="rememberme">                           
-            </div> 
-            <div class="additionals">
-                <div>
-                    <p>No tienes una cuenta? <a href="register">Regístrate</a>.</p>
-                    <button type="submit">Log In</button>
-                </div>
-            </div>
+
+            <input type="submit" value="Inicia sesión">
         </form>
     </div>
-     <!-- FOOTER -->
-     <%- include('./partials/footer') %>
+
+    <script src="../js-frontend/validations_login.js"></script>
 </body>
+<!-- FOOTER -->
+<%- include('./partials/footer') %>
 </html>

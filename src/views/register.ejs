@@ -7,7 +7,6 @@
 <body>
     <!-- HEADER -->
     <%- include('./partials/header') %>
-    <!-- Mostrador de errores -->
     <% if(typeof errors != 'undefined') { %>
         <p style="top: 3em; color: red;">ERROR</p>
         <ul>
@@ -43,12 +42,18 @@
                 <span class="requisito" style="display: none;">Debe tener entre 4 y 12 caracteres.</span>
             </div>
 
+            <div id="grupo-password-rep">
+                <label for="contraseña-rep">Repetir Contraseña:</label>
+                <input type="password" id="contraseña-rep" name="passwordRepeat" placeholder="Repetir Contraseña" required>
+                <span class="requisito" style="display: none;">Las contraseñas deben coincidir.</span>
+            </div>
+
             <input type="submit" value="Crea tu cuenta">
         </form>
     </div>
 
     <script src="../js-frontend/validations.js"></script>
 </body>
- <!-- FOOTER -->
- <%- include('./partials/footer') %>
+<!-- FOOTER -->
+<%- include('./partials/footer') %>
 </html>

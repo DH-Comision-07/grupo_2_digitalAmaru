@@ -94,5 +94,42 @@
   "name": "ana",
   "email": "romi@hotmail.com",
   "password": "$2a$12$yn.O3upW4oP1dzhdXNy7ueXLb.o8gWLhczz0cLwtq80dpMivNupGa"
+ },
+ {
+  "id": 17,
+  "name": "C",
+  "email": "mensacees@gmail.com",
+  "password": "$2a$12$83xdXpqawr7dQoADuy3poOQIxC2LusoLUch0L/Q4ZEL3mS7SPLOAi"
+ },
+ {
+  "id": 18,
+  "name": "martina",
+  "email": "martucuomo@gmail.com",
+  "password": "$2a$12$5pNGYQZW61JacbvfT2JWwOs/U/MbPYa9lXVwbXbsewMQkJdbHfMae"
+ },
+ {
+  "id": 19,
+  "name": "curso ",
+  "email": "prueba2@gmail.com",
+  "password": "$2a$12$KwEhgaFQm.4WoBcUT2cEauz9ReFZ/KekVfDexas.feQnfdNUzwHXe"
+ },
+ {
+  "id": 20,
+  "name": "curso ",
+  "email": "mensajeluyfdymercedes@gmail.com",
+  "password": "$2a$12$0uOlvZFSicGRSMlfF75syu4kefuJ8fMn0F91/lFA6lWteTt4pToj2"
+ },
+ {
+  "id": 21,
+  "name": "matias",
+  "email": "rhhhhh@gmail.com",
+  "password": "$2a$12$5NPSqPZQKIPpFGAKQqR2beWMVpaJfi./S82bgQj4oCuvIC2Zj8QBS"
+ },
+ {
+  "id": 22,
+  "name": "mauro",
+  "email": "mauro@gmail.com",
+  "password": "$2a$12$WR7inU75TpHczlplopl5F.Ryc4YJyqknHlLiTBg4dVXl5akeuZwgS",
+  "passwordRepeat": "mauro29"
  }
 ]
