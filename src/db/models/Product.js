@@ -40,6 +40,12 @@
     };
     
     let Product = sequelize.define(alias, cols, config);
+
+    Product.associate =  function (models) {
+    Product.belongsTo(models.User, {
+        as :"user", 
+        foreignKey : "categoria_id"});
+    }
   
     return Product;
   }

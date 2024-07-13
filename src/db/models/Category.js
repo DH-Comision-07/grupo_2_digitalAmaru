@@ -20,11 +20,13 @@ module.exports = (sequelize, DataTypes)=>{
 
     let Category = sequelize.define(alias, cols, config);
 
-    Category.associate =  (models) => {
-    Category.belongsTo(models.Product, {as :"user", foreignKey : "categoria_id"});
+    Category.associate =  function (models) {
+    Category.belongsTo(models.Product, {
+      as :"user", 
+      foreignKey : "categoria_id"});
   }
 
     return Category;
-  }
+}
   
   
