@@ -9,8 +9,5 @@ router.get("/blog", indexController.blog);
 
 router.get("/nosotros", indexController.nosotros)
 
-
-
 module.exports = router;
-
 

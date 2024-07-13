@@ -38,7 +38,6 @@ app.use('/cart', cartRouter);
 const editCreationRouter = require('./routes/editCreation');
 app.use('/editCreation', editCreationRouter);
 
-
 app.listen(port, () => 
     console.log(`Servidor corriendo en http://localhost:${port}`)
 );
