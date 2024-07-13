@@ -131,5 +131,19 @@
   "email": "mauro@gmail.com",
   "password": "$2a$12$WR7inU75TpHczlplopl5F.Ryc4YJyqknHlLiTBg4dVXl5akeuZwgS",
   "passwordRepeat": "mauro29"
+ },
+ {
+  "id": 23,
+  "name": "catalina",
+  "email": "catamatidamasia@gmail.com",
+  "password": "$2a$12$R5Pm0HusTmkQjqyMG7KfHOu4DuQcwE/Zi51KrYoRiWbvDFYKjyUvm",
+  "passwordRepeat": "cata123"
+ },
+ {
+  "id": 24,
+  "name": "Catalina",
+  "email": "cataguzman7835@gmail.com",
+  "password": "$2a$12$fYzBQIXhE6Mof0LKdUGtJuB.c4J2ykjQ.n0XADUmrdAy/QNw5IsVW",
+  "passwordRepeat": "casa7836"
  }
 ]

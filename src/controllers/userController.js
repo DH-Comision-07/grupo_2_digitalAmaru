@@ -41,7 +41,7 @@ const userController = {
             }
 
             let usuarioCreado =  userService.create(userHashed);
-            res.redirect("/user/login");
+            res.redirect("/user/welcome");
             
         } else { 
             return errorsReg
@@ -104,6 +104,13 @@ const userController = {
    logout: (req, res) => {
         req.session.destroy();
         res.redirect("/")
+   },
+
+   welcome: (req, res) => {
+    return res.render('bienvenida')
+   },
+   welcomeToLogin: (req, res) => {
+    return res.render('login')
    }
     
 };

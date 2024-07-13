@@ -1,0 +1,23 @@
+.buttom-bien{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+    box-sizing: border-box;
+    max-width: 200px;
+    margin: 0 auto;
+}
+.buttom-bien:hover{
+    background-color: #0056b3;
+    color: #fff;
+}
+.a-bien{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.a-bien:hover{
+    color: rgb(255, 255, 255);
+}

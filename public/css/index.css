@@ -397,9 +397,21 @@ ul {
   flex: 1 1 45%; /* para que ajustemos el ancho de la secccion */
   margin: 0 10px
 }
+.footer__section ul {
+ padding: 0%;
+}
   .nosotros {
     text-decoration: none; /* Quita el subrayado */
     color: black; /* Cambia el color a negro */
     font-weight: normal; /* Ajusta el peso de la fuente si es necesario */
     /* Otros estilos que desees aplicar */
+}
+
+
+
+
+/*titulos*/
+
+.titulos-gen{
+  color: #000;
 }
