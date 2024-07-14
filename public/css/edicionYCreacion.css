@@ -58,6 +58,14 @@
 .price-edit,.desxcription-edit,.name-edit{
     margin: 0%;
 }
+.input-correcto {
+    border: 2px solid green;
+}
+
+.input-incorrecto {
+    border: 2px solid red;
+}
+
 
 @media (min-width: 769px) {
     .listado-de-cursos-cont{

@@ -6,8 +6,18 @@ const port = 7777;
 const cookies = require('cookie-parser');
 const session = require('express-session');
 
-const publicPath = path.resolve(__dirname, '../public');
+// Rutas
+const userRouter = require('./routes/users');
+const productRouter = require('./routes/product');
+const indexRouter = require('./routes/index');
+const cartRouter = require('./routes/cart');
+const editCreationRouter = require('./routes/editCreation');
 
+// Middlewares
+const publicPath = path.resolve(__dirname, '../public');
+const userLoggedMiddleware = require('./middlewers/userloggedmidleweres');
+
+// Configuración de Express
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -19,25 +29,16 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-
-const userLoggedMiddleware = require('./middlewers/userloggedmidleweres');
 app.use(userLoggedMiddleware);
 
-const userRouter = require('./routes/users');
+// Rutas
 app.use('/user', userRouter);
-
-const productRouter = require('./routes/product');
 app.use('/product', productRouter);
-
-const indexRouter = require('./routes/index');
+app.use('/cart', cartRouter);
+app.use('/editCreation', editCreationRouter);
 app.use('/', indexRouter);
 
-const cartRouter = require('./routes/cart');
-app.use('/cart', cartRouter);
-
-const editCreationRouter = require('./routes/editCreation');
-app.use('/editCreation', editCreationRouter);
-
-app.listen(port, () => 
-    console.log(`Servidor corriendo en http://localhost:${port}`)
-);
+// Puerto de escucha
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
+});

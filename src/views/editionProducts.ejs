@@ -14,19 +14,31 @@
     <main class="container-edition">
         <!-- Creación -->
         <div class="Creacion">
-            <h2 class="titulos-gen" class="titulos-gen">Crea tu Curso</h2>
-            <form action="/editCreation/create" method="POST">
-                <label for="name">Nombre del producto</label>
-                <input type="text" id="name" name="name" required>
+            <h2 class="titulos-gen">Crea tu Curso</h2>
+            <form action="/editCreation/create" method="POST" id="formulario-crear">
+                <div id="grupo-name">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="requisito" style="display: none;">Debe contener entre 1 y 50 caracteres.</span>
+                </div>
 
-                <label for="description">Descripción del producto</label>
-                <textarea class="textarea" id="description" name="description" rows="4" placeholder="Ingrese la descripción del producto aquí..." required></textarea>
+                <div id="grupo-description">
+                    <label for="description">Descripción del producto</label>
+                    <textarea class="textarea" id="description" name="description" rows="4" placeholder="Ingrese la descripción del producto aquí..." required></textarea>
+                    <span class="requisito" style="display: none;">Debe contener entre 10 y 400 caracteres.</span>
+                </div>
 
-                <label for="image">URL de la foto</label>
-                <input type="text" id="image" name="image" placeholder="(Opcional)">
+                <div id="grupo-image">
+                    <label for="image">URL de la foto</label>
+                    <input type="text" id="image" name="image" placeholder="(Opcional)">
+                    <span class="requisito" style="display: none;">Debe contener maximo 400 caracteres.</span>
+                </div>
 
-                <label for="price">Precio</label>
-                <input type="number" id="price" name="price" placeholder="$" required>
+                <div id="grupo-price">
+                    <label for="price">Precio</label>
+                    <input type="text" id="price" name="price" placeholder="$" required>
+                    <span class="requisito" style="display: none;">Debe contener solo números.</span>
+                </div>
 
                 <button type="submit" class="button-edit">Crear Producto</button>
             </form>
@@ -47,7 +59,8 @@
             <% }) %>
         </div>
     </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+    <script src="../js-frontend/validations_Products.js"></script>
 </body>
- <!-- FOOTER -->
- <%- include('./partials/footer') %>
 </html>
