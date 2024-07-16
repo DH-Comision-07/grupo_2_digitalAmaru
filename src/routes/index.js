@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const session = require('express-session');
-const indexController = require('../controllers/indexController');
+const indexController = require('../controllersNew/indexController');
 
 router.get("/", indexController.index);
 // ruta a blog
