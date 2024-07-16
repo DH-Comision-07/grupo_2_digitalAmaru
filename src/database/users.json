@@ -145,5 +145,12 @@
   "email": "cataguzman7835@gmail.com",
   "password": "$2a$12$fYzBQIXhE6Mof0LKdUGtJuB.c4J2ykjQ.n0XADUmrdAy/QNw5IsVW",
   "passwordRepeat": "casa7836"
+ },
+ {
+  "id": 25,
+  "name": "DCL PLAS",
+  "email": "dclplas@gmail.com",
+  "password": "$2a$12$HHexwu3sMHJOG3E/kAsc5uVaX3K4hx80uqn4gez74M8df4w57aOPO",
+  "passwordRepeat": "$2a$12$hQwIVDs6pqRiXPWoxws7MOvHezypY1Jewcj0cSOYuRRosa2JuOcvi"
  }
 ]
