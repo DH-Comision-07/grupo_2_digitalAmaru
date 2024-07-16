@@ -37,7 +37,8 @@ const userController = {
             
             let userHashed = {
                 ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 12)
+                password: bcryptjs.hashSync(req.body.password, 12),
+                passwordRepeat:bcryptjs.hashSync(req.body.password, 12)
             }
 
             let usuarioCreado =  userService.create(userHashed);

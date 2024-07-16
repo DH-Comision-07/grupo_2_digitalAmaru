@@ -31,21 +31,21 @@
     "id": 5,
     "name": "Curso CSS Grid y Flexbox",
     "description": "Aprende a diseñar páginas web modernas y flexibles con este curso de 4 horas. Dominarás CSS Grid y Flexbox para crear diseños complejos y flexibles que se ajusten a cualquier dispositivo.",
-    "image": "/images/cursospng.jpeg",
+    "image": "/images/reuniones-grupales.jpg",
     "price": 18000
   },
   {
     "id": 6,
     "name": "Curso Programación con JavaScript",
     "description": "Explora el mundo de la programación en el lado del cliente con este curso de 11 horas. Aprende sobre variables, operadores y estructuras de control en JavaScript para crear aplicaciones web interactivas y dinámicas.",
-    "image": "/images/cursospng.jpeg",
+    "image": "/images/port-javascript.jpg",
     "price": 30000
   },
   {
     "id": 7,
     "name": "Curso Básico de Programación Orientada a Objetos con JavaScript",
     "description": "Sumérgete en los principios de la programación orientada a objetos con este curso de 3 horas. Aprende los conceptos básicos de OOP en JavaScript y cómo aplicarlos en tus proyectos.",
-    "image": "/images/cursospng.jpeg",
+    "image": "/images/foto3.jppg.webp",
     "price": 15000
   },
   {
