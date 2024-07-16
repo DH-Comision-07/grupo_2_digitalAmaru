@@ -1,4 +1,4 @@
-const arrayCursos = require("../../src/database/products.json");
+const arrayCursos = require("../database/products.json");
 const arrayTitulos = require("../../public/jsvaScript/titulos");
 
 
