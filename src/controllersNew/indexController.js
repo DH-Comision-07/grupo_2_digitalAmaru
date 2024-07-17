@@ -4,10 +4,9 @@ const indexController = {
     index: async function(req, res) {
         try {
             let products = await db.Product.findAll(); // Cambia 'Product' al nombre de tu modelo
-            let titulos = await db.Title.findAll(); // Cambia 'Title' al nombre de tu modelo
+           // let titulos = await db.Title.findAll(); // Cambia 'Title' al nombre de tu modelo
             res.render('index', {
                 products: products,
-                titulos: titulos
             });
         } catch (error) {
             console.error(error);
