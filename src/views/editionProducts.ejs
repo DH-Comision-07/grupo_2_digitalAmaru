@@ -15,7 +15,7 @@
         <!-- Creación -->
         <div class="Creacion">
             <h2 class="titulos-gen">Crea tu Curso</h2>
-            <form action="/editCreation/create" method="POST" id="formulario-crear">
+            <form action="/product/create" method="POST" id="formulario-crear">
                 <div id="grupo-name">
                     <label for="name">Nombre del producto</label>
                     <input type="text" id="name" name="name" required>
@@ -53,7 +53,7 @@
                     <p class="name-edit"><b><%= product.name %></b></p>
                     <p class="description-edit"><%= product.description %></p>
                     <p class="price-edit">$<%= product.price %></p>
-                    <a href="/editCreation/edit/<%= product.id %>" class="btn-read-more">Editar</a>
+                    <a href="/product/edit/<%= product.id %>" class="btn-read-more">Editar</a>
                 </div>
                 <hr>
             <% }) %>

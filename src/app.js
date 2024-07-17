@@ -12,8 +12,7 @@ const config = require('./db/config/config');
 const userRouter = require('./routes/users');
 const productRouter = require('./routes/product');
 const indexRouter = require('./routes/index');
-const cartRouter = require('./routes/cart');
-const editCreationRouter = require('./routes/editCreation');
+
 
 // Middlewares
 const publicPath = path.resolve(__dirname, '../public');
@@ -48,8 +47,6 @@ sequelize.authenticate()
 // Rutas
 app.use('/user', userRouter);
 app.use('/product', productRouter);
-app.use('/cart', cartRouter);
-app.use('/editCreation', editCreationRouter);
 app.use('/', indexRouter);
 
 // Puerto de escucha
