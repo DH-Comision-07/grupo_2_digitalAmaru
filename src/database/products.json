@@ -54,5 +54,12 @@
     "description": "Profundiza tus conocimientos de programación orientada a objetos con este curso de 4 horas. Explora conceptos avanzados de OOP y aprende a aplicarlos en situaciones del mundo real.",
     "image": "/images/escritorio.jpg",
     "price": "20000"
+  },
+  {
+    "id": 9,
+    "name": "nnnnnnnnn",
+    "description": "nnnnnnnnnnnnnnn",
+    "image": "",
+    "price": "50000"
   }
 ]
