@@ -4,7 +4,7 @@ const { resolve } = require("path");
 const { validationResult } = require("express-validator");
 const  { body } = require("express-validator")
 const bcryptjs = require("bcryptjs");
-const userService = require("../models/User");
+const userService = require("../session/User");
 const { isUtf8 } = require("buffer");
 const { log } = require("console");
 

@@ -8,6 +8,7 @@ const indexController = {
             res.render('index', {
                 products: products,
             });
+            
         } catch (error) {
             console.error(error);
             res.status(500).send('Error al obtener los productos');
