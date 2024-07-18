@@ -32,17 +32,17 @@ UNLOCK TABLES;
 
 -- Create product table
 CREATE TABLE `product` (
-  `sku` int(20) UNSIGNED NOT NULL,
-  `name` varchar(150) NOT NULL,
+  `id` int(20) UNSIGNED AUTO_INCREMENT NOT NULL,
+  `name` varchar(150) UNSIGNED NOT NULL,
   `description` text NOT NULL, 
-  `image` varchar(200) NOT NULL,
+  `image` varchar(200) NULL,
   `price` int(10) UNSIGNED NOT NULL, 
   `name_teacher` varchar(100) NOT NULL,
-  PRIMARY KEY (`sku`)
+  PRIMARY KEY (`id`)
 );
 
 -- Insert data into product table
-INSERT INTO `product`(sku, name, description, image, price, name_teacher) VALUES
+INSERT INTO `product`(id, name, description, image, price, name_teacher) VALUES
 (1, 'Curso de Programación Básica', 'Descubre los fundamentos de la programación en nuestro curso introductorio. Desde conceptos básicos como variables y operadores, hasta estructuras de control y funciones, este curso te proporcionará las habilidades necesarias para comenzar tu viaje en el mundo de la programación. Aprende a crear programas simples y resolver problemas utilizando lenguajes de programación populares como Python o JavaScript. No se requiere experiencia previa en programación. ¡Únete y comienza a crear tu propio código hoy!', 'programacion_basica.jpg', 45000, 'Pepe Santos'),
 (2, 'Curso Fundamentos HTML y CSS', 'Descubre los fundamentos esenciales de HTML y CSS en este curso introductorio. Aprende a crear y diseñar páginas web desde cero, dominando etiquetas HTML para estructurar contenido y aplicando estilos con CSS para lograr diseños atractivos. Este curso práctico está diseñado para principiantes sin experiencia previa en programación. Desarrolla habilidades en diseño web responsivo y completa proyectos prácticos que te prepararán para crear sitios web profesionales. Únete ahora y comienza tu viaje en el desarrollo web.', 'fundamentos_html_css.jpg', 45000, 'Pepe Santos'),
 (3, 'Curso avanzado HTML y CSS', 'Avanza en HTML y CSS con este curso dinámico y práctico. Profundiza en las técnicas avanzadas de HTML para estructurar contenido de manera semántica y perfecciona tus habilidades en CSS para crear diseños sofisticados y responsive. Aprende a utilizar flexbox, grid y animaciones CSS para desarrollar sitios web interactivos y modernos. Este curso es ideal para aquellos con conocimientos básicos de HTML y CSS que buscan llevar sus habilidades al siguiente nivel. Completa proyectos desafiantes y adquiere las herramientas necesarias para construir sitios web profesionales y atractivos. Únete ahora y conviértete en un experto en diseño web avanzado.', 'avanzado_html_css.jpg', 12500, 'Pepe el Grillo'),

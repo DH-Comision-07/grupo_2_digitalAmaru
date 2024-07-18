@@ -46,7 +46,7 @@
                     <h3><%= products[i].name %></h3>
                     <p><%= products[i].description %></p>
                     <p class="price">$<%= products[i].price %></p>
-                    <a href="/product/detalle/<%= products[i].sku %>" class="btn-read-more">Leer más</a>
+                    <a href="/product/detalle/<%= products[i].id %>" class="btn-read-more">Leer más</a>
                 </div>
                 <% } %>
             </div>
@@ -54,7 +54,7 @@
 
         <!-- Mensaje para agregar curso -->
         <div class="nuevocurso">
-            <p>Para agregar curso haz <a href="/product//crearueditar">Click aquí</a></p>
+            <p>Para agregar curso haz <a href="/product/crearueditar">Click aquí</a></p>
         </div>
     </main>
 

@@ -2,11 +2,6 @@
 
      let alias = "Product";
      let cols = {
-
-      sku: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        primaryKey: true,
-      },
       name: {
         type: DataTypes.STRING,
         allowNull: false,

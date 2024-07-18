@@ -43,14 +43,12 @@
         </main>
 
         <div class="boton">
+            <a href="/product/edit/<%= product.id%>">editar A</a>
             <form action="/product/add" method="POST">
-                <input type="hidden" name="id" value="<%= product.sku %>">
-                <input type="hidden" name="name" value="<%= product.name %>">
-                <input type="hidden" name="price" value="<%= product.price %>">
-                <input type="hidden" name="image" value="<%= product.image %>">
-                <% if (locals.isLogged) { %>
                 <button type="submit">Agregar al carrito</button>
-                <% } %>
+            </form>
+            <form action="/product/delete/<%= product.id%>?_method=DELETE" method="POST">
+                <button type="submit">eliminar</button>
             </form>
         </div>
     </main>

@@ -5,6 +5,7 @@ const port = 7777;
 
 const cookies = require('cookie-parser');
 const session = require('express-session');
+const methodOverride = require('method-override');
 const { Sequelize } = require('sequelize');
 const config = require('./db/config/config');
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(methodOverride('_method'));
 app.use(cookies());
 app.use(session({
     secret: "esto es secreto!",

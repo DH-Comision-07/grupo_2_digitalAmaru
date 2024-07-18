@@ -15,7 +15,7 @@
         <!-- Creación -->
         <div class="Creacion">
             <h2 class="titulos-gen">Crea tu Curso</h2>
-            <form action="/product/create" method="POST" id="formulario-crear">
+            <form action="/product/crearueditar" method="POST" id="formulario-crear">
                 <div id="grupo-name">
                     <label for="name">Nombre del producto</label>
                     <input type="text" id="name" name="name" required>
@@ -40,24 +40,18 @@
                     <span class="requisito" style="display: none;">Debe contener solo números.</span>
                 </div>
 
+                <div> 
+                    <label for="price">Precio</label>
+                    <input type="text" id="price" name="name_teacher" placeholder="$" required>
+                </div>
+
                 <button type="submit" class="button-edit">Crear Producto</button>
             </form>
         </div>
 
         <!-- Edición -->
-        <div class="listado-de-cursos-cont">
-            <h2 class="titulos-gen">Edita tu Curso</h2>
-            <% products.forEach(product => { %>
-                <div class="curso-individual-cont">
-                    <img class="img-edit" src="<%= product.image %>" alt="<%= product.name %>">
-                    <p class="name-edit"><b><%= product.name %></b></p>
-                    <p class="description-edit"><%= product.description %></p>
-                    <p class="price-edit">$<%= product.price %></p>
-                    <a href="/product/edit/<%= product.id %>" class="btn-read-more">Editar</a>
-                </div>
-                <hr>
-            <% }) %>
-        </div>
+         <a href="product/edit">Click para editar</a>
+
     </main>
     <!-- FOOTER -->
     <%- include('./partials/footer') %>

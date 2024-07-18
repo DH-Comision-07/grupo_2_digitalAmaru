@@ -1,4 +1,3 @@
-const { productById } = require('../controllers/productController');
 const db = require('../db/models');
 
 const productController = {
@@ -15,59 +14,49 @@ const productController = {
             res.status(500).send('Error al obtener los productos');
         }
     },
-    editionCreate: function(req, res){ 
-            return res.render('editionProducts');
+    create: function(req, res){ 
+         res.render('editionProducts');
     },
-    creationProduct: async function (req, res) {
+    creationStore: async function (req, res) {
+        console.log(req.body)
         try {
-            let product = await db.Product.findByPk(req.params.id); // Cambia 'Product' al nombre de tu modelo
-
-            res.render('product-details', {
-                product: product
-            });
+     await db.Product.create({
+        ...req.body
+     }); // Cambia 'Product' al nombre de tu modelo
+           res.redirect('/')
             
         } catch (error) {
             console.error(error);
             res.status(500).send('Error al obtener los productos');
         }
-    },
-    editProduct : async function (req, res) { 
-    let product = await db.Product.findByPk(req.params.id)
-        .then(function(product){
-            res.render('editproducts/editProduct',{product: product})
-        })
-    
-    .catch(function (req, res) {
-        return res.status(404).send('Producto no encontrado');
-        }
-    )
-        
-   
+    },        
+
+edit: async (req, res) => {
+    try {
+        let product = await db.Product.findByPk(req.params.id);
+        res.render('editProduct', { product:product})
+    } catch (error) {
+        console.log(error)
+    }
+
+
 },
-create: function (req, res) {
-    db.product.create({
-        name: req.body.name,
-        description: req.body.description,
-        image: req.body.image,
-        price: req.body.price,
-        name_teacher: req.body.name_teacher
-    })
-    res.render('index')
+updateProduct: async function (req, res) {
+    console.log(req.body)
+    let productoeditado = await db.Product.findByPk(req.params.id)
+   await productoeditado.update({
+    ...req.body
+    }),
+    res.redirect('/')
 },
-updateProduct: function (req, res) {
-    db.peliculas.update({
-        name: req.body.name,
-        description: req.body.description,
-        image: req.body.image,
-        price: req.body.price,
-        name_teacher: req.body.name_teacher
-    },
-    {
-    where: {
-        id: req.params.id
-        }
-    })
-    res.redirect('/product/crearueditar')
+delete:async function(req, res){
+    try {
+       const  product = await db.Product.findByPk(req.params.id)
+       await product.destroy()
+       res.redirect('/')
+    } catch (error) {
+        console.log(error)
+    }
 }
 
     
