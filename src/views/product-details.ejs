@@ -26,28 +26,28 @@
             <section class="div-info">
                 <div>
                     <p>Nombre del curso</p>
-                    <h2 class="name"><%= products.name %></h2>
+                    <h2 class="name"><%= product.name %></h2>
                 </div>
                 <div>
                     <p>Descripcion del curso</p>
-                    <p class="descrip"><%= products.description %></p>
+                    <p class="descrip"><%= product.description %></p>
                 </div>
                 <div>
                     <p>Precio del curso</p>
-                    <p class="precio"><%= products.price %></p>
+                    <p class="precio"><%= product.price %></p>
                 </div>
             </section>
             <section>
-                <img src="<%= products.image %>" alt="">
+                <img src="/images/<%= product.image %>" alt="">
             </section>
         </main>
 
         <div class="boton">
             <form action="/product/add" method="POST">
-                <input type="hidden" name="id" value="<%= products.id %>">
-                <input type="hidden" name="name" value="<%= products.name %>">
-                <input type="hidden" name="price" value="<%= products.price %>">
-                <input type="hidden" name="image" value="<%= products.image %>">
+                <input type="hidden" name="id" value="<%= product.sku %>">
+                <input type="hidden" name="name" value="<%= product.name %>">
+                <input type="hidden" name="price" value="<%= product.price %>">
+                <input type="hidden" name="image" value="<%= product.image %>">
                 <% if (locals.isLogged) { %>
                 <button type="submit">Agregar al carrito</button>
                 <% } %>

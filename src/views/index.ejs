@@ -42,11 +42,11 @@
             <div class="courses-container">
                 <% for(let i = 0; i < products.length; i++) { %>
                 <div class="course">
-                    <img src="<%= products[i].image %>" alt="<%= products[i].name %>">
+                    <img src="/images/<%= products[i].image %>" alt="<%= products[i].name %>">
                     <h3><%= products[i].name %></h3>
                     <p><%= products[i].description %></p>
                     <p class="price">$<%= products[i].price %></p>
-                    <a href="/product/cursos/detalle/<%= products[i].id %>" class="btn-read-more">Leer más</a>
+                    <a href="/product/detalle/<%= products[i].sku %>" class="btn-read-more">Leer más</a>
                 </div>
                 <% } %>
             </div>

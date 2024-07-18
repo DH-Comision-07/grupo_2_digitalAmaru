@@ -8,7 +8,7 @@
         primaryKey: true,
       },
       name: {
-        type: DataTypes.STRING(150),
+        type: DataTypes.STRING,
         allowNull: false,
       },
       description: {
@@ -16,18 +16,18 @@
         allowNull: false,
       },
       image: {
-        type: DataTypes.STRING(200),
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
       },
       price: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
-      categoria_sku: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false,
-      },
+      name_teacher: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
      };
     
     let config = {
@@ -37,11 +37,6 @@
     
     let Product = sequelize.define(alias, cols, config);
 
-    Product.associate =  function (models) {
-    Product.belongsTo(models.User, {
-        as :"user", 
-        foreignKey : "categoria_id"});
-    }
   
     return Product;
   }

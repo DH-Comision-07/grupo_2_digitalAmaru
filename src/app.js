@@ -51,6 +51,6 @@ app.use('/', indexRouter);
 
 // Puerto de escucha
 app.listen(port, () => {
-    console.log('Servidor corriendo en http://localhost:${port}');
+    console.log(`Servidor corriendo en http://localhost:${port}`)
 });
 

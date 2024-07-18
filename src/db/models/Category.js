@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes)=>{
     Category.associate =  function (models) {
     Category.belongsTo(models.Product, {
       as :"user", 
-      foreignKey : "categoria_id"});
+      foreignKey : "categoria_sku"});
   }
 
     return Category;

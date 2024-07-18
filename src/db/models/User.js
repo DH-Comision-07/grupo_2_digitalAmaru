@@ -27,11 +27,7 @@ module.exports = (sequelize, DataTypes)=>{
       categoria_sku: {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
-        references: {
-          model: 'Category',
-          key: 'sku',
         },
-      },
     };
     
     let config = {
