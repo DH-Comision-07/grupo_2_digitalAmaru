@@ -5,7 +5,8 @@ const db = require('../db/models');
 const userController = {
     getAllUsers: async (req, res) => {
         try {
-            const users = await db.User.findAll();
+            console.log(db.usuarios);
+            const users = await db.usuarios.findAll();
             return res.send(users);
         } catch (error) {
             return res.status(500).send(error);
@@ -17,35 +18,19 @@ const userController = {
     },
 
     prosesRegister: async (req, res) => {
-        const errorsReg = validationResult(req);
-
-        // Verificar si el email ya está en uso
-        let userComparationEmail = await db.User.findOne({ where: { mail: req.body.mail } });
-        if (userComparationEmail) {
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya está en uso, intenta con otro'
-                    }
-                }
-            });
-        }
-
-        if (errorsReg.isEmpty()) {
-            let userHashed = {
-                ...req.body,
-                contraseña: bcryptjs.hashSync(req.body.contraseña, 12)
-            };
-
-            await db.User.create(userHashed);
-            res.redirect("/user/welcome");
-        } else {
-            return res.render('register', {
-                errors: errorsReg.mapped(),
-                oldData: req.body
-            });
-        }
+            try {
+                console.log(req.body)
+         await db.usuarios.create({
+            ...req.body
+         }); // Cambia 'User' al nombre de tu modelo
+               res.redirect('/')
+                
+            } catch (error) {
+                console.error(error);
+                res.status(500).send('Error al obtener los usuarios');
+            }     
     },
+
 login: (req, res) => {
         return res.render("login");
     },

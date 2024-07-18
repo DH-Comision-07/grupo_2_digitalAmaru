@@ -152,5 +152,12 @@
   "email": "dclplas@gmail.com",
   "password": "$2a$12$HHexwu3sMHJOG3E/kAsc5uVaX3K4hx80uqn4gez74M8df4w57aOPO",
   "passwordRepeat": "$2a$12$hQwIVDs6pqRiXPWoxws7MOvHezypY1Jewcj0cSOYuRRosa2JuOcvi"
+ },
+ {
+  "id": 26,
+  "name": "maria",
+  "email": "mariaprueba1@hotmail.com",
+  "password": "$2a$12$r8GCN3J1ONDm3b3eCB06POJTQES8ZSzyjlr3Z8JKBY/4qEqvKVfEe",
+  "passwordRepeat": "$2a$12$00uGLMjsnFnNAuQsPV6yx.6UPWzEzjipykbSMxU3nxSPu2ZdfposG"
  }
 ]

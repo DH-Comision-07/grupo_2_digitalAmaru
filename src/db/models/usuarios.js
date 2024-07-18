@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes)=>{
 
-    let alias = "User";
+    let alias = "usuarios";
     let cols = {
 
       sku: {
@@ -31,19 +31,19 @@ module.exports = (sequelize, DataTypes)=>{
     };
     
     let config = {
-      tableName: "user",
+      tableName: "usuarios",
       timestamps: false
     };
 
-   let  User = sequelize.define(alias, cols, config);
+   let  usuarios = sequelize.define(alias, cols, config);
   
-    User.associate = function (models) {
-      User.belongsTo(models.Product, {
+    usuarios.associate = function (models) {
+      usuarios.belongsTo(models.Product, {
         as:"product",
         foreignKey: "name_teacher"});
     }
   
-    return User;
+    return usuarios;
 
   }
 

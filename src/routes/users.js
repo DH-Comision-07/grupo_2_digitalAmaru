@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const session = require('express-session');
-const userController = require('../controllers/userController');
-router.get("/", userController.user);
+const userController = require('../controllersNew/userController');
 const userValidations = require('../middlewers/validations');
 const guestmiddlewers = require("../middlewers/guestMiddlewers");
 const autMiddlewers = require("../middlewers/autMiddleweres");
