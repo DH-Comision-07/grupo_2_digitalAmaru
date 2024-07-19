@@ -3,25 +3,18 @@ const bcryptjs = require("bcryptjs");
 const db = require('../db/models');
 
 const userController = {
-    getAllUsers: async (req, res) => {
-        try {
-            console.log(db.usuarios);
-            const users = await db.usuarios.findAll();
-            return res.send(users);
-        } catch (error) {
-            return res.status(500).send(error);
-        }
-    },
 
     register: (req, res) => {
         return res.render("register");
     },
 
     prosesRegister: async (req, res) => {
-            try {
-                console.log(req.body)
-         await db.usuarios.create({
-            ...req.body
+        console.log(req.body)
+            try {   
+         await db.Usuarios.create({
+            ...req.body, 
+            contraseña:bcryptjs.hashSync(req.body.contraseña, 10),
+            categoria_id:3
          }); // Cambia 'User' al nombre de tu modelo
                res.redirect('/')
                 
@@ -36,10 +29,13 @@ login: (req, res) => {
     },
 
     procesLogin: async (req, res) => {
-        let userToLogin = await db.User.findOne({ where: { mail: req.body.mail } });
+        let userToLogin = await db.Usuarios.findOne({ where: { mail: req.body.mail } });
+
+console.log(req.body.contraseña)
+
 
         if (userToLogin) {
-            let passwordOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña);
+            let passwordOk = bcryptjs.compareSync(userToLogin.contraseña, req.body.contraseña);
             if (passwordOk) {
                 delete userToLogin.contraseña;
                 req.session.userLogged = userToLogin;

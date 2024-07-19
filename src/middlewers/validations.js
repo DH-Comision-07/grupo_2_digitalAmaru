@@ -5,17 +5,17 @@ const userValidations = {
         body("name")
             .notEmpty().withMessage('Debes ingresar tu nombre.')
             .matches(/^[A-Za-z\s]+$/).withMessage('El nombre solo debe contener letras y espacios'),
-        body("email")
+        body("mail")
             .notEmpty().withMessage('Debes ingresar tu email.')
             .isEmail().withMessage('Debes ingresar un email válido.'),
-        body("password")
+        body("contraseña")
             .isLength({ min: 4 }).withMessage('La contraseña debe tener al menos 4 caracteres.')
     ],
     login: [
-        body("email")
+        body("mail")
             .notEmpty().withMessage('Debes ingresar tu email.')
             .isEmail().withMessage('Debes ingresar un email válido.'),
-        body("password")
+        body("contraseña")
             .notEmpty().withMessage('Debes ingresar tu contraseña.')
     ],
     productCreate: [
