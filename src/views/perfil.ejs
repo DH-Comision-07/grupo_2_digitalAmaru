@@ -10,7 +10,7 @@
 <body>
     <!--HEADER-->
     <%- include('./partials/header') %>
-    
+
 
     <main>
 
@@ -21,8 +21,11 @@
             <p class="p-name-titulo">Name:</p>
             <h3 class="nombre-perfil"> Hola <%= user.name %></h3>
             <p class="p-email-titulo">Email: </p>
-            <h3 class="email-perfil"> <%= user.email %> </h3>
+            <h3 class="email-perfil"> <%= user.mail %> </h3>
 
+            <form action="/user/deleteAccount" method="POST">
+                <button type="submit">Eliminar Cuenta</button>
+            </form>
         </div>
 
     </main>

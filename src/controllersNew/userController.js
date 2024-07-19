@@ -10,31 +10,29 @@ const userController = {
 
     prosesRegister: async (req, res) => {
         console.log(req.body)
-            try {   
+            try {
          await db.Usuarios.create({
             ...req.body, 
-            contraseña:bcryptjs.hashSync(req.body.contraseña, 10),
-            categoria_id:3
-         }); // Cambia 'User' al nombre de tu modelo
+            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+            categoria_id: 3
+         });
                res.redirect('/')
-                
+
             } catch (error) {
                 console.error(error);
                 res.status(500).send('Error al obtener los usuarios');
-            }     
+            }
     },
 
-login: (req, res) => {
+    login: (req, res) => {
         return res.render("login");
     },
 
     procesLogin: async (req, res) => {
         let userToLogin = await db.Usuarios.findOne({ where: { mail: req.body.mail } });
 
-console.log(req.body.contraseña)
-
-
-        if (userToLogin) {
+        console.log(req.body.contraseña);
+if (userToLogin) {
             let passwordOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña);
             if (passwordOk) {
                 delete userToLogin.contraseña;
@@ -80,6 +78,19 @@ console.log(req.body.contraseña)
 
     welcomeToLogin: (req, res) => {
         return res.render('login');
+    },
+
+    deleteAccount: async (req, res) => {
+        try {
+            await db.Usuarios.destroy({
+                where: { id: req.session.userLogged.id }
+            });
+            req.session.destroy();
+            res.redirect('/');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error al eliminar la cuenta');
+        }
     }
 };
 

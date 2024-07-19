@@ -21,6 +21,8 @@ router.get("/perfil", autMiddlewers, userController.perfil);
 
 router.get("/logout", userController.logout);
 
+router.post("/deleteAccount", autMiddlewers, userController.deleteAccount);  // Nueva ruta para eliminar cuenta
+
 //bienvenida
 
 //router.get("/welcome", userController.welcome);
