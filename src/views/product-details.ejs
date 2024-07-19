@@ -43,12 +43,12 @@
         </main>
 
         <div class="boton">
-            <a href="/product/edit/<%= product.id%>">editar A</a>
+            <a href="/product/edit/<%= product.id%>">Editar</a>
             <form action="/product/add" method="POST">
                 <button type="submit">Agregar al carrito</button>
             </form>
             <form action="/product/delete/<%= product.id%>?_method=DELETE" method="POST">
-                <button type="submit">eliminar</button>
+                <button type="submit">Eliminar</button>
             </form>
         </div>
     </main>
