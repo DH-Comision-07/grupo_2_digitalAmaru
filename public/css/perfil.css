@@ -27,6 +27,24 @@
 .nombre-perfil{
     margin-bottom: 1em;
 }
+.btn-eliminar {
+    background-color: #ff4d4d; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-eliminar:hover {
+    background-color: #ff3333; 
+}
+
+.caja-perfil form {
+    margin-top: 20px; 
+}
 @media (min-width: 738px) {
     .caja-perfil{
         width: 30%;  

@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/path/to/your/css/file.css"> <!-- Asegúrate de poner la ruta correcta -->
 </head>
 <body>
     <!--HEADER-->
     <%- include('./partials/header') %>
 
-
     <main>
-
         <div class="caja-perfil">
             <div class="caja-perfil-letra-perfil">
                 <h1 class="letraperfil"><%= user.name[0].toUpperCase(); %></h1>
@@ -24,12 +22,11 @@
             <h3 class="email-perfil"> <%= user.mail %> </h3>
 
             <form action="/user/deleteAccount" method="POST">
-                <button type="submit">Eliminar Cuenta</button>
+                <button type="submit" class="btn-eliminar">Eliminar Cuenta</button>
             </form>
         </div>
-
     </main>
-     <!-- FOOTER -->
-     <%- include('./partials/footer') %>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
 </body>
 </html>
