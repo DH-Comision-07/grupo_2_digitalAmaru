@@ -35,7 +35,7 @@ console.log(req.body.contraseña)
 
 
         if (userToLogin) {
-            let passwordOk = bcryptjs.compareSync(userToLogin.contraseña, req.body.contraseña);
+            let passwordOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña);
             if (passwordOk) {
                 delete userToLogin.contraseña;
                 req.session.userLogged = userToLogin;
